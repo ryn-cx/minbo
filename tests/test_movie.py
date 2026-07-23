@@ -8,8 +8,8 @@ from pydantic import BaseModel
 from tests.utils import download_and_save, parse_json
 
 if TYPE_CHECKING:
-    from minbo import Minbo
-    from minbo.movie import Movie
+    from minbo import MinBO
+    from minbo.movies import Movies
 
 
 class TestData(BaseModel):
@@ -18,15 +18,12 @@ class TestData(BaseModel):
 
 
 TEST_DATA = [
-    TestData(
-        id="92b085e4-764c-41ca-a46f-4d76a5b28642",
-        name="long-walk",
-    ),
+    TestData(id="92b085e4-764c-41ca-a46f-4d76a5b28642", name="long-walk"),
 ]
 
 
 @pytest.fixture(scope="session")
-def endpoint(client: Minbo) -> Movie:
+def endpoint(client: MinBO) -> Movies:
     return client.movie
 
 
@@ -36,13 +33,13 @@ def test_data(request: pytest.FixtureRequest) -> TestData:
 
 
 class TestMovie:
-    def test_download(self, endpoint: Movie, test_data: TestData) -> None:
+    def test_download(self, endpoint: Movies, test_data: TestData) -> None:
         download_and_save(
             endpoint,
             test_data.name,
             lambda: endpoint.download(test_data.id),
         )
 
-    def test_parse(self, endpoint: Movie, test_data: TestData) -> None:
+    def test_parse(self, endpoint: Movies, test_data: TestData) -> None:
         movie = parse_json(endpoint, test_data.name)
-        assert movie.feature_id
+        assert movie.props.page_props.mapped_data.idref14.feature_id == test_data.id

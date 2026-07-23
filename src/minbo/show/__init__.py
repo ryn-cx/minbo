@@ -1,13 +1,14 @@
 # TODO: Validate
-"""Contains the Show class."""
+"""Contains the Show endpoint."""
 
 from __future__ import annotations
 
 from logging import NullHandler, getLogger
 from typing import Any, override
 
+from good_ass_pydantic_integrator import ReplacementField
+
 from minbo.base_api_endpoint import BaseEndpoint
-from minbo.exceptions import AmbiguousContentError, ContentNotFoundError
 from minbo.show.models import ShowModel
 
 logger = getLogger(__name__)
@@ -17,57 +18,57 @@ logger.addHandler(NullHandler())
 class Show(BaseEndpoint[ShowModel, [str]]):
     """Manage the show file.
 
-    Wraps ``GET https://www.hbomax.com/shows/<id>`` (and the per-season
-    ``.../s<n>/<id>`` variant), extracting the show's content object from the
-    page's embedded ``__NEXT_DATA__`` JSON.
+    Downloads https://www.hbomax.com/show/<show_id> and extracts the
+    __NEXT_DATA__ JSON from the page.
+
+    This URL will redirect to https://www.hbomax.com/show/<slug>/<show_id>.
+
+    Example Headers
+        - GET /shows/<slug>/<show_id> HTTP/2
+        - Host: www.hbomax.com
+        - User-Agent: __REDACTED__
+        - Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+        - Accept-Language: en-US,en;q=0.9
+        - Accept-Encoding: gzip, deflate, br, zstd
+        - Referer: https://www.google.com/
+        - Sec-GPC: 1
+        - Connection: keep-alive
+        - Cookie: __REDACTED__
+        - Upgrade-Insecure-Requests: 1
+        - Sec-Fetch-Dest: document
+        - Sec-Fetch-Mode: navigate
+        - Sec-Fetch-Site: cross-site
+        - Sec-Fetch-User: ?1
+        - Priority: u=0, i
     """
 
     _response_model = ShowModel
 
-    @staticmethod
-    def _content_object(next_data: dict[str, Any]) -> dict[str, Any]:
-        """Pull the show's content object out of the page's ``__NEXT_DATA__``.
-
-        HBO Max normalizes page state into a ``mappedData`` reference table keyed
-        by opaque ``idref<n>`` names. Exactly one entry is the show itself; it is
-        the only value carrying both ``seriesId`` and ``seasons``.
-        """
-        mapped_data = next_data["props"]["pageProps"]["mappedData"]
-        matches: list[dict[str, Any]] = [
-            value
-            for value in mapped_data.values()
-            if isinstance(value, dict) and "seriesId" in value and "seasons" in value
+    @classmethod
+    @override
+    def _replacement_fields(cls) -> list[ReplacementField]:
+        return [
+            # Chernobyl's first episode is titled "1:23:45" which is detected as a
+            # timedelta.
+            ReplacementField(class_name="Title4", field_name="short", new_field="str"),
+            ReplacementField(class_name="Title4", field_name="full", new_field="str"),
         ]
-        if not matches:
-            msg = "No content object found in page __NEXT_DATA__"
-            raise ContentNotFoundError(msg)
-        if len(matches) > 1:
-            msg = f"Expected exactly one content object, found {len(matches)}"
-            raise AmbiguousContentError(msg)
-        return matches[0]
 
     @override
     def download(
         self,
-        id: str,
-        *,
-        season: int | None = None,
+        show_id: str,
+        season_number: int | None = None,
     ) -> dict[str, Any]:
         log_id = self.get_log_id(self.download, locals())
-        # The slug is optional: a show lives at ``/shows/<id>`` and every
-        # non-default season inserts an ``/s<n>/`` segment. HBO Max redirects
-        # these to the canonical ``/shows/<slug>/[s<n>/]<id>`` page, which the
-        # download client follows, so no slug is needed to fetch a show.
-        season_segment = "" if season is None else f"s{season}/"
-        url = f"https://www.hbomax.com/shows/{season_segment}{id}"
-        next_data = self._client.download(url, log_id=log_id)
-        return self._content_object(next_data)
+        season_id = "" if season_number is None else f"s{season_number}/"
+        url = f"https://www.hbomax.com/shows/{season_id}{show_id}"
+        return self._client.download(url, log_id=log_id)
 
     @override
     def download_and_parse(
         self,
-        id: str,
-        *,
-        season: int | None = None,
+        show_id: str,
+        season_number: int | None = None,
     ) -> ShowModel:
-        return self.parse(self.download(id, season=season))
+        return self.parse(self.download(show_id, season_number))

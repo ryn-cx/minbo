@@ -1,4 +1,4 @@
-"""Rebuilds Minbo models."""
+"""Rebuilds MinBO models."""
 
 import logging
 

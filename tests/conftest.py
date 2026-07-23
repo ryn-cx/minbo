@@ -1,16 +1,9 @@
-# TODO: Validate
 import pytest
-from get_around import build_client_automatically, get_credential
+from get_around import build_client_automatically
 
-from minbo import Minbo
+from minbo import MinBO
 
 
 @pytest.fixture(scope="session")
-def client() -> Minbo:
-    # The ``st`` token is only needed by the JSON API routes (search); the HTML
-    # page routes (show) work without it, so a missing credential is tolerated.
-    try:
-        token = get_credential("MINBO_TOKEN")
-    except RuntimeError:
-        token = ""
-    return Minbo(token=token, get_around_client=build_client_automatically())
+def client() -> MinBO:
+    return MinBO(get_around_client=build_client_automatically())

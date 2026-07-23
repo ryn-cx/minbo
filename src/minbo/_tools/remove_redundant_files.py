@@ -1,4 +1,4 @@
-"""Removes redundant Minbo files."""
+"""Removes redundant MinBO files."""
 
 import logging
 

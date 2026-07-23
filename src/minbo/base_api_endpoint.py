@@ -1,4 +1,3 @@
-# TODO: Validate
 """Contains BaseEndpoint."""
 
 from __future__ import annotations
@@ -14,7 +13,7 @@ from minbo.constants import FILES_PATH
 if TYPE_CHECKING:
     from collections.abc import Callable
 
-    from minbo import Minbo
+    from minbo import MinBO
 
 
 class BaseEndpoint[T: GAPIBaseModel, **P](GAPIClient[T]):
@@ -22,8 +21,8 @@ class BaseEndpoint[T: GAPIBaseModel, **P](GAPIClient[T]):
 
     JSON_FILES_ROOT = FILES_PATH
 
-    def __init__(self, client: Minbo) -> None:
-        """Initialize the endpoint with the Minbo client."""
+    def __init__(self, client: MinBO) -> None:
+        """Initialize the endpoint with the MinBO client."""
         self._client = client
 
     @staticmethod
