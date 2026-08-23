@@ -3,57 +3,59 @@
 
 from __future__ import annotations
 
-import json
 import re
-import time
 from http import HTTPStatus
 from logging import NullHandler, getLogger
-from typing import Any
+from time import monotonic, sleep
 
 from get_around import GetAround
 
-from minbo.exceptions import ExtractionError, HTTPError
-from minbo.movies import Movies
+from minbo.exceptions import ExtractionError, HTTPError, ResourceNotFoundError
+from minbo.movie import Movie
 from minbo.show import Show
 
 logger = getLogger(__name__)
 logger.addHandler(NullHandler())
 
-# HBO Max is a Next.js site, so every page embeds its state as a single JSON blob
-# in a ``<script id="__NEXT_DATA__" type="application/json">`` tag near the end of
-# the document. The tag is split across lines, so match across newlines.
-_NEXT_DATA_RE = re.compile(
+API_DOMAIN = "www.hbomax.com"
+
+NEXT_DATA_RE = re.compile(
     r'<script id="__NEXT_DATA__"[^>]*>(?P<json>.*?)</script>',
     re.DOTALL,
 )
+"""The script tag a page keeps its data in."""
 
 
+# TODO: Validate
 class MinBO:
     """HBO Max API wrapper.
 
-    Scrapes the anonymously-accessible pages at ``www.hbomax.com``, extracting
-    each page's server-rendered ``__NEXT_DATA__`` JSON. No login or API token is
-    required.
+    There is no JSON API behind hbomax.com. A page is HTML with everything the
+    page was built from written into a `__NEXT_DATA__` script tag, so a
+    download fetches the page and returns the JSON out of that tag.
     """
 
+    # TODO: Validate
     def __init__(
         self,
         get_around_client: GetAround | None = None,
         locale: str = "en-US",
+        sleep_time: float = 0,
     ) -> None:
-        """Initialize the MinBO client.
+        """Initializes the MinBO client.
 
-        Args:
-            get_around_client: A pre-built :class:`GetAround` client. A default
-                one is created when omitted.
-            locale: The preferred language, e.g. ``en-US``.
+        The client holds one attribute per endpoint, so `client.show(id)` looks
+        a show up and `client.show.download(id)` and `client.show.load(data)`
+        are the halves of it.
         """
-        self.locale = locale
         self.get_around_client = get_around_client or GetAround()
+        self.locale = locale
+        self.sleep_time = sleep_time
 
+        self.movie = Movie(self)
         self.show = Show(self)
-        self.movie = Movies(self)
 
+    # TODO: Validate
     def _headers(self) -> dict[str, str]:
         return {
             # "Host": Set by httpx
@@ -68,31 +70,40 @@ class MinBO:
             "Priority": "u=0, i",
         }
 
-    @staticmethod
-    def extract_next_data(html: str) -> dict[str, Any]:
-        """Extract and decode the ``__NEXT_DATA__`` JSON embedded in a page's HTML."""
-        match = _NEXT_DATA_RE.search(html)
-        if match is None:
-            msg = "Could not find __NEXT_DATA__ script tag in the page HTML"
-            raise ExtractionError(msg)
-        parsed: dict[str, Any] = json.loads(match.group("json"))
-        return parsed
+    # TODO: Validate
+    def download(
+        self,
+        endpoint: str,
+        headers: dict[str, str],
+        log_id: str,
+    ) -> str:
+        """Downloads a page and returns the JSON from its `__NEXT_DATA__` tag.
 
-    def download(self, url: str, *, log_id: str) -> dict[str, Any]:
-        """Download a page and return its decoded ``__NEXT_DATA__`` JSON.
-
-        Redirects are followed, so a slug-less URL (e.g.
-        ``https://www.hbomax.com/shows/<id>``) resolves to its canonical
-        ``.../<slug>/<id>`` page rather than raising on the 301.
+        Raises:
+            ResourceNotFoundError: If the site has no page at that address.
+            HTTPError: If the request is answered with any other error status.
+            ExtractionError: If the page carries no `__NEXT_DATA__` script tag.
         """
         logger.debug("Downloading: %s", log_id)
-        start = time.monotonic()
+        url = f"https://{API_DOMAIN}/{endpoint}"
+        start = monotonic()
         response = self.get_around_client.get(
             url,
-            headers=self._headers(),
+            headers=self._headers() | headers,
             follow_redirects=True,
+            timeout=30,
         )
+
         if response.status_code != HTTPStatus.OK:
+            if response.status_code == HTTPStatus.NOT_FOUND:
+                raise ResourceNotFoundError(response.status_code, response.text)
             raise HTTPError(response.status_code, response.text)
-        logger.debug("Downloaded %s (%.4f s)", log_id, time.monotonic() - start)
-        return self.extract_next_data(response.text)
+
+        logger.debug("Downloaded %s (%.4f s)", log_id, monotonic() - start)
+
+        next_data = NEXT_DATA_RE.search(response.text)
+        if next_data is None:
+            raise ExtractionError(response.text)
+
+        sleep(self.sleep_time)
+        return next_data.group("json")

@@ -1,30 +1,32 @@
 # TODO: Validate
-"""Contains the Show endpoint."""
+"""Contains the Show class."""
 
 from __future__ import annotations
 
+import json
+from http import HTTPStatus
 from logging import NullHandler, getLogger
-from typing import Any, override
-
-from good_ass_pydantic_integrator import ReplacementField
 
 from minbo.base_api_endpoint import BaseEndpoint
-from minbo.show.models import ShowModel
+from minbo.exceptions import ResourceNotFoundError, ShowNotFoundError
+from minbo.show.models import ShowModel, model_validate_json
 
 logger = getLogger(__name__)
 logger.addHandler(NullHandler())
 
 
-class Show(BaseEndpoint[ShowModel, [str]]):
+# TODO: Validate
+class Show(BaseEndpoint):
     """Manage the show file.
 
-    Downloads https://www.hbomax.com/show/<show_id> and extracts the
-    __NEXT_DATA__ JSON from the page.
+    A show's page lists every season but fills in the episodes of only one of
+    them, and `season_number` picks which. Left out, the site picks the season
+    it would show a visitor.
 
-    This URL will redirect to https://www.hbomax.com/show/<slug>/<show_id>.
+    Source: https://www.hbomax.com/shows/{show_id}
 
-    Example Headers
-        - GET /shows/<slug>/<show_id> HTTP/2
+    Example request:
+        - GET /shows/{slug}/{show_id} HTTP/2
         - Host: www.hbomax.com
         - User-Agent: __REDACTED__
         - Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -42,33 +44,41 @@ class Show(BaseEndpoint[ShowModel, [str]]):
         - Priority: u=0, i
     """
 
-    _response_model = ShowModel
+    # TODO: Validate
+    def __call__(self, show_id: str, season_number: int | None = None) -> ShowModel:
+        """Look the show up and return the model it is read into."""
+        log_id = self.get_log_id(self.__call__, locals())
+        return self.load(self.download(show_id, season_number), log_id)
 
-    @classmethod
-    @override
-    def _replacement_fields(cls) -> list[ReplacementField]:
-        return [
-            # Chernobyl's first episode is titled "1:23:45" which is detected as a
-            # timedelta.
-            ReplacementField(class_name="Title4", field_name="short", new_field="str"),
-            ReplacementField(class_name="Title4", field_name="full", new_field="str"),
-        ]
-
-    @override
-    def download(
-        self,
-        show_id: str,
-        season_number: int | None = None,
-    ) -> dict[str, Any]:
+    # TODO: Validate
+    def download(self, show_id: str, season_number: int | None = None) -> str:
+        """Download the show file."""
         log_id = self.get_log_id(self.download, locals())
-        season_id = "" if season_number is None else f"s{season_number}/"
-        url = f"https://www.hbomax.com/shows/{season_id}{show_id}"
-        return self._client.download(url, log_id=log_id)
+        season = "" if season_number is None else f"s{season_number}/"
+        try:
+            response = self._client.download(
+                endpoint=f"shows/{season}{show_id}",
+                headers={},
+                log_id=log_id,
+            )
+        except ResourceNotFoundError as err:
+            raise ShowNotFoundError(
+                show_id,
+                err.status_code,
+                err.response,
+            ) from err
+        return self._validate_download(response, show_id)
 
-    @override
-    def download_and_parse(
-        self,
-        show_id: str,
-        season_number: int | None = None,
-    ) -> ShowModel:
-        return self.parse(self.download(show_id, season_number))
+    # TODO: Validate
+    def _validate_download(self, response: str, show_id: str) -> str:
+        # The page names what it was built from by position, so every field on
+        # it sits under an idrefN key and the show is always idref14.
+        show = json.loads(response)["props"]["pageProps"]["mappedData"]["idref14"]
+        if show["seriesId"] != show_id:
+            raise ShowNotFoundError(show_id, HTTPStatus.OK, response)
+        return response
+
+    # TODO: Validate
+    def load(self, data: str, log_id: str = "") -> ShowModel:
+        """Read a downloaded show file into its model."""
+        return model_validate_json(data, log_id or type(self).__name__)
