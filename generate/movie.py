@@ -12,7 +12,10 @@ from generate.constants import FILES_PATH, MINBO_PATH
 from generate.utils import download_if_missing
 from minbo import MinBO
 
-MOVIE_IDS = {"long-walk": "92b085e4-764c-41ca-a46f-4d76a5b28642"}
+MOVIE_IDS = {
+    "long-walk": "92b085e4-764c-41ca-a46f-4d76a5b28642",
+    "batman-mask-of-the-phantasm": "14a0d4dc-79f0-40f1-8967-fded774b2593",
+}
 """The movie id each recording is named after."""
 
 

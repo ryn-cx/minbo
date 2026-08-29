@@ -6,31 +6,31 @@ from uuid import UUID
 from datetime import date, timedelta
 
 class DeveloperPanelConfig(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     enabled: bool | None = None
     minimized: bool | None = None
 
 class Action(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     lg: int | None = None
 
 class Indicator(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     badge: int | None = None
 
 class Option(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     checkbox: int | None = None
 
 class Input(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     field: int | None = None
     option: Option | None = None
     toggle: int | None = None
     toggle_thumb: int | None = None
 
 class Corner(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     action: Action | None = None
     full: int | None = None
     indicator: Indicator | None = None
@@ -41,33 +41,33 @@ class Corner(BaseModel):
     sm: int | None = None
 
 class Chip(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     selected: int | None = None
     unselected: int | None = None
 
 class Option1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     emphasis: int | None = None
     selected: int | None = None
     unselected: int | None = None
 
 class Toggle(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     emphasis: float | None = None
     selected: int | None = None
     unselected: int | None = None
 
 class Input1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     option: Option1 | None = None
     toggle: Toggle | None = None
 
 class Notify(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     container_border: int | None = None
 
 class Stroke(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     bold: int | None = None
     chip: Chip | None = None
     extra_bold: int | None = None
@@ -79,19 +79,19 @@ class Stroke(BaseModel):
     thin: float | None = None
 
 class BorderToken(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     corner: Corner | None = None
     stroke: Stroke | None = None
 
 class Alt(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     surface_00: str | None = None
     surface_01: str | None = None
     surface_01_film: str | None = None
     surface_01_glass: str | None = None
 
 class Base(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     scrim_01: str | None = None
     scrim_02: str | None = None
     surface_00: str | None = None
@@ -104,12 +104,12 @@ class Base(BaseModel):
     surface_accent: str | None = None
 
 class Background(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     alt: Alt | None = None
     base: Base | None = None
 
 class Plan(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     base_fill: str | None = None
     base_text: str | None = None
     special_fill: str | None = None
@@ -118,7 +118,7 @@ class Plan(BaseModel):
     tab_text: str | None = None
 
 class Badge(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     fill_highlight_free: str | None = None
     fill_tile_free: str | None = None
     outline_highlight_free: str | None = None
@@ -127,7 +127,7 @@ class Badge(BaseModel):
     text_tile_free: str | None = None
 
 class Button(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     fill_loud: str | None = None
     fill_loud_hover: str | None = None
     fill_quiet: str | None = None
@@ -137,13 +137,13 @@ class Button(BaseModel):
     outline_quiet_hover: str | None = None
 
 class Chip1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     fill_selected: str | None = None
     outline_selected: str | None = None
     outline_unselected: str | None = None
 
 class Fill(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     action_accent: str | None = None
     action_accent_dim: str | None = None
     action_accent_film: str | None = None
@@ -165,13 +165,13 @@ class Fill(BaseModel):
     skeleton_pressed: str | None = None
 
 class Onalt(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     text_01: str | None = None
     text_02: str | None = None
     text_03: str | None = None
 
 class Onbase(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     text_01: str | None = None
     text_02: str | None = None
     text_03: str | None = None
@@ -181,17 +181,17 @@ class Onbase(BaseModel):
     text_notify_message: str | None = None
 
 class Foreground(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     onalt: Onalt | None = None
     onbase: Onbase | None = None
 
 class Indicator1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     fill_background: str | None = None
     fill_foreground_loud: str | None = None
 
 class FieldModel(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     action_fill_focus: str | None = None
     action_icon_focus: str | None = None
     action_icon_on_focus: str | None = None
@@ -199,20 +199,20 @@ class FieldModel(BaseModel):
     text_focus: str | None = None
 
 class Option2(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     fill_radio_selected: str | None = None
     outline_selected: str | None = None
     outline_unselected: str | None = None
     text_label: str | None = None
 
 class Toggle1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     icon_thumb: str | None = None
     outline_selected: str | None = None
     outline_unselected: str | None = None
 
 class Input2(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     field: FieldModel | None = None
     option: Option2 | None = None
     outline_active: str | None = None
@@ -221,17 +221,17 @@ class Input2(BaseModel):
     toggle: Toggle1 | None = None
 
 class Keyboard(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     focus_alt: str | None = None
     focus_base: str | None = None
 
 class Banner(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     text_error: str | None = None
     text_message: str | None = None
 
 class Notify1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     banner: Banner | None = None
     icon_error: str | None = None
     icon_message: str | None = None
@@ -239,18 +239,18 @@ class Notify1(BaseModel):
     outline_message: str | None = None
 
 class Onbase1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     outline_01: str | None = None
     outline_02: str | None = None
     outline_03: str | None = None
     outline_04: str | None = None
 
 class Stroke1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     onbase: Onbase1 | None = None
 
 class ColorToken(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     background: Background | None = None
     badge: Badge | None = None
     button: Button | None = None
@@ -265,7 +265,7 @@ class ColorToken(BaseModel):
     transparent: str | None = None
 
 class Gutter(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     bp_01: int | None = None
     bp_03: int | None = None
     bp_04: int | None = None
@@ -273,7 +273,7 @@ class Gutter(BaseModel):
     bp_06: int | None = None
 
 class Margin(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     bp_01: int | None = None
     bp_03: int | None = None
     bp_04: int | None = None
@@ -281,7 +281,7 @@ class Margin(BaseModel):
     bp_06: int | None = None
 
 class MarginOffset(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     bp_01: int | None = None
     bp_03: int | None = None
     bp_04: int | None = None
@@ -289,7 +289,7 @@ class MarginOffset(BaseModel):
     bp_06: int | None = None
 
 class Vertical(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     bp_01: int | None = None
     bp_03: int | None = None
     bp_04: int | None = None
@@ -297,7 +297,7 @@ class Vertical(BaseModel):
     bp_06: int | None = None
 
 class Universal(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     field_12: int | None = Field(None, alias='_12')
     field_16: int | None = Field(None, alias='_16')
     field_20: int | None = Field(None, alias='_20')
@@ -320,7 +320,7 @@ class Universal(BaseModel):
     field_08: int | None = Field(None, alias='_08')
 
 class SpacerToken(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     gutter: Gutter | None = None
     margin: Margin | None = None
     margin_offset: MarginOffset | None = None
@@ -328,14 +328,14 @@ class SpacerToken(BaseModel):
     universal: Universal | None = None
 
 class Page(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     surface_accent: str | None = Field(None, alias='surface-accent')
     surface_00: str | None = Field(None, alias='surface-00')
     surface_default: str | None = Field(None, alias='surface-default')
     surface_basic: str | None = Field(None, alias='surface-basic')
 
 class Band(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     surface_fill_01: str | None = Field(None, alias='surface-fill-01')
     surface_fill_02: str | None = Field(None, alias='surface-fill-02')
     action_light: str | None = Field(None, alias='action-light')
@@ -344,7 +344,7 @@ class Band(BaseModel):
     surface_fill_gradient_02: str | None = Field(None, alias='surface-fill-gradient-02')
 
 class Column(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     surface_fill_01: str | None = Field(None, alias='surface-fill-01')
     surface_fill_02: str | None = Field(None, alias='surface-fill-02')
     action_light: str | None = Field(None, alias='action-light')
@@ -353,13 +353,13 @@ class Column(BaseModel):
     surface_fill_gradient_02: str | None = Field(None, alias='surface-fill-gradient-02')
 
 class Backgrounds(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     page: Page | None = None
     band: Band | None = None
     column: Column | None = None
 
 class ResolvedTheme(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     border_token: BorderToken | None = Field(None, alias='BorderToken')
     color_token: ColorToken | None = Field(None, alias='ColorToken')
     spacer_token: SpacerToken | None = Field(None, alias='SpacerToken')
@@ -367,69 +367,69 @@ class ResolvedTheme(BaseModel):
     font_family: str | None = Field(None, alias='fontFamily')
 
 class TenantStyles(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     design_systems: str | None = Field(None, alias='designSystems')
     tenant_styles: str | None = Field(None, alias='tenantStyles')
 
 class AuthState(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class SignIn(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class User(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     auth_state: AuthState | None = Field(None, alias='authState')
     sign_in: SignIn | None = Field(None, alias='signIn')
 
 class PageView(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class PageName(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class AnalyticsTitle(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class PreviousPageName(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class SiteSection(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class PageCategory(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class UserCountry(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class UserLanguage(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class UserRegion(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class UserCity(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class UserContinent(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class Navigation(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     page_view: PageView | None = Field(None, alias='pageView')
     page_name: PageName | None = Field(None, alias='pageName')
     analytics_title: AnalyticsTitle | None = Field(None, alias='analyticsTitle')
@@ -443,47 +443,47 @@ class Navigation(BaseModel):
     user_continent: UserContinent | None = Field(None, alias='userContinent')
 
 class ModuleName(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class BandName(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class Headline(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class PageDepth(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class Interaction(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class CardType(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class CarouselPosition(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class EventAction(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class ElementType(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class EventLabel(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class Module(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     module_name: ModuleName | None = Field(None, alias='moduleName')
     band_name: BandName | None = Field(None, alias='bandName')
     headline: Headline | None = None
@@ -496,61 +496,61 @@ class Module(BaseModel):
     event_label: EventLabel | None = Field(None, alias='eventLabel')
 
 class Modal(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     event_action: EventAction | None = Field(None, alias='eventAction')
     element_type: ElementType | None = Field(None, alias='elementType')
     event_label: EventLabel | None = Field(None, alias='eventLabel')
 
 class Category(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class Title(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class VideoType(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class ContentId(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class Genre(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class SeasonNumber(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class EpisodeNumber(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class CurrentTime(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class AltText(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class PlayerAction(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class IsPopupVideo(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class Autoplay(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class Video(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     category: Category | None = None
     title: Title | None = None
     video_type: VideoType | None = Field(None, alias='videoType')
@@ -565,31 +565,31 @@ class Video(BaseModel):
     autoplay: Autoplay | None = None
 
 class LinkUrl(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class ContentName(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class ContentCategory(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class CastAndCrew(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class RatingCode(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class Brand(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class Content(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     alt_text: AltText | None = Field(None, alias='altText')
     link_url: LinkUrl | None = Field(None, alias='linkURL')
     content_id: ContentId | None = Field(None, alias='contentID')
@@ -602,56 +602,56 @@ class Content(BaseModel):
     element_type: ElementType | None = Field(None, alias='elementType')
 
 class Text(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class Element(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class Destination(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class Cta(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     text: Text | None = None
     element: Element | None = None
     destination: Destination | None = None
 
 class GateAction(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class GateElement(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class GatedContentTitle(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class Gate(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     gate_action: GateAction | None = Field(None, alias='gateAction')
     gate_element: GateElement | None = Field(None, alias='gateElement')
     gated_content_title: GatedContentTitle | None = Field(None, alias='gatedContentTitle')
 
 class EmailSubmissionSuccess(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class B2bFieldValue(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     data_layer: str | None = Field(None, alias='dataLayer')
 
 class Email(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     email_submission_success: EmailSubmissionSuccess | None = Field(None, alias='emailSubmissionSuccess')
     b2b_field_value: B2bFieldValue | None = Field(None, alias='b2bFieldValue')
 
 class Schemas(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     user: User | None = None
     navigation: Navigation | None = None
     module: Module | None = None
@@ -663,7 +663,7 @@ class Schemas(BaseModel):
     email: Email | None = None
 
 class Navigation1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     page_view: list[str] | None = Field(None, alias='pageView')
     page_name: list[str] | None = Field(None, alias='pageName')
     analytics_title: list[str] | None = Field(None, alias='analyticsTitle')
@@ -677,11 +677,11 @@ class Navigation1(BaseModel):
     user_continent: list[str] | None = Field(None, alias='userContinent')
 
 class User1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     sign_in: list[str] | None = Field(None, alias='signIn')
 
 class Content1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     content_id: list[str] | None = Field(None, alias='contentID')
     content_name: list[str] | None = Field(None, alias='contentName')
     content_category: list[str] | None = Field(None, alias='contentCategory')
@@ -692,19 +692,19 @@ class Content1(BaseModel):
     link_url: list[str] | None = Field(None, alias='linkURL')
 
 class PageTrack(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     navigation: Navigation1 | None = None
     user: User1 | None = None
     content: Content1 | None = None
 
 class Cta1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     text: list[str] | None = None
     element: list[str] | None = None
     destination: list[str] | None = None
 
 class Module1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     module_name: list[str] | None = Field(None, alias='moduleName')
     band_name: list[str] | None = Field(None, alias='bandName')
     headline: list[str] | None = None
@@ -717,7 +717,7 @@ class Module1(BaseModel):
     event_label: list[str] | None = Field(None, alias='eventLabel')
 
 class Video1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     category: list[str] | None = None
     title: list[str] | None = None
     video_type: list[str] | None = Field(None, alias='videoType')
@@ -730,7 +730,7 @@ class Video1(BaseModel):
     autoplay: list[str] | None = None
 
 class Content2(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     alt_text: list[str] | None = Field(None, alias='altText')
     link_url: list[str] | None = Field(None, alias='linkURL')
     content_id: list[str] | None = Field(None, alias='contentID')
@@ -742,14 +742,14 @@ class Content2(BaseModel):
     element_type: list[str] | None = Field(None, alias='elementType')
 
 class Click(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     cta: Cta1 | None = None
     module: Module1 | None = None
     video: Video1 | None = None
     content: Content2 | None = None
 
 class Module2(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     module_name: list[str] | None = Field(None, alias='moduleName')
     band_name: list[str] | None = Field(None, alias='bandName')
     page_depth: list[str] | None = Field(None, alias='pageDepth')
@@ -758,7 +758,7 @@ class Module2(BaseModel):
     carousel_position: list[str] | None = Field(None, alias='carouselPosition')
 
 class Video2(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     category: list[str] | None = None
     title: list[str] | None = None
     video_type: list[str] | None = Field(None, alias='videoType')
@@ -773,12 +773,12 @@ class Video2(BaseModel):
     autoplay: list[str] | None = None
 
 class VideoPlayer(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     module: Module2 | None = None
     video: Video2 | None = None
 
 class Module3(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     module_name: list[str] | None = Field(None, alias='moduleName')
     band_name: list[str] | None = Field(None, alias='bandName')
     headline: list[str] | None = None
@@ -786,35 +786,35 @@ class Module3(BaseModel):
     interaction: list[str] | None = None
 
 class Gate1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     gate_action: list[str] | None = Field(None, alias='gateAction')
     gate_element: list[str] | None = Field(None, alias='gateElement')
     gated_content_title: list[str] | None = Field(None, alias='gatedContentTitle')
 
 class Gating(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     module: Module3 | None = None
     gate: Gate1 | None = None
 
 class Module4(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     module_name: list[str] | None = Field(None, alias='moduleName')
     band_name: list[str] | None = Field(None, alias='bandName')
     page_depth: list[str] | None = Field(None, alias='pageDepth')
 
 class Email2(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     email_submission_success: list[str] | None = Field(None, alias='emailSubmissionSuccess')
     b2b_field_value: list[str] | None = Field(None, alias='b2bFieldValue')
 
 class Email1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     module: Module4 | None = None
     email: Email2 | None = None
     cta: Cta1 | None = None
 
 class Events(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     page_track: PageTrack | None = Field(None, alias='pageTrack')
     click: Click | None = None
     video_player: VideoPlayer | None = Field(None, alias='videoPlayer')
@@ -822,12 +822,12 @@ class Events(BaseModel):
     email: Email1 | None = None
 
 class AnalyticsMapping(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     schemas: Schemas | None = None
     events: Events | None = None
 
 class RelatedAppUrls(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     account: str | None = None
     add_on: str | None = Field(None, alias='addOn')
     create_account: str | None = Field(None, alias='createAccount')
@@ -838,43 +838,134 @@ class RelatedAppUrls(BaseModel):
     subscribe: str | None = None
 
 class AnalyticsConfig(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     analytics_mapping: AnalyticsMapping | None = Field(None, alias='analyticsMapping')
     frameworks: list[Any] | None = None
     related_app_urls: RelatedAppUrls | None = Field(None, alias='relatedAppUrls')
 
 class BrazeConfig(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     braze_endpoint: Any | None = Field(None, alias='brazeEndpoint')
     ek: Any | None = None
     email_signup_source: str | None = Field(None, alias='emailSignupSource')
     eps: str | None = None
 
 class UsEs(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class AtEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class AtDe(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class DeEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class DeDe(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class LiEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class LiDe(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class LuEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class LuFr(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class LuDe(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class ChEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class ChFr(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class ChDe(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class ChIt(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     url: str | None = None
     start_date: AwareDatetime | None = Field(None, alias='startDate')
     end_date: AwareDatetime | None = Field(None, alias='endDate')
 
 class AuEn(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     url: str | None = None
     start_date: AwareDatetime | None = Field(None, alias='startDate')
     end_date: AwareDatetime | None = Field(None, alias='endDate')
 
 class CountryLangUris(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     us_es: UsEs | None = Field(None, alias='us/es')
+    at_en: AtEn | None = Field(None, alias='at/en')
+    at_de: AtDe | None = Field(None, alias='at/de')
+    de_en: DeEn | None = Field(None, alias='de/en')
+    de_de: DeDe | None = Field(None, alias='de/de')
+    li_en: LiEn | None = Field(None, alias='li/en')
+    li_de: LiDe | None = Field(None, alias='li/de')
+    lu_en: LuEn | None = Field(None, alias='lu/en')
+    lu_fr: LuFr | None = Field(None, alias='lu/fr')
+    lu_de: LuDe | None = Field(None, alias='lu/de')
+    ch_en: ChEn | None = Field(None, alias='ch/en')
+    ch_fr: ChFr | None = Field(None, alias='ch/fr')
+    ch_de: ChDe | None = Field(None, alias='ch/de')
+    ch_it: ChIt | None = Field(None, alias='ch/it')
     au_en: AuEn | None = Field(None, alias='au/en')
 
 class CountryMapping(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     language: str | None = None
     country_code: str | None = Field(None, alias='countryCode')
     bcp47_code: str | None = Field(None, alias='bcp47Code')
 
 class CountryToDefaultLang(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     bn: str | None = Field(None, alias='BN')
     mo: str | None = Field(None, alias='MO')
     bo: str | None = Field(None, alias='BO')
@@ -1019,7 +1110,7 @@ class CountryToDefaultLang(BaseModel):
     ad: str | None = Field(None, alias='AD')
 
 class CountryToRegion(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     mc: str | None = None
     hk: str | None = None
     tw: str | None = None
@@ -1179,13 +1270,13 @@ class CountryToRegion(BaseModel):
     to: str | None = None
 
 class LanguageVariables(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     lang: str | None = None
     country: str | None = None
     region: str | None = None
 
 class Flags(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     has_audio_description: bool | None = Field(None, alias='hasAudioDescription')
     is_uhd: bool | None = Field(None, alias='isUHD')
     has_dolby_atmos: bool | None = Field(None, alias='hasDolbyAtmos')
@@ -1193,7 +1284,7 @@ class Flags(BaseModel):
     has_pse_advisory: bool | None = Field(None, alias='hasPSEAdvisory')
 
 class Trailer(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     program_id: Any | None = Field(None, alias='programId')
     edit_id: Any | None = Field(None, alias='editId')
     title: Any | None = None
@@ -1201,17 +1292,17 @@ class Trailer(BaseModel):
     url: Any | None = None
 
 class OfferingDates(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     start_date: AwareDatetime | None = Field(None, alias='startDate')
     end_date: AwareDatetime | None = Field(None, alias='endDate')
 
 class Title1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     short: str | None = None
     full: str | None = None
 
 class Credits(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     starring: str | None = None
     directors: str | None = None
     writers: str | None = None
@@ -1221,12 +1312,12 @@ class Credits(BaseModel):
     sign_interpreters: str | None = Field(None, alias='signInterpreters')
 
 class ActorItem(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     field_type: str | None = Field(None, alias='@type')
     name: str | None = None
 
 class CastAndCrew1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     actor: list[ActorItem] | None = Field(None, alias='Actor')
     cast: Any | None = Field(None, alias='Cast')
     producer: Any | None = Field(None, alias='Producer')
@@ -1234,33 +1325,33 @@ class CastAndCrew1(BaseModel):
     writer: Any | None = Field(None, alias='Writer')
 
 class Summary(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     short: str | None = None
     full: str | None = None
 
 class Images(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     default_wide: str | None = Field(None, alias='default-wide')
-    default: str | None = None
     centered_background_small: str | None = Field(None, alias='centered-background-small')
+    default: str | None = None
     centered_background: str | None = Field(None, alias='centered-background')
     cover_artwork: str | None = Field(None, alias='cover-artwork')
     logo_left: str | None = Field(None, alias='logo-left')
     content_logo_monochromatic: str | None = Field(None, alias='content-logo-monochromatic')
     logo_centered: str | None = Field(None, alias='logo-centered')
-    poster_with_logo: str | None = Field(None, alias='poster-with-logo')
     content_logo_polychromatic: str | None = Field(None, alias='content-logo-polychromatic')
+    poster_with_logo: str | None = Field(None, alias='poster-with-logo')
     cover_artwork_horizontal: str | None = Field(None, alias='cover-artwork-horizontal')
     cover_artwork_square: str | None = Field(None, alias='cover-artwork-square')
 
 class LocalizedRating(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     rating_authority: str | None = None
     classifier: str | None = None
     descriptors: list[Any] | None = None
 
 class Idref14(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     image_url_link: str | None = Field(None, alias='imageUrlLink')
     feature_id: UUID | None = Field(None, alias='featureId')
     hbomax_id: UUID | None = Field(None, alias='hbomaxId')
@@ -1288,91 +1379,91 @@ class Idref14(BaseModel):
     localized_rating: LocalizedRating | None = Field(None, alias='localizedRating')
 
 class Default(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     en_us: str | None = Field(None, alias='en_US')
     url: str | None = None
 
 class Mobile(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     en_us: str | None = Field(None, alias='en_US')
     url: str | None = None
 
 class BrowseAudioDescription(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     default: Default | None = None
     mobile: Mobile | None = None
 
 class Default1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     en_us: str | None = Field(None, alias='en_US')
 
 class Mobile1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     en_us: str | None = Field(None, alias='en_US')
 
 class UnauthLabel(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     default: Default1 | None = None
     mobile: Mobile1 | None = None
 
 class AuthLabel(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     default: Default1 | None = None
     mobile: Mobile1 | None = None
 
 class SecondaryCta(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     unauth_label: UnauthLabel | None = Field(None, alias='unauthLabel')
     unauth_url: str | None = Field(None, alias='unauthUrl')
     auth_url: str | None = Field(None, alias='authUrl')
     auth_label: AuthLabel | None = Field(None, alias='authLabel')
 
 class AltText2(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     en_us: str | None = Field(None, alias='en_US')
 
 class Logo(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     alt_text: AltText2 | None = Field(None, alias='altText')
     url: str | None = None
 
 class Label(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     en_us: str | None = Field(None, alias='en_US')
 
 class Link(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     label: Label | None = None
     url: str | None = Field(None, alias='URL')
 
 class SecondaryLink(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     link: Link | None = None
 
 class UnauthLabel1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     default: Default1 | None = None
     mobile: Mobile1 | None = None
 
 class AuthLabel1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     default: Default1 | None = None
     mobile: Mobile1 | None = None
 
 class PrimaryCta(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     unauth_label: UnauthLabel1 | None = Field(None, alias='unauthLabel')
     unauth_url: str | None = Field(None, alias='unauthUrl')
     auth_url: str | None = Field(None, alias='authUrl')
     auth_label: AuthLabel1 | None = Field(None, alias='authLabel')
 
 class SkipToContent(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     default: Default1 | None = None
     mobile: Mobile1 | None = None
 
 class Idref15(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     browse_audio_description: BrowseAudioDescription | None = Field(None, alias='browseAudioDescription')
     secondary_cta: SecondaryCta | None = Field(None, alias='secondaryCta')
     logo: Logo | None = None
@@ -1381,200 +1472,185 @@ class Idref15(BaseModel):
     skip_to_content: SkipToContent | None = Field(None, alias='skipToContent')
 
 class Idref16Item(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     lang: str | None = None
     url: str | None = None
 
 class UnauthLabel2(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     default: Default1 | None = None
     mobile: Mobile1 | None = None
 
 class AuthLabel2(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     default: Default1 | None = None
     mobile: Mobile1 | None = None
 
 class SecondaryCta1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     unauth_label: UnauthLabel2 | None = Field(None, alias='unauthLabel')
     unauth_url: str | None = Field(None, alias='unauthUrl')
     auth_url: str | None = Field(None, alias='authUrl')
     auth_label: AuthLabel2 | None = Field(None, alias='authLabel')
 
 class Logo1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     alt_text: AltText2 | None = Field(None, alias='altText')
     url: str | None = None
 
 class SkipToContent1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     default: Default1 | None = None
     mobile: Mobile1 | None = None
 
 class Idref19(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     secondary_cta: SecondaryCta1 | None = Field(None, alias='secondaryCta')
     logo: Logo1 | None = None
     skip_to_content: SkipToContent1 | None = Field(None, alias='skipToContent')
 
 class Value(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     large: str | None = None
 
 class Idref20(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     value: Value | None = None
 
 class MaxWidthidref20(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     large: int | None = None
 
 class MaxHeightidref20(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     large: int | None = None
 
 class Value1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     large: str | None = None
     medium: str | None = None
     small: str | None = None
 
 class Idref21(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     value: Value1 | None = None
 
 class MaxWidthidref21(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     large: int | None = None
     medium: int | None = None
     small: int | None = None
 
 class MaxHeightidref21(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     large: int | None = None
     medium: int | None = None
     small: int | None = None
 
 class Value2(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     large: str | None = None
 
 class Idref31(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     value: Value2 | None = None
 
 class MaxWidthidref31(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     large: int | None = None
 
 class MaxHeightidref31(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     large: int | None = None
 
 class Value3(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     large: str | None = None
     medium: str | None = None
     small: str | None = None
 
 class Idref32(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     value: Value3 | None = None
 
 class MaxWidthidref32(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     large: int | None = None
     medium: int | None = None
     small: int | None = None
 
 class MaxHeightidref32(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     large: int | None = None
     medium: int | None = None
     small: int | None = None
 
-class Images1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
-    default_wide: str | None = Field(None, alias='default-wide')
-    default: str | None = None
-    centered_background_small: str | None = Field(None, alias='centered-background-small')
-    centered_background: str | None = Field(None, alias='centered-background')
-    cover_artwork: str | None = Field(None, alias='cover-artwork')
-    logo_left: str | None = Field(None, alias='logo-left')
-    content_logo_monochromatic: str | None = Field(None, alias='content-logo-monochromatic')
-    logo_centered: str | None = Field(None, alias='logo-centered')
-    poster_with_logo: str | None = Field(None, alias='poster-with-logo')
-    content_logo_polychromatic: str | None = Field(None, alias='content-logo-polychromatic')
-    cover_artwork_square: str | None = Field(None, alias='cover-artwork-square')
-    cover_artwork_horizontal: str | None = Field(None, alias='cover-artwork-horizontal')
-
 class Idref45Item(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     hbomax_id: UUID | None = Field(None, alias='hbomaxId')
     type: str | None = None
     title: Title1 | None = None
     image_url_link: str | None = Field(None, alias='imageUrlLink')
-    images: Images1 | None = None
+    images: Images | None = None
     offering_dates: OfferingDates | None = Field(None, alias='offeringDates')
-    localized_rating: Any | None = Field(None, alias='localizedRating')
+    localized_rating: Any | LocalizedRating | None = Field(None, alias='localizedRating')
     genres: list[Any] | None = None
     rank: Any | None = None
 
 class FirstItem(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     title: Title1 | None = None
 
 class Description(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     short: Any | None = None
     full: Any | None = None
 
 class Image(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     default_wide: str | None = Field(None, alias='default-wide')
-    default: str | None = None
     centered_background_small: str | None = Field(None, alias='centered-background-small')
+    default: str | None = None
     centered_background: str | None = Field(None, alias='centered-background')
     cover_artwork: str | None = Field(None, alias='cover-artwork')
     logo_left: str | None = Field(None, alias='logo-left')
     content_logo_monochromatic: str | None = Field(None, alias='content-logo-monochromatic')
     logo_centered: str | None = Field(None, alias='logo-centered')
-    poster_with_logo: str | None = Field(None, alias='poster-with-logo')
     content_logo_polychromatic: str | None = Field(None, alias='content-logo-polychromatic')
-    cover_artwork_horizontal: str | None = Field(None, alias='cover-artwork-horizontal')
+    poster_with_logo: str | None = Field(None, alias='poster-with-logo')
     cover_artwork_square: str | None = Field(None, alias='cover-artwork-square')
+    cover_artwork_horizontal: str | None = Field(None, alias='cover-artwork-horizontal')
 
 class RatingCodeItem(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     code: list[str] | None = None
     organization: str | None = None
     rating_code: timedelta | str | None = Field(default=None, union_mode='left_to_right')
 
 class Title5(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     full_original: Any | None = None
     short_original: Any | None = None
     short: str | None = None
     full: str | None = None
 
 class Images2(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     default_wide: str | None = Field(None, alias='default-wide')
-    default: str | None = None
     centered_background_small: str | None = Field(None, alias='centered-background-small')
+    default: str | None = None
     centered_background: str | None = Field(None, alias='centered-background')
     cover_artwork: str | None = Field(None, alias='cover-artwork')
     logo_left: str | None = Field(None, alias='logo-left')
     content_logo_monochromatic: str | None = Field(None, alias='content-logo-monochromatic')
     logo_centered: str | None = Field(None, alias='logo-centered')
-    poster_with_logo: str | None = Field(None, alias='poster-with-logo')
     content_logo_polychromatic: str | None = Field(None, alias='content-logo-polychromatic')
-    cover_artwork_horizontal: str | None = Field(None, alias='cover-artwork-horizontal')
+    poster_with_logo: str | None = Field(None, alias='poster-with-logo')
     cover_artwork_square: str | None = Field(None, alias='cover-artwork-square')
+    cover_artwork_horizontal: str | None = Field(None, alias='cover-artwork-horizontal')
 
 class Item(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     field__typename: str | None = Field(None, alias='__typename')
     series_id: UUID | None = Field(None, alias='seriesId')
     hbomax_url: Any | None = Field(None, alias='hbomaxURL')
@@ -1595,7 +1671,7 @@ class Item(BaseModel):
     url: Any | None = None
 
 class Idref46(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     collection_id: str | None = Field(None, alias='collectionId')
     image_to_show: str | None = Field(None, alias='imageToShow')
     first_item: FirstItem | None = Field(None, alias='firstItem')
@@ -1606,59 +1682,29 @@ class Idref46(BaseModel):
     items: list[Item] | None = None
 
 class Title6(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     short: str | None = None
     full: str | None = None
 
 class FirstItem1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     title: Title6 | None = None
 
-class Image1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
-    default_wide: str | None = Field(None, alias='default-wide')
-    centered_background_small: str | None = Field(None, alias='centered-background-small')
-    default: str | None = None
-    centered_background: str | None = Field(None, alias='centered-background')
-    cover_artwork: str | None = Field(None, alias='cover-artwork')
-    logo_left: str | None = Field(None, alias='logo-left')
-    content_logo_monochromatic: str | None = Field(None, alias='content-logo-monochromatic')
-    logo_centered: str | None = Field(None, alias='logo-centered')
-    content_logo_polychromatic: str | None = Field(None, alias='content-logo-polychromatic')
-    poster_with_logo: str | None = Field(None, alias='poster-with-logo')
-    cover_artwork_square: str | None = Field(None, alias='cover-artwork-square')
-    cover_artwork_horizontal: str | None = Field(None, alias='cover-artwork-horizontal')
-
 class RatingCodeItem1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     code: list[str] | None = None
     organization: str | None = None
     rating_code: str | None = None
 
 class Title8(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     full_original: Any | None = None
     short_original: Any | None = None
     short: str | None = None
     full: str | None = None
 
-class Images3(BaseModel):
-    model_config = ConfigDict(extra='ignore')
-    default_wide: str | None = Field(None, alias='default-wide')
-    centered_background_small: str | None = Field(None, alias='centered-background-small')
-    default: str | None = None
-    centered_background: str | None = Field(None, alias='centered-background')
-    cover_artwork: str | None = Field(None, alias='cover-artwork')
-    logo_left: str | None = Field(None, alias='logo-left')
-    content_logo_monochromatic: str | None = Field(None, alias='content-logo-monochromatic')
-    logo_centered: str | None = Field(None, alias='logo-centered')
-    content_logo_polychromatic: str | None = Field(None, alias='content-logo-polychromatic')
-    poster_with_logo: str | None = Field(None, alias='poster-with-logo')
-    cover_artwork_square: str | None = Field(None, alias='cover-artwork-square')
-    cover_artwork_horizontal: str | None = Field(None, alias='cover-artwork-horizontal')
-
 class Item1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     field__typename: str | None = Field(None, alias='__typename')
     series_id: UUID | None = Field(None, alias='seriesId')
     hbomax_url: Any | None = Field(None, alias='hbomaxURL')
@@ -1672,69 +1718,69 @@ class Item1(BaseModel):
     offering_dates: OfferingDates | None = Field(None, alias='offeringDates')
     title: Title8 | None = None
     summary: Summary | None = None
-    images: Images3 | None = None
+    images: Images2 | None = None
     status: str | None = None
     feature_id: UUID | None = Field(None, alias='featureId')
     url: Any | None = None
 
 class Idref60(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     collection_id: str | None = Field(None, alias='collectionId')
     image_to_show: str | None = Field(None, alias='imageToShow')
     first_item: FirstItem1 | None = Field(None, alias='firstItem')
     title: Title6 | None = None
     description: Description | None = None
-    image: Image1 | None = None
+    image: Image | None = None
     event_type: str | None = Field(None, alias='eventType')
     items: list[Item1] | None = None
 
 class Idref61Item(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     lang: str | None = None
     url: str | None = None
 
 class Legal(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     en_us: str | None = Field(None, alias='en_US')
 
 class SecondaryRowItem(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     label: Label | None = None
     url: str | None = None
     open_in_new_tab: bool | None = Field(None, alias='openInNewTab')
     is_ccpa_link: bool | None = Field(None, alias='isCCPALink')
 
 class PrimaryRowItem(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     label: Label | None = None
     url: str | None = None
 
 class Idref63(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     legal: Legal | None = None
     secondary_row: list[SecondaryRowItem] | None = Field(None, alias='secondaryRow')
     primary_row: list[PrimaryRowItem] | None = Field(None, alias='primaryRow')
 
 class SecondaryRowItem1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     label: Label | None = None
     url: str | None = None
     open_in_new_tab: bool | None = Field(None, alias='openInNewTab')
     is_ccpa_link: bool | None = Field(None, alias='isCCPALink')
 
 class PrimaryRowItem1(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     label: Label | None = None
     url: str | None = None
 
 class Idref64(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     legal: Legal | None = None
     secondary_row: list[SecondaryRowItem1] | None = Field(None, alias='secondaryRow')
     primary_row: list[PrimaryRowItem1] | None = Field(None, alias='primaryRow')
 
 class MappedData(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     idref0: str | None = None
     idref1: str | None = None
     idref2: str | None = None
@@ -1815,12 +1861,12 @@ class MappedData(BaseModel):
     idref69: str | None = None
 
 class MediaMelonConfig(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     is_media_melon_enabled: bool | None = Field(None, alias='IS_MEDIA_MELON_ENABLED')
     mm_environment_key: int | None = Field(None, alias='MM_ENVIRONMENT_KEY')
 
 class PageProps(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     developer_panel_config: DeveloperPanelConfig | None = Field(None, alias='developerPanelConfig')
     is_published: bool | None = Field(None, alias='isPublished')
     media_app_id: str | None = Field(None, alias='mediaAppId')
@@ -1880,17 +1926,17 @@ class PageProps(BaseModel):
     utm_params: list[str] | None = Field(None, alias='utmParams')
 
 class Props(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     page_props: PageProps | None = Field(None, alias='pageProps')
     field__n_ssp: bool | None = Field(None, alias='__N_SSP')
 
 class Query(BaseModel):
-    model_config = ConfigDict(extra='ignore')
-    lid: str | None = None
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     slug: list[str | UUID] | None = None
+    lid: str | None = None
 
 class MovieModel(BaseModel):
-    model_config = ConfigDict(extra='ignore')
+    model_config = ConfigDict(extra='ignore', defer_build=True)
     props: Props | None = None
     page: str | None = None
     query: Query | None = None

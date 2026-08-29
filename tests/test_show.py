@@ -80,6 +80,10 @@ def test_parse(
             "00000000-0000-0000-0000-000000000000",
             id="show that does not exist",
         ),
+        pytest.param(
+            "14a0d4dc-79f0-40f1-8967-fded774b2593",
+            id="movie asked for as a show",
+        ),
     ],
 )
 def test_download_invalid(client: MinBO, show_id: str) -> None:

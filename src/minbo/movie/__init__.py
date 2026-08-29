@@ -66,13 +66,15 @@ class Movie(BaseEndpoint):
     # TODO: Validate
     def _validate_download(self, response: str, movie_id: str) -> str:
         # The page names what it was built from by position, so every field on
-        # it sits under an idrefN key and the movie is always idref14.
+        # it sits under an idrefN key and the movie is always idref14. A show
+        # is served from the same address and carries a seriesId there
+        # instead, so an id that is not a movie reads as no movie being found.
         movie = json.loads(response)["props"]["pageProps"]["mappedData"]["idref14"]
-        if movie["featureId"] != movie_id:
+        if movie.get("featureId") != movie_id:
             raise MovieNotFoundError(movie_id, HTTPStatus.OK, response)
         return response
 
     # TODO: Validate
     def load(self, data: str, log_id: str = "") -> MovieModel:
         """Read a downloaded movie file into its model."""
-        return model_validate_json(data, log_id or type(self).__name__)
+        return model_validate_json(data, log_id or self.default_log_id)
