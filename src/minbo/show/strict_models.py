@@ -2948,7 +2948,7 @@ class Item1(BaseModel):
     status: str
     badges: list[None]
     feature_id: UUID | None = Field(None, alias='featureId')
-    url: None = None
+    url: None = Field(None)
 
 class Idref53(BaseModel):
     model_config = ConfigDict(defer_build=True)
@@ -3031,7 +3031,7 @@ class Item2(BaseModel):
     images: Images5
     status: str
     feature_id: UUID | None = Field(None, alias='featureId')
-    url: None = None
+    url: None = Field(None)
 
 class Idref68(BaseModel):
     model_config = ConfigDict(defer_build=True)
