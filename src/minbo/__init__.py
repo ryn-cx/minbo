@@ -19,6 +19,12 @@ logger.addHandler(NullHandler())
 
 API_DOMAIN = "www.hbomax.com"
 
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+)
+"""The site blocks any request whose user agent is not a browser."""
+
 NEXT_DATA_RE = re.compile(
     r'<script id="__NEXT_DATA__"[^>]*>(?P<json>.*?)</script>',
     re.DOTALL,
@@ -59,7 +65,7 @@ class MinBO:
     def _headers(self) -> dict[str, str]:
         return {
             # "Host": Set by httpx
-            # "User-Agent":  Set by httpx
+            "User-Agent": USER_AGENT,
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
             "Accept-Language": "en-US,en;q=0.9",
             # "Accept-Encoding": Set by httpx

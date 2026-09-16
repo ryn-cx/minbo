@@ -367,6 +367,11 @@ class ResolvedTheme(BaseModel):
     backgrounds: Backgrounds
     font_family: str = Field(..., alias='fontFamily')
 
+class TenantStyles(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    design_systems: str = Field(..., alias='designSystems')
+    tenant_styles: str = Field(..., alias='tenantStyles')
+
 class AuthState(BaseModel):
     model_config = ConfigDict(defer_build=True)
     data_layer: str = Field(..., alias='dataLayer')
@@ -852,6 +857,462 @@ class UsEs(BaseModel):
     start_date: AwareDatetime = Field(..., alias='startDate')
     end_date: AwareDatetime = Field(..., alias='endDate')
 
+class AlEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class AdEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class AdEs(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class AmEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class AmRu(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class BeNl(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class BeEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class BeFr(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class BaHr(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class BaEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class BgBg(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class BgEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class HrHr(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class HrEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class CyEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class CyEl(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class CzCs(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class CzEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class DkDa(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class DkEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class EeEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class EeEt(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class FiEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class FiFi(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class FrEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class FrFr(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class GeEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class GeRu(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class GrEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class GrEl(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class HuEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class HuHu(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class IsEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class IlEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class IlHe(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class KzEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class KzRu(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class KgEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class KgRu(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class LvEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class LvLv(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class LtEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class LtLt(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class MkEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class MkMk(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class MtEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class MdEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class MdRo(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class MeEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class MeSr(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class NlNl(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class NlEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class NoEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class NoNo(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class PlEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class PlPl(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class PtEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class PtPt(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class RoEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class RoRo(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class RsEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class RsSr(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class SkEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class SkSk(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class SiEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class SiSl(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class EsEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class EsEs(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class SeEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class SeSv(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class TjEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class TjRu(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class TrEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class TrTr(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class UaEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class UaUk(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
 class MyEn(BaseModel):
     model_config = ConfigDict(defer_build=True)
     url: str
@@ -1140,156 +1601,6 @@ class TkEn(BaseModel):
     start_date: AwareDatetime = Field(..., alias='startDate')
     end_date: AwareDatetime = Field(..., alias='endDate')
 
-class GrEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class IlEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class GrEl(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class IlHe(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class AlEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class AmEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class TjEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class CyEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class EeEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class GeEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class IsEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class KzEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class KgEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class LvEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class LtEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class MtEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class AmRu(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class TjRu(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class GeRu(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class KzRu(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class KgRu(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class CyEl(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class EeEt(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class LvLv(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class LtLt(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
 class HnEs(BaseModel):
     model_config = ConfigDict(defer_build=True)
     url: str
@@ -1512,307 +1823,109 @@ class BrPt(BaseModel):
     start_date: AwareDatetime = Field(..., alias='startDate')
     end_date: AwareDatetime = Field(..., alias='endDate')
 
-class FrEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class AdEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class BaEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class BgEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class HrEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class CzEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class DkEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class FiEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class HuEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class MkEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class MdEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class MeEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class NlEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class NoEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class PtEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class RoEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class RsEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class SkEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class SiEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class EsEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class SeEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class BeEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class TrEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class AdEs(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class EsEs(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class BaHr(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class HrHr(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class BgBg(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class CzCs(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class DkDa(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class FiFi(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class HuHu(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class MkMk(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class MdRo(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class RoRo(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class MeSr(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class RsSr(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class NoNo(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class PtPt(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class SkSk(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class SiSl(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class SeSv(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class FrFr(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class PlPl(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class NlNl(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class BeNl(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class BeFr(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class TrTr(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
 class ClEs(BaseModel):
     model_config = ConfigDict(defer_build=True)
     url: str
     start_date: AwareDatetime = Field(..., alias='startDate')
     end_date: AwareDatetime = Field(..., alias='endDate')
 
-class UaEn(BaseModel):
+class AtEn(BaseModel):
     model_config = ConfigDict(defer_build=True)
     url: str
     start_date: AwareDatetime = Field(..., alias='startDate')
     end_date: AwareDatetime = Field(..., alias='endDate')
 
-class UaUk(BaseModel):
+class AtDe(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class DeEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class DeDe(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class IeEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class ItEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class ItIt(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class LiEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class LiDe(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class LuEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class LuFr(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class LuDe(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class ChEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class ChFr(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class ChDe(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class ChIt(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class GbEn(BaseModel):
     model_config = ConfigDict(defer_build=True)
     url: str
     start_date: AwareDatetime = Field(..., alias='startDate')
@@ -1830,137 +1943,111 @@ class VnVi(BaseModel):
     start_date: AwareDatetime = Field(..., alias='startDate')
     end_date: AwareDatetime = Field(..., alias='endDate')
 
-class IeEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class GbEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class AtEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class DeEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class ItEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class LiEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class LuEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class ChEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class AtDe(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class DeDe(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class LiDe(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class LuDe(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class ChDe(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class LuFr(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class ChFr(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class ItIt(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class ChIt(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
 class CountryLangUris(BaseModel):
     model_config = ConfigDict(defer_build=True)
     us_es: UsEs = Field(..., alias='us/es')
-    my_en: MyEn | None = Field(None, alias='my/en')
-    hk_en: HkEn | None = Field(None, alias='hk/en')
-    ph_en: PhEn | None = Field(None, alias='ph/en')
-    tw_en: TwEn | None = Field(None, alias='tw/en')
+    al_en: AlEn = Field(..., alias='al/en')
+    ad_en: AdEn = Field(..., alias='ad/en')
+    ad_es: AdEs = Field(..., alias='ad/es')
+    am_en: AmEn = Field(..., alias='am/en')
+    am_ru: AmRu = Field(..., alias='am/ru')
+    be_nl: BeNl = Field(..., alias='be/nl')
+    be_en: BeEn = Field(..., alias='be/en')
+    be_fr: BeFr = Field(..., alias='be/fr')
+    ba_hr: BaHr = Field(..., alias='ba/hr')
+    ba_en: BaEn = Field(..., alias='ba/en')
+    bg_bg: BgBg = Field(..., alias='bg/bg')
+    bg_en: BgEn = Field(..., alias='bg/en')
+    hr_hr: HrHr = Field(..., alias='hr/hr')
+    hr_en: HrEn = Field(..., alias='hr/en')
+    cy_en: CyEn = Field(..., alias='cy/en')
+    cy_el: CyEl = Field(..., alias='cy/el')
+    cz_cs: CzCs = Field(..., alias='cz/cs')
+    cz_en: CzEn = Field(..., alias='cz/en')
+    dk_da: DkDa = Field(..., alias='dk/da')
+    dk_en: DkEn = Field(..., alias='dk/en')
+    ee_en: EeEn = Field(..., alias='ee/en')
+    ee_et: EeEt = Field(..., alias='ee/et')
+    fi_en: FiEn = Field(..., alias='fi/en')
+    fi_fi: FiFi = Field(..., alias='fi/fi')
+    fr_en: FrEn = Field(..., alias='fr/en')
+    fr_fr: FrFr = Field(..., alias='fr/fr')
+    ge_en: GeEn = Field(..., alias='ge/en')
+    ge_ru: GeRu = Field(..., alias='ge/ru')
+    gr_en: GrEn = Field(..., alias='gr/en')
+    gr_el: GrEl = Field(..., alias='gr/el')
+    hu_en: HuEn = Field(..., alias='hu/en')
+    hu_hu: HuHu = Field(..., alias='hu/hu')
+    is_en: IsEn = Field(..., alias='is/en')
+    il_en: IlEn = Field(..., alias='il/en')
+    il_he: IlHe = Field(..., alias='il/he')
+    kz_en: KzEn = Field(..., alias='kz/en')
+    kz_ru: KzRu = Field(..., alias='kz/ru')
+    kg_en: KgEn = Field(..., alias='kg/en')
+    kg_ru: KgRu = Field(..., alias='kg/ru')
+    lv_en: LvEn = Field(..., alias='lv/en')
+    lv_lv: LvLv = Field(..., alias='lv/lv')
+    lt_en: LtEn = Field(..., alias='lt/en')
+    lt_lt: LtLt = Field(..., alias='lt/lt')
+    mk_en: MkEn = Field(..., alias='mk/en')
+    mk_mk: MkMk = Field(..., alias='mk/mk')
+    mt_en: MtEn = Field(..., alias='mt/en')
+    md_en: MdEn = Field(..., alias='md/en')
+    md_ro: MdRo = Field(..., alias='md/ro')
+    me_en: MeEn = Field(..., alias='me/en')
+    me_sr: MeSr = Field(..., alias='me/sr')
+    nl_nl: NlNl = Field(..., alias='nl/nl')
+    nl_en: NlEn = Field(..., alias='nl/en')
+    no_en: NoEn = Field(..., alias='no/en')
+    no_no: NoNo = Field(..., alias='no/no')
+    pl_en: PlEn = Field(..., alias='pl/en')
+    pl_pl: PlPl = Field(..., alias='pl/pl')
+    pt_en: PtEn = Field(..., alias='pt/en')
+    pt_pt: PtPt = Field(..., alias='pt/pt')
+    ro_en: RoEn = Field(..., alias='ro/en')
+    ro_ro: RoRo = Field(..., alias='ro/ro')
+    rs_en: RsEn = Field(..., alias='rs/en')
+    rs_sr: RsSr = Field(..., alias='rs/sr')
+    sk_en: SkEn = Field(..., alias='sk/en')
+    sk_sk: SkSk = Field(..., alias='sk/sk')
+    si_en: SiEn = Field(..., alias='si/en')
+    si_sl: SiSl = Field(..., alias='si/sl')
+    es_en: EsEn = Field(..., alias='es/en')
+    es_es: EsEs = Field(..., alias='es/es')
+    se_en: SeEn = Field(..., alias='se/en')
+    se_sv: SeSv = Field(..., alias='se/sv')
+    tj_en: TjEn = Field(..., alias='tj/en')
+    tj_ru: TjRu = Field(..., alias='tj/ru')
+    tr_en: TrEn = Field(..., alias='tr/en')
+    tr_tr: TrTr = Field(..., alias='tr/tr')
+    ua_en: UaEn = Field(..., alias='ua/en')
+    ua_uk: UaUk = Field(..., alias='ua/uk')
+    my_en: MyEn = Field(..., alias='my/en')
+    hk_en: HkEn = Field(..., alias='hk/en')
+    ph_en: PhEn = Field(..., alias='ph/en')
+    tw_en: TwEn = Field(..., alias='tw/en')
     au_en: AuEn = Field(..., alias='au/en')
-    id_en: IdEn | None = Field(None, alias='id/en')
-    sg_en: SgEn | None = Field(None, alias='sg/en')
-    th_en: ThEn | None = Field(None, alias='th/en')
-    hk_zh: HkZh | None = Field(None, alias='hk/zh')
-    id_id: IdId | None = Field(None, alias='id/id')
-    my_ms: MyMs | None = Field(None, alias='my/ms')
-    sg_ms: SgMs | None = Field(None, alias='sg/ms')
-    my_zh: MyZh | None = Field(None, alias='my/zh')
-    sg_zh: SgZh | None = Field(None, alias='sg/zh')
-    ph_tl: PhTl | None = Field(None, alias='ph/tl')
-    tw_zh: TwZh | None = Field(None, alias='tw/zh')
-    th_th: ThTh | None = Field(None, alias='th/th')
-    bd_en: BdEn | None = Field(None, alias='bd/en')
+    id_en: IdEn = Field(..., alias='id/en')
+    sg_en: SgEn = Field(..., alias='sg/en')
+    th_en: ThEn = Field(..., alias='th/en')
+    hk_zh: HkZh = Field(..., alias='hk/zh')
+    id_id: IdId = Field(..., alias='id/id')
+    my_ms: MyMs = Field(..., alias='my/ms')
+    sg_ms: SgMs = Field(..., alias='sg/ms')
+    my_zh: MyZh = Field(..., alias='my/zh')
+    sg_zh: SgZh = Field(..., alias='sg/zh')
+    ph_tl: PhTl = Field(..., alias='ph/tl')
+    tw_zh: TwZh = Field(..., alias='tw/zh')
+    th_th: ThTh = Field(..., alias='th/th')
+    bd_en: BdEn = Field(..., alias='bd/en')
     bn_en: BnEn | None = Field(None, alias='bn/en')
     kh_en: KhEn | None = Field(None, alias='kh/en')
     la_en: LaEn | None = Field(None, alias='la/en')
     mo_en: MoEn | None = Field(None, alias='mo/en')
-    mn_en: MnEn | None = Field(None, alias='mn/en')
+    mn_en: MnEn = Field(..., alias='mn/en')
     mm_en: MmEn | None = Field(None, alias='mm/en')
     np_en: NpEn | None = Field(None, alias='np/en')
-    pk_en: PkEn | None = Field(None, alias='pk/en')
+    pk_en: PkEn = Field(..., alias='pk/en')
     pw_en: PwEn | None = Field(None, alias='pw/en')
     pg_en: PgEn | None = Field(None, alias='pg/en')
     sb_en: SbEn | None = Field(None, alias='sb/en')
@@ -1968,46 +2055,21 @@ class CountryLangUris(BaseModel):
     tl_en: TlEn | None = Field(None, alias='tl/en')
     bn_ms: BnMs | None = Field(None, alias='bn/ms')
     mo_zh: MoZh | None = Field(None, alias='mo/zh')
-    bt_en: BtEn | None = Field(None, alias='bt/en')
-    fj_en: FjEn | None = Field(None, alias='fj/en')
-    ki_en: KiEn | None = Field(None, alias='ki/en')
-    mv_en: MvEn | None = Field(None, alias='mv/en')
-    mh_en: MhEn | None = Field(None, alias='mh/en')
-    fm_en: FmEn | None = Field(None, alias='fm/en')
-    nr_en: NrEn | None = Field(None, alias='nr/en')
-    nu_en: NuEn | None = Field(None, alias='nu/en')
-    ws_en: WsEn | None = Field(None, alias='ws/en')
-    to_en: ToEn | None = Field(None, alias='to/en')
-    tv_en: TvEn | None = Field(None, alias='tv/en')
-    vu_en: VuEn | None = Field(None, alias='vu/en')
+    bt_en: BtEn = Field(..., alias='bt/en')
+    fj_en: FjEn = Field(..., alias='fj/en')
+    ki_en: KiEn = Field(..., alias='ki/en')
+    mv_en: MvEn = Field(..., alias='mv/en')
+    mh_en: MhEn = Field(..., alias='mh/en')
+    fm_en: FmEn = Field(..., alias='fm/en')
+    nr_en: NrEn = Field(..., alias='nr/en')
+    nu_en: NuEn = Field(..., alias='nu/en')
+    ws_en: WsEn = Field(..., alias='ws/en')
+    to_en: ToEn = Field(..., alias='to/en')
+    tv_en: TvEn = Field(..., alias='tv/en')
+    vu_en: VuEn = Field(..., alias='vu/en')
     ck_en: CkEn | None = Field(None, alias='ck/en')
-    nz_en: NzEn | None = Field(None, alias='nz/en')
+    nz_en: NzEn = Field(..., alias='nz/en')
     tk_en: TkEn | None = Field(None, alias='tk/en')
-    gr_en: GrEn = Field(..., alias='gr/en')
-    il_en: IlEn = Field(..., alias='il/en')
-    gr_el: GrEl = Field(..., alias='gr/el')
-    il_he: IlHe = Field(..., alias='il/he')
-    al_en: AlEn = Field(..., alias='al/en')
-    am_en: AmEn = Field(..., alias='am/en')
-    tj_en: TjEn = Field(..., alias='tj/en')
-    cy_en: CyEn = Field(..., alias='cy/en')
-    ee_en: EeEn = Field(..., alias='ee/en')
-    ge_en: GeEn = Field(..., alias='ge/en')
-    is_en: IsEn = Field(..., alias='is/en')
-    kz_en: KzEn = Field(..., alias='kz/en')
-    kg_en: KgEn = Field(..., alias='kg/en')
-    lv_en: LvEn = Field(..., alias='lv/en')
-    lt_en: LtEn = Field(..., alias='lt/en')
-    mt_en: MtEn = Field(..., alias='mt/en')
-    am_ru: AmRu = Field(..., alias='am/ru')
-    tj_ru: TjRu = Field(..., alias='tj/ru')
-    ge_ru: GeRu = Field(..., alias='ge/ru')
-    kz_ru: KzRu = Field(..., alias='kz/ru')
-    kg_ru: KgRu = Field(..., alias='kg/ru')
-    cy_el: CyEl = Field(..., alias='cy/el')
-    ee_et: EeEt = Field(..., alias='ee/et')
-    lv_lv: LvLv = Field(..., alias='lv/lv')
-    lt_lt: LtLt = Field(..., alias='lt/lt')
     hn_es: HnEs = Field(..., alias='hn/es')
     mx_es: MxEs = Field(..., alias='mx/es')
     ni_es: NiEs = Field(..., alias='ni/es')
@@ -2045,76 +2107,26 @@ class CountryLangUris(BaseModel):
     tt_en: TtEn = Field(..., alias='tt/en')
     tc_en: TcEn = Field(..., alias='tc/en')
     br_pt: BrPt = Field(..., alias='br/pt')
-    fr_en: FrEn = Field(..., alias='fr/en')
-    ad_en: AdEn = Field(..., alias='ad/en')
-    ba_en: BaEn = Field(..., alias='ba/en')
-    bg_en: BgEn = Field(..., alias='bg/en')
-    hr_en: HrEn = Field(..., alias='hr/en')
-    cz_en: CzEn = Field(..., alias='cz/en')
-    dk_en: DkEn = Field(..., alias='dk/en')
-    fi_en: FiEn = Field(..., alias='fi/en')
-    hu_en: HuEn = Field(..., alias='hu/en')
-    mk_en: MkEn = Field(..., alias='mk/en')
-    md_en: MdEn = Field(..., alias='md/en')
-    me_en: MeEn = Field(..., alias='me/en')
-    nl_en: NlEn = Field(..., alias='nl/en')
-    no_en: NoEn = Field(..., alias='no/en')
-    pt_en: PtEn = Field(..., alias='pt/en')
-    ro_en: RoEn = Field(..., alias='ro/en')
-    rs_en: RsEn = Field(..., alias='rs/en')
-    sk_en: SkEn = Field(..., alias='sk/en')
-    si_en: SiEn = Field(..., alias='si/en')
-    es_en: EsEn = Field(..., alias='es/en')
-    se_en: SeEn = Field(..., alias='se/en')
-    be_en: BeEn = Field(..., alias='be/en')
-    tr_en: TrEn = Field(..., alias='tr/en')
-    ad_es: AdEs = Field(..., alias='ad/es')
-    es_es: EsEs = Field(..., alias='es/es')
-    ba_hr: BaHr = Field(..., alias='ba/hr')
-    hr_hr: HrHr = Field(..., alias='hr/hr')
-    bg_bg: BgBg = Field(..., alias='bg/bg')
-    cz_cs: CzCs = Field(..., alias='cz/cs')
-    dk_da: DkDa = Field(..., alias='dk/da')
-    fi_fi: FiFi = Field(..., alias='fi/fi')
-    hu_hu: HuHu = Field(..., alias='hu/hu')
-    mk_mk: MkMk = Field(..., alias='mk/mk')
-    md_ro: MdRo = Field(..., alias='md/ro')
-    ro_ro: RoRo = Field(..., alias='ro/ro')
-    me_sr: MeSr = Field(..., alias='me/sr')
-    rs_sr: RsSr = Field(..., alias='rs/sr')
-    no_no: NoNo = Field(..., alias='no/no')
-    pt_pt: PtPt = Field(..., alias='pt/pt')
-    sk_sk: SkSk = Field(..., alias='sk/sk')
-    si_sl: SiSl = Field(..., alias='si/sl')
-    se_sv: SeSv = Field(..., alias='se/sv')
-    fr_fr: FrFr = Field(..., alias='fr/fr')
-    pl_pl: PlPl = Field(..., alias='pl/pl')
-    nl_nl: NlNl = Field(..., alias='nl/nl')
-    be_nl: BeNl = Field(..., alias='be/nl')
-    be_fr: BeFr = Field(..., alias='be/fr')
-    tr_tr: TrTr = Field(..., alias='tr/tr')
     cl_es: ClEs = Field(..., alias='cl/es')
-    ua_en: UaEn = Field(..., alias='ua/en')
-    ua_uk: UaUk = Field(..., alias='ua/uk')
+    at_en: AtEn | None = Field(None, alias='at/en')
+    at_de: AtDe | None = Field(None, alias='at/de')
+    de_en: DeEn | None = Field(None, alias='de/en')
+    de_de: DeDe | None = Field(None, alias='de/de')
+    ie_en: IeEn | None = Field(None, alias='ie/en')
+    it_en: ItEn | None = Field(None, alias='it/en')
+    it_it: ItIt | None = Field(None, alias='it/it')
+    li_en: LiEn | None = Field(None, alias='li/en')
+    li_de: LiDe | None = Field(None, alias='li/de')
+    lu_en: LuEn | None = Field(None, alias='lu/en')
+    lu_fr: LuFr | None = Field(None, alias='lu/fr')
+    lu_de: LuDe | None = Field(None, alias='lu/de')
+    ch_en: ChEn | None = Field(None, alias='ch/en')
+    ch_fr: ChFr | None = Field(None, alias='ch/fr')
+    ch_de: ChDe | None = Field(None, alias='ch/de')
+    ch_it: ChIt | None = Field(None, alias='ch/it')
+    gb_en: GbEn | None = Field(None, alias='gb/en')
     vn_en: VnEn | None = Field(None, alias='vn/en')
     vn_vi: VnVi | None = Field(None, alias='vn/vi')
-    ie_en: IeEn | None = Field(None, alias='ie/en')
-    gb_en: GbEn | None = Field(None, alias='gb/en')
-    at_en: AtEn | None = Field(None, alias='at/en')
-    de_en: DeEn | None = Field(None, alias='de/en')
-    it_en: ItEn | None = Field(None, alias='it/en')
-    li_en: LiEn | None = Field(None, alias='li/en')
-    lu_en: LuEn | None = Field(None, alias='lu/en')
-    ch_en: ChEn | None = Field(None, alias='ch/en')
-    at_de: AtDe | None = Field(None, alias='at/de')
-    de_de: DeDe | None = Field(None, alias='de/de')
-    li_de: LiDe | None = Field(None, alias='li/de')
-    lu_de: LuDe | None = Field(None, alias='lu/de')
-    ch_de: ChDe | None = Field(None, alias='ch/de')
-    lu_fr: LuFr | None = Field(None, alias='lu/fr')
-    ch_fr: ChFr | None = Field(None, alias='ch/fr')
-    it_it: ItIt | None = Field(None, alias='it/it')
-    ch_it: ChIt | None = Field(None, alias='ch/it')
 
 class CountryMapping(BaseModel):
     model_config = ConfigDict(defer_build=True)
@@ -2443,11 +2455,11 @@ class Flags(BaseModel):
 
 class Trailer(BaseModel):
     model_config = ConfigDict(defer_build=True)
-    program_id: UUID | str | None = Field(..., alias='programId', union_mode='left_to_right')
-    edit_id: UUID | str | None = Field(..., alias='editId', union_mode='left_to_right')
-    title: str | None
-    description: str | None
-    url: str | None
+    program_id: UUID = Field(..., alias='programId')
+    edit_id: UUID = Field(..., alias='editId')
+    title: str
+    description: str
+    url: str
 
 class OfferingDates(BaseModel):
     model_config = ConfigDict(defer_build=True)
@@ -2671,11 +2683,6 @@ class Idref15(BaseModel):
     primary_cta: PrimaryCta = Field(..., alias='primaryCta')
     skip_to_content: SkipToContent = Field(..., alias='skipToContent')
 
-class Idref16Item(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    lang: str
-    url: str
-
 class UnauthLabel2(BaseModel):
     model_config = ConfigDict(defer_build=True)
     default: Default1
@@ -2703,7 +2710,7 @@ class SkipToContent1(BaseModel):
     default: Default1
     mobile: Mobile1
 
-class Idref19(BaseModel):
+class Idref17(BaseModel):
     model_config = ConfigDict(defer_build=True)
     secondary_cta: SecondaryCta1 = Field(..., alias='secondaryCta')
     logo: Logo1
@@ -2713,15 +2720,15 @@ class Value(BaseModel):
     model_config = ConfigDict(defer_build=True)
     large: str
 
-class Idref20(BaseModel):
+class Idref18(BaseModel):
     model_config = ConfigDict(defer_build=True)
     value: Value
 
-class MaxWidthidref20(BaseModel):
+class MaxWidthidref18(BaseModel):
     model_config = ConfigDict(defer_build=True)
     large: int
 
-class MaxHeightidref20(BaseModel):
+class MaxHeightidref18(BaseModel):
     model_config = ConfigDict(defer_build=True)
     large: int
 
@@ -2731,17 +2738,17 @@ class Value1(BaseModel):
     medium: str
     small: str
 
-class Idref21(BaseModel):
+class Idref19(BaseModel):
     model_config = ConfigDict(defer_build=True)
     value: Value1
 
-class MaxWidthidref21(BaseModel):
+class MaxWidthidref19(BaseModel):
     model_config = ConfigDict(defer_build=True)
     large: int
     medium: int
     small: int
 
-class MaxHeightidref21(BaseModel):
+class MaxHeightidref19(BaseModel):
     model_config = ConfigDict(defer_build=True)
     large: int
     medium: int
@@ -2751,15 +2758,15 @@ class Value2(BaseModel):
     model_config = ConfigDict(defer_build=True)
     large: str
 
-class Idref31(BaseModel):
+class Idref29(BaseModel):
     model_config = ConfigDict(defer_build=True)
     value: Value2
 
-class MaxWidthidref31(BaseModel):
+class MaxWidthidref29(BaseModel):
     model_config = ConfigDict(defer_build=True)
     large: int
 
-class MaxHeightidref31(BaseModel):
+class MaxHeightidref29(BaseModel):
     model_config = ConfigDict(defer_build=True)
     large: int
 
@@ -2769,17 +2776,55 @@ class Value3(BaseModel):
     medium: str
     small: str
 
-class Idref32(BaseModel):
+class Idref30(BaseModel):
     model_config = ConfigDict(defer_build=True)
     value: Value3
 
-class MaxWidthidref32(BaseModel):
+class MaxWidthidref30(BaseModel):
     model_config = ConfigDict(defer_build=True)
     large: int
     medium: int
     small: int
 
-class MaxHeightidref32(BaseModel):
+class MaxHeightidref30(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: int
+    medium: int
+    small: int
+
+class Value4(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: str
+
+class Idref42(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    value: Value4
+
+class MaxWidthidref42(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: int
+
+class MaxHeightidref42(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: int
+
+class Value5(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: str
+    medium: str
+    small: str
+
+class Idref43(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    value: Value5
+
+class MaxWidthidref43(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: int
+    medium: int
+    small: int
+
+class MaxHeightidref43(BaseModel):
     model_config = ConfigDict(defer_build=True)
     large: int
     medium: int
@@ -2793,7 +2838,7 @@ class Item(BaseModel):
     description: str
     url_slug: str = Field(..., alias='urlSlug')
 
-class Idref42(BaseModel):
+class Idref53(BaseModel):
     model_config = ConfigDict(defer_build=True)
     type: str
     items: list[Item]
@@ -2828,7 +2873,7 @@ class Episode1(BaseModel):
     title: Title5
     summary: Summary
 
-class Idref46Item(BaseModel):
+class Idref57Item(BaseModel):
     model_config = ConfigDict(defer_build=True)
     season_id: UUID = Field(..., alias='seasonId')
     orgtitle: None
@@ -2865,7 +2910,7 @@ class LocalizedRating1(BaseModel):
     classifier: str
     descriptors: list[None]
 
-class Idref52Item(BaseModel):
+class Idref63Item(BaseModel):
     model_config = ConfigDict(defer_build=True)
     hbomax_id: UUID = Field(..., alias='hbomaxId')
     type: str
@@ -2889,23 +2934,23 @@ class Description(BaseModel):
 class Image(BaseModel):
     model_config = ConfigDict(defer_build=True)
     default_wide: str = Field(..., alias='default-wide')
-    default: str
     centered_background_small: str = Field(..., alias='centered-background-small')
+    default: str
     centered_background: str = Field(..., alias='centered-background')
     cover_artwork: str = Field(..., alias='cover-artwork')
     logo_left: str = Field(..., alias='logo-left')
     content_logo_monochromatic: str = Field(..., alias='content-logo-monochromatic')
     logo_centered: str = Field(..., alias='logo-centered')
-    poster_with_logo: str = Field(..., alias='poster-with-logo')
     content_logo_polychromatic: str = Field(..., alias='content-logo-polychromatic')
-    cover_artwork_horizontal: str = Field(..., alias='cover-artwork-horizontal')
+    poster_with_logo: str = Field(..., alias='poster-with-logo')
     cover_artwork_square: str = Field(..., alias='cover-artwork-square')
+    cover_artwork_horizontal: str = Field(..., alias='cover-artwork-horizontal')
 
 class RatingCodeItem(BaseModel):
     model_config = ConfigDict(defer_build=True)
     code: list[str]
     organization: str
-    rating_code: timedelta | str = Field(union_mode='left_to_right')
+    rating_code: str
 
 class Title9(BaseModel):
     model_config = ConfigDict(defer_build=True)
@@ -2917,17 +2962,17 @@ class Title9(BaseModel):
 class Images4(BaseModel):
     model_config = ConfigDict(defer_build=True)
     default_wide: str = Field(..., alias='default-wide')
-    default: str
     centered_background_small: str = Field(..., alias='centered-background-small')
+    default: str
     centered_background: str = Field(..., alias='centered-background')
     cover_artwork: str = Field(..., alias='cover-artwork')
     logo_left: str = Field(..., alias='logo-left')
     content_logo_monochromatic: str = Field(..., alias='content-logo-monochromatic')
     logo_centered: str = Field(..., alias='logo-centered')
-    poster_with_logo: str = Field(..., alias='poster-with-logo')
     content_logo_polychromatic: str = Field(..., alias='content-logo-polychromatic')
-    cover_artwork_horizontal: str = Field(..., alias='cover-artwork-horizontal')
+    poster_with_logo: str = Field(..., alias='poster-with-logo')
     cover_artwork_square: str = Field(..., alias='cover-artwork-square')
+    cover_artwork_horizontal: str = Field(..., alias='cover-artwork-horizontal')
 
 class Item1(BaseModel):
     model_config = ConfigDict(defer_build=True)
@@ -2950,7 +2995,7 @@ class Item1(BaseModel):
     feature_id: UUID | None = Field(None, alias='featureId')
     url: None = Field(None)
 
-class Idref53(BaseModel):
+class Idref64(BaseModel):
     model_config = ConfigDict(defer_build=True)
     collection_id: str = Field(..., alias='collectionId')
     image_to_show: str = Field(..., alias='imageToShow')
@@ -2970,48 +3015,12 @@ class FirstItem1(BaseModel):
     model_config = ConfigDict(defer_build=True)
     title: Title10
 
-class Image1(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    default_wide: str = Field(..., alias='default-wide')
-    centered_background_small: str = Field(..., alias='centered-background-small')
-    default: str
-    centered_background: str = Field(..., alias='centered-background')
-    cover_artwork: str = Field(..., alias='cover-artwork')
-    logo_left: str = Field(..., alias='logo-left')
-    content_logo_monochromatic: str = Field(..., alias='content-logo-monochromatic')
-    logo_centered: str = Field(..., alias='logo-centered')
-    content_logo_polychromatic: str = Field(..., alias='content-logo-polychromatic')
-    poster_with_logo: str = Field(..., alias='poster-with-logo')
-    cover_artwork_square: str = Field(..., alias='cover-artwork-square')
-    cover_artwork_horizontal: str = Field(..., alias='cover-artwork-horizontal')
-
-class RatingCodeItem1(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    code: list[str]
-    organization: str
-    rating_code: str
-
 class Title12(BaseModel):
     model_config = ConfigDict(defer_build=True)
     full_original: None
     short_original: None
     short: str
     full: str
-
-class Images5(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    default_wide: str = Field(..., alias='default-wide')
-    centered_background_small: str = Field(..., alias='centered-background-small')
-    default: str
-    centered_background: str = Field(..., alias='centered-background')
-    cover_artwork: str = Field(..., alias='cover-artwork')
-    logo_left: str = Field(..., alias='logo-left')
-    content_logo_monochromatic: str = Field(..., alias='content-logo-monochromatic')
-    logo_centered: str = Field(..., alias='logo-centered')
-    content_logo_polychromatic: str = Field(..., alias='content-logo-polychromatic')
-    poster_with_logo: str = Field(..., alias='poster-with-logo')
-    cover_artwork_square: str = Field(..., alias='cover-artwork-square')
-    cover_artwork_horizontal: str = Field(..., alias='cover-artwork-horizontal')
 
 class Item2(BaseModel):
     model_config = ConfigDict(defer_build=True)
@@ -3024,25 +3033,30 @@ class Item2(BaseModel):
     image_url_link: str = Field(..., alias='imageUrlLink')
     genres: list[str]
     brand: list[str]
-    rating_code: list[RatingCodeItem1] = Field(..., alias='ratingCode')
+    rating_code: list[RatingCodeItem] = Field(..., alias='ratingCode')
     offering_dates: OfferingDates = Field(..., alias='offeringDates')
     title: Title12
     summary: Summary
-    images: Images5
+    images: Images4
     status: str
     feature_id: UUID | None = Field(None, alias='featureId')
     url: None = Field(None)
 
-class Idref68(BaseModel):
+class Idref79(BaseModel):
     model_config = ConfigDict(defer_build=True)
     collection_id: str = Field(..., alias='collectionId')
     image_to_show: str = Field(..., alias='imageToShow')
     first_item: FirstItem1 = Field(..., alias='firstItem')
     title: Title10
     description: Description
-    image: Image1
+    image: Image
     event_type: str = Field(..., alias='eventType')
     items: list[Item2]
+
+class Idref80Item(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    lang: str
+    url: str
 
 class Legal(BaseModel):
     model_config = ConfigDict(defer_build=True)
@@ -3060,7 +3074,7 @@ class PrimaryRowItem(BaseModel):
     label: Label
     url: str
 
-class Idref69(BaseModel):
+class Idref81(BaseModel):
     model_config = ConfigDict(defer_build=True)
     legal: Legal
     secondary_row: list[SecondaryRowItem] = Field(..., alias='secondaryRow')
@@ -3078,7 +3092,7 @@ class PrimaryRowItem1(BaseModel):
     label: Label
     url: str
 
-class Idref70(BaseModel):
+class Idref82(BaseModel):
     model_config = ConfigDict(defer_build=True)
     legal: Legal
     secondary_row: list[SecondaryRowItem1] = Field(..., alias='secondaryRow')
@@ -3102,16 +3116,16 @@ class MappedData(BaseModel):
     idref13: str
     idref14: Idref14
     idref15: Idref15
-    idref16: list[Idref16Item]
-    idref17: str
-    idref18: str
+    idref16: str
+    idref17: Idref17
+    idref18: Idref18
+    max_widthidref18: MaxWidthidref18 = Field(..., alias='maxWidthidref18')
+    max_heightidref18: MaxHeightidref18 = Field(..., alias='maxHeightidref18')
     idref19: Idref19
-    idref20: Idref20
-    max_widthidref20: MaxWidthidref20 = Field(..., alias='maxWidthidref20')
-    max_heightidref20: MaxHeightidref20 = Field(..., alias='maxHeightidref20')
-    idref21: Idref21
-    max_widthidref21: MaxWidthidref21 = Field(..., alias='maxWidthidref21')
-    max_heightidref21: MaxHeightidref21 = Field(..., alias='maxHeightidref21')
+    max_widthidref19: MaxWidthidref19 = Field(..., alias='maxWidthidref19')
+    max_heightidref19: MaxHeightidref19 = Field(..., alias='maxHeightidref19')
+    idref20: str
+    idref21: str
     idref22: str
     idref23: str
     idref24: str
@@ -3119,14 +3133,14 @@ class MappedData(BaseModel):
     idref26: str
     idref27: str
     idref28: str
-    idref29: str
-    idref30: str
-    idref31: Idref31
-    max_widthidref31: MaxWidthidref31 = Field(..., alias='maxWidthidref31')
-    max_heightidref31: MaxHeightidref31 = Field(..., alias='maxHeightidref31')
-    idref32: Idref32
-    max_widthidref32: MaxWidthidref32 = Field(..., alias='maxWidthidref32')
-    max_heightidref32: MaxHeightidref32 = Field(..., alias='maxHeightidref32')
+    idref29: Idref29
+    max_widthidref29: MaxWidthidref29 = Field(..., alias='maxWidthidref29')
+    max_heightidref29: MaxHeightidref29 = Field(..., alias='maxHeightidref29')
+    idref30: Idref30
+    max_widthidref30: MaxWidthidref30 = Field(..., alias='maxWidthidref30')
+    max_heightidref30: MaxHeightidref30 = Field(..., alias='maxHeightidref30')
+    idref31: str
+    idref32: str
     idref33: str
     idref34: str
     idref35: str
@@ -3137,34 +3151,50 @@ class MappedData(BaseModel):
     idref40: str
     idref41: str
     idref42: Idref42
-    idref43: str
+    max_widthidref42: MaxWidthidref42 = Field(..., alias='maxWidthidref42')
+    max_heightidref42: MaxHeightidref42 = Field(..., alias='maxHeightidref42')
+    idref43: Idref43
+    max_widthidref43: MaxWidthidref43 = Field(..., alias='maxWidthidref43')
+    max_heightidref43: MaxHeightidref43 = Field(..., alias='maxHeightidref43')
     idref44: str
     idref45: str
-    idref46: list[Idref46Item]
+    idref46: str
     idref47: str
     idref48: str
     idref49: str
     idref50: str
     idref51: str
-    idref52: list[Idref52Item]
+    idref52: str
     idref53: Idref53
     idref54: str
     idref55: str
     idref56: str
-    idref57: str
+    idref57: list[Idref57Item]
     idref58: str
     idref59: str
     idref60: str
     idref61: str
     idref62: str
-    idref63: str
-    idref64: str
+    idref63: list[Idref63Item]
+    idref64: Idref64
     idref65: str
     idref66: str
     idref67: str
-    idref68: Idref68
-    idref69: Idref69
-    idref70: Idref70
+    idref68: str
+    idref69: str
+    idref70: str
+    idref71: str
+    idref72: str
+    idref73: str
+    idref74: str
+    idref75: str
+    idref76: str
+    idref77: str
+    idref78: str
+    idref79: Idref79
+    idref80: list[Idref80Item]
+    idref81: Idref81
+    idref82: Idref82
 
 class MediaMelonConfig(BaseModel):
     model_config = ConfigDict(defer_build=True)
@@ -3173,13 +3203,13 @@ class MediaMelonConfig(BaseModel):
 
 class PageProps(BaseModel):
     model_config = ConfigDict(defer_build=True)
-    media_app_id: str = Field(..., alias='mediaAppId')
-    is_published: bool = Field(..., alias='isPublished')
     developer_panel_config: DeveloperPanelConfig = Field(..., alias='developerPanelConfig')
-    version_tag: str = Field(..., alias='versionTag')
-    supported_countries: list[None] = Field(..., alias='supportedCountries')
+    is_published: bool = Field(..., alias='isPublished')
+    media_app_id: str = Field(..., alias='mediaAppId')
     resolved_theme: ResolvedTheme = Field(..., alias='resolvedTheme')
-    tenant_style_hash: str = Field(..., alias='tenantStyleHash')
+    supported_countries: list[None] = Field(..., alias='supportedCountries')
+    tenant_styles: TenantStyles = Field(..., alias='tenantStyles')
+    version_tag: str = Field(..., alias='versionTag')
     ab_testing_module_hash: str = Field(..., alias='abTestingModuleHash')
     analytics_config: AnalyticsConfig = Field(..., alias='analyticsConfig')
     auth_cookie_name: str = Field(..., alias='authCookieName')
@@ -3230,7 +3260,6 @@ class PageProps(BaseModel):
     user_country: str = Field(..., alias='userCountry')
     user_region_cookie: str = Field(..., alias='userRegionCookie')
     utm_params: list[str] = Field(..., alias='utmParams')
-    video_watch_ids: None = Field(..., alias='videoWatchIds')
 
 class Props(BaseModel):
     model_config = ConfigDict(defer_build=True)

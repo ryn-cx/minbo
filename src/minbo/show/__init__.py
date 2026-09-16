@@ -17,7 +17,7 @@ logger.addHandler(NullHandler())
 
 # TODO: Validate
 class Show(BaseEndpoint):
-    """Manage the show file.
+    """Contains the show.
 
     A show's page lists every season but fills in the episodes of only one of
     them, and `season_number` picks which. Left out, the site picks the season
@@ -46,7 +46,7 @@ class Show(BaseEndpoint):
 
     # TODO: Validate
     def __call__(self, show_id: str, season_number: int | None = None) -> ShowModel:
-        """Look the show up and return the model it is read into."""
+        """Download and parse the show file."""
         log_id = self.get_log_id(self.__call__, locals())
         return self.load(self.download(show_id, season_number), log_id)
 
@@ -82,5 +82,5 @@ class Show(BaseEndpoint):
 
     # TODO: Validate
     def load(self, data: str, log_id: str = "") -> ShowModel:
-        """Read a downloaded show file into its model."""
+        """Load a show file into its model."""
         return model_validate_json(data, log_id or self.default_log_id)

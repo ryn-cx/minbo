@@ -17,7 +17,7 @@ logger.addHandler(NullHandler())
 
 # TODO: Validate
 class Movie(BaseEndpoint):
-    """Manage the movie file.
+    """Contains the movie.
 
     Source: https://www.hbomax.com/movies/{movie_id}
 
@@ -41,7 +41,7 @@ class Movie(BaseEndpoint):
 
     # TODO: Validate
     def __call__(self, movie_id: str) -> MovieModel:
-        """Look the movie up and return the model it is read into."""
+        """Download and parse the movie file."""
         log_id = self.get_log_id(self.__call__, locals())
         return self.load(self.download(movie_id), log_id)
 
@@ -76,5 +76,5 @@ class Movie(BaseEndpoint):
 
     # TODO: Validate
     def load(self, data: str, log_id: str = "") -> MovieModel:
-        """Read a downloaded movie file into its model."""
+        """Load a movie file into its model."""
         return model_validate_json(data, log_id or self.default_log_id)
