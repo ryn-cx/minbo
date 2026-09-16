@@ -934,6 +934,696 @@ class ChIt(BaseModel):
     start_date: AwareDatetime | None = Field(None, alias='startDate')
     end_date: AwareDatetime | None = Field(None, alias='endDate')
 
+class MyEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class HkEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class PhEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class TwEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class IdEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class SgEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class ThEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class HkZh(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class IdId(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class MyMs(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class SgMs(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class MyZh(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class SgZh(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class PhTl(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class TwZh(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class ThTh(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class BdEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class BnEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class KhEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class LaEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class MoEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class MnEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class MmEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class NpEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class PkEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class PwEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class PgEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class SbEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class LkEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class TlEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class MoZh(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class BnMs(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class BtEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class FjEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class KiEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class MvEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class MhEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class FmEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class NrEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class NuEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class WsEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class ToEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class TvEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class VuEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class VnEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class VnVi(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class AmEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class AmRu(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class CyEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class CyEl(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class EeEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class EeEt(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class GeEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class GeRu(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class GrEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class GrEl(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class IeEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class IlEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class IlHe(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class KzEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class KzRu(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class KgEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class KgRu(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class LvEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class LvLv(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class LtEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class LtLt(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class MtEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class PtEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class PtPt(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class TjEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class TjRu(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class TrEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class TrTr(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class UaEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class UaUk(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class GbEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class HnEs(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class MxEs(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class NiEs(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class PaEs(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class ArEs(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class BoEs(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class CoEs(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class CrEs(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class DoEs(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class EcEs(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class SvEs(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class GtEs(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class PyEs(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class PeEs(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class UyEs(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class BrPt(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class JmEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class MsEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class AiEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class AgEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class AwEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class BsEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class BbEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class BzEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class VgEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class KyEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class CwEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class DmEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class GdEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class GyEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class HtEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class KnEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class LcEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class VcEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class SrEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class TtEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class TcEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class ClEs(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
 class CzCs(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     url: str | None = None
@@ -1028,6 +1718,121 @@ class CountryLangUris(BaseModel):
     ch_fr: ChFr | None = Field(None, alias='ch/fr')
     ch_de: ChDe | None = Field(None, alias='ch/de')
     ch_it: ChIt | None = Field(None, alias='ch/it')
+    my_en: MyEn | None = Field(None, alias='my/en')
+    hk_en: HkEn | None = Field(None, alias='hk/en')
+    ph_en: PhEn | None = Field(None, alias='ph/en')
+    tw_en: TwEn | None = Field(None, alias='tw/en')
+    id_en: IdEn | None = Field(None, alias='id/en')
+    sg_en: SgEn | None = Field(None, alias='sg/en')
+    th_en: ThEn | None = Field(None, alias='th/en')
+    hk_zh: HkZh | None = Field(None, alias='hk/zh')
+    id_id: IdId | None = Field(None, alias='id/id')
+    my_ms: MyMs | None = Field(None, alias='my/ms')
+    sg_ms: SgMs | None = Field(None, alias='sg/ms')
+    my_zh: MyZh | None = Field(None, alias='my/zh')
+    sg_zh: SgZh | None = Field(None, alias='sg/zh')
+    ph_tl: PhTl | None = Field(None, alias='ph/tl')
+    tw_zh: TwZh | None = Field(None, alias='tw/zh')
+    th_th: ThTh | None = Field(None, alias='th/th')
+    bd_en: BdEn | None = Field(None, alias='bd/en')
+    bn_en: BnEn | None = Field(None, alias='bn/en')
+    kh_en: KhEn | None = Field(None, alias='kh/en')
+    la_en: LaEn | None = Field(None, alias='la/en')
+    mo_en: MoEn | None = Field(None, alias='mo/en')
+    mn_en: MnEn | None = Field(None, alias='mn/en')
+    mm_en: MmEn | None = Field(None, alias='mm/en')
+    np_en: NpEn | None = Field(None, alias='np/en')
+    pk_en: PkEn | None = Field(None, alias='pk/en')
+    pw_en: PwEn | None = Field(None, alias='pw/en')
+    pg_en: PgEn | None = Field(None, alias='pg/en')
+    sb_en: SbEn | None = Field(None, alias='sb/en')
+    lk_en: LkEn | None = Field(None, alias='lk/en')
+    tl_en: TlEn | None = Field(None, alias='tl/en')
+    mo_zh: MoZh | None = Field(None, alias='mo/zh')
+    bn_ms: BnMs | None = Field(None, alias='bn/ms')
+    bt_en: BtEn | None = Field(None, alias='bt/en')
+    fj_en: FjEn | None = Field(None, alias='fj/en')
+    ki_en: KiEn | None = Field(None, alias='ki/en')
+    mv_en: MvEn | None = Field(None, alias='mv/en')
+    mh_en: MhEn | None = Field(None, alias='mh/en')
+    fm_en: FmEn | None = Field(None, alias='fm/en')
+    nr_en: NrEn | None = Field(None, alias='nr/en')
+    nu_en: NuEn | None = Field(None, alias='nu/en')
+    ws_en: WsEn | None = Field(None, alias='ws/en')
+    to_en: ToEn | None = Field(None, alias='to/en')
+    tv_en: TvEn | None = Field(None, alias='tv/en')
+    vu_en: VuEn | None = Field(None, alias='vu/en')
+    vn_en: VnEn | None = Field(None, alias='vn/en')
+    vn_vi: VnVi | None = Field(None, alias='vn/vi')
+    am_en: AmEn | None = Field(None, alias='am/en')
+    am_ru: AmRu | None = Field(None, alias='am/ru')
+    cy_en: CyEn | None = Field(None, alias='cy/en')
+    cy_el: CyEl | None = Field(None, alias='cy/el')
+    ee_en: EeEn | None = Field(None, alias='ee/en')
+    ee_et: EeEt | None = Field(None, alias='ee/et')
+    ge_en: GeEn | None = Field(None, alias='ge/en')
+    ge_ru: GeRu | None = Field(None, alias='ge/ru')
+    gr_en: GrEn | None = Field(None, alias='gr/en')
+    gr_el: GrEl | None = Field(None, alias='gr/el')
+    ie_en: IeEn | None = Field(None, alias='ie/en')
+    il_en: IlEn | None = Field(None, alias='il/en')
+    il_he: IlHe | None = Field(None, alias='il/he')
+    kz_en: KzEn | None = Field(None, alias='kz/en')
+    kz_ru: KzRu | None = Field(None, alias='kz/ru')
+    kg_en: KgEn | None = Field(None, alias='kg/en')
+    kg_ru: KgRu | None = Field(None, alias='kg/ru')
+    lv_en: LvEn | None = Field(None, alias='lv/en')
+    lv_lv: LvLv | None = Field(None, alias='lv/lv')
+    lt_en: LtEn | None = Field(None, alias='lt/en')
+    lt_lt: LtLt | None = Field(None, alias='lt/lt')
+    mt_en: MtEn | None = Field(None, alias='mt/en')
+    pt_en: PtEn | None = Field(None, alias='pt/en')
+    pt_pt: PtPt | None = Field(None, alias='pt/pt')
+    tj_en: TjEn | None = Field(None, alias='tj/en')
+    tj_ru: TjRu | None = Field(None, alias='tj/ru')
+    tr_en: TrEn | None = Field(None, alias='tr/en')
+    tr_tr: TrTr | None = Field(None, alias='tr/tr')
+    ua_en: UaEn | None = Field(None, alias='ua/en')
+    ua_uk: UaUk | None = Field(None, alias='ua/uk')
+    gb_en: GbEn | None = Field(None, alias='gb/en')
+    hn_es: HnEs | None = Field(None, alias='hn/es')
+    mx_es: MxEs | None = Field(None, alias='mx/es')
+    ni_es: NiEs | None = Field(None, alias='ni/es')
+    pa_es: PaEs | None = Field(None, alias='pa/es')
+    ar_es: ArEs | None = Field(None, alias='ar/es')
+    bo_es: BoEs | None = Field(None, alias='bo/es')
+    co_es: CoEs | None = Field(None, alias='co/es')
+    cr_es: CrEs | None = Field(None, alias='cr/es')
+    do_es: DoEs | None = Field(None, alias='do/es')
+    ec_es: EcEs | None = Field(None, alias='ec/es')
+    sv_es: SvEs | None = Field(None, alias='sv/es')
+    gt_es: GtEs | None = Field(None, alias='gt/es')
+    py_es: PyEs | None = Field(None, alias='py/es')
+    pe_es: PeEs | None = Field(None, alias='pe/es')
+    uy_es: UyEs | None = Field(None, alias='uy/es')
+    br_pt: BrPt | None = Field(None, alias='br/pt')
+    jm_en: JmEn | None = Field(None, alias='jm/en')
+    ms_en: MsEn | None = Field(None, alias='ms/en')
+    ai_en: AiEn | None = Field(None, alias='ai/en')
+    ag_en: AgEn | None = Field(None, alias='ag/en')
+    aw_en: AwEn | None = Field(None, alias='aw/en')
+    bs_en: BsEn | None = Field(None, alias='bs/en')
+    bb_en: BbEn | None = Field(None, alias='bb/en')
+    bz_en: BzEn | None = Field(None, alias='bz/en')
+    vg_en: VgEn | None = Field(None, alias='vg/en')
+    ky_en: KyEn | None = Field(None, alias='ky/en')
+    cw_en: CwEn | None = Field(None, alias='cw/en')
+    dm_en: DmEn | None = Field(None, alias='dm/en')
+    gd_en: GdEn | None = Field(None, alias='gd/en')
+    gy_en: GyEn | None = Field(None, alias='gy/en')
+    ht_en: HtEn | None = Field(None, alias='ht/en')
+    kn_en: KnEn | None = Field(None, alias='kn/en')
+    lc_en: LcEn | None = Field(None, alias='lc/en')
+    vc_en: VcEn | None = Field(None, alias='vc/en')
+    sr_en: SrEn | None = Field(None, alias='sr/en')
+    tt_en: TtEn | None = Field(None, alias='tt/en')
+    tc_en: TcEn | None = Field(None, alias='tc/en')
+    cl_es: ClEs | None = Field(None, alias='cl/es')
     cz_cs: CzCs | None = Field(None, alias='cz/cs')
     cz_en: CzEn | None = Field(None, alias='cz/en')
     hu_en: HuEn | None = Field(None, alias='hu/en')
@@ -1428,6 +2233,11 @@ class Images(BaseModel):
     cover_artwork_horizontal: str | None = Field(None, alias='cover-artwork-horizontal')
     cover_artwork_square: str | None = Field(None, alias='cover-artwork-square')
 
+class Rating(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    us_mpaa_film: str | None = Field(None, alias='us-mpaa-film')
+    us_fcc_tv: str | None = Field(None, alias='us-fcc-tv')
+
 class LocalizedRating(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     rating_authority: str | None = None
@@ -1444,7 +2254,7 @@ class Idref14(BaseModel):
     genres: list[str] | None = None
     brand: list[str] | None = None
     category: Any | None = None
-    rating_code: list[Any] | None = Field(None, alias='ratingCode')
+    rating_code: list[str] | None = Field(None, alias='ratingCode')
     offering_dates: OfferingDates | None = Field(None, alias='offeringDates')
     title: Title1 | None = None
     credits: Credits | None = None
@@ -1452,7 +2262,7 @@ class Idref14(BaseModel):
     summary: Summary | None = None
     images: Images | None = None
     status: str | None = None
-    rating: dict[str, Any] | None = None
+    rating: Rating | None = None
     runtime: str | None = None
     quality: Any | None = None
     primary_genre: str | None = Field(None, alias='primaryGenre')
@@ -1709,7 +2519,7 @@ class Idref56Item(BaseModel):
     title: Title1 | None = None
     image_url_link: str | None = Field(None, alias='imageUrlLink')
     images: Images | None = None
-    offering_dates: OfferingDates | None = Field(None, alias='offeringDates')
+    offering_dates: Any | OfferingDates | None = Field(None, alias='offeringDates')
     localized_rating: Any | LocalizedRating | None = Field(None, alias='localizedRating')
     genres: list[Any] | None = None
     rank: Any | None = None
