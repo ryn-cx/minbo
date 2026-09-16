@@ -2454,8 +2454,8 @@ class Flags(BaseModel):
 
 class Trailer(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
-    program_id: Any | UUID | None = Field(None, alias='programId')
-    edit_id: Any | UUID | None = Field(None, alias='editId')
+    program_id: UUID | None = Field(None, alias='programId')
+    edit_id: UUID | None = Field(None, alias='editId')
     title: str | None = None
     description: str | None = None
     url: str | None = None
@@ -2500,19 +2500,13 @@ class Summary(BaseModel):
 
 class Images(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
-    centered_background_small: str | None = Field(None, alias='centered-background-small')
     default: str | None = None
+    centered_background_small: str | None = Field(None, alias='centered-background-small')
     cover_artwork: str | None = Field(None, alias='cover-artwork')
-    default_wide: str | None = Field(None, alias='default-wide')
 
 class Flags1(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     is_watch_free: bool | None = Field(None, alias='isWatchFree')
-
-class Title3(BaseModel):
-    model_config = ConfigDict(extra='ignore', defer_build=True)
-    short: timedelta | str | None = Field(default=None, union_mode='left_to_right')
-    full: timedelta | str | None = Field(default=None, union_mode='left_to_right')
 
 class Episode(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
@@ -2524,7 +2518,7 @@ class Episode(BaseModel):
     flags: Flags1 | None = None
     episode_url: str | None = Field(None, alias='episodeUrl')
     offering_dates: OfferingDates | None = Field(None, alias='offeringDates')
-    title: Title3 | None = None
+    title: Title1 | None = None
     summary: Summary | None = None
 
 class Season(BaseModel):
@@ -2541,8 +2535,8 @@ class Season(BaseModel):
 class Images1(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     default_wide: str | None = Field(None, alias='default-wide')
-    centered_background_small: str | None = Field(None, alias='centered-background-small')
     default: str | None = None
+    centered_background_small: str | None = Field(None, alias='centered-background-small')
     centered_background: str | None = Field(None, alias='centered-background')
     cover_artwork: str | None = Field(None, alias='cover-artwork')
     logo_left: str | None = Field(None, alias='logo-left')
@@ -2555,8 +2549,7 @@ class Images1(BaseModel):
 
 class Rating(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
-    viisi: str | None = None
-    blm: timedelta | None = None
+    us_fcc_tv: str | None = Field(None, alias='us-fcc-tv')
 
 class LocalizedRating(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
@@ -2564,7 +2557,7 @@ class LocalizedRating(BaseModel):
     classifier: str | None = None
     descriptors: list[str] | None = None
 
-class Idref14(BaseModel):
+class Idref11(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     image_url_link: str | None = Field(None, alias='imageUrlLink')
     category: Any | None = None
@@ -2576,7 +2569,7 @@ class Idref14(BaseModel):
     genres: list[str] | None = None
     brand: list[str] | None = None
     episode_count: Any | None = Field(None, alias='episodeCount')
-    rating_code: list[str | timedelta] | None = Field(None, alias='ratingCode')
+    rating_code: list[str] | None = Field(None, alias='ratingCode')
     offering_dates: OfferingDates | None = Field(None, alias='offeringDates')
     title: Title1 | None = None
     credits: Credits | None = None
@@ -2679,7 +2672,7 @@ class SkipToContent(BaseModel):
     default: Default1 | None = None
     mobile: Mobile1 | None = None
 
-class Idref15(BaseModel):
+class Idref12(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     browse_audio_description: BrowseAudioDescription | None = Field(None, alias='browseAudioDescription')
     secondary_cta: SecondaryCta | None = Field(None, alias='secondaryCta')
@@ -2688,15 +2681,153 @@ class Idref15(BaseModel):
     primary_cta: PrimaryCta | None = Field(None, alias='primaryCta')
     skip_to_content: SkipToContent | None = Field(None, alias='skipToContent')
 
+class Flags2(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    has_audio_description: bool | None = Field(None, alias='hasAudioDescription')
+    is_uhd: bool | None = Field(None, alias='isUHD')
+    has_dolby_atmos: bool | None = Field(None, alias='hasDolbyAtmos')
+    has_dolby_vision: bool | None = Field(None, alias='hasDolbyVision')
+    has_pse_advisory: bool | None = Field(None, alias='hasPSEAdvisory')
+
+class Trailer1(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    program_id: Any | UUID | None = Field(None, alias='programId')
+    edit_id: Any | UUID | None = Field(None, alias='editId')
+    title: str | None = None
+    description: str | None = None
+    url: str | None = None
+
+class CastAndCrew2(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    actor: list[ActorItem] | None = Field(None, alias='Actor')
+    cast: Any | None = Field(None, alias='Cast')
+    producer: Any | None = Field(None, alias='Producer')
+    director: Any | None = Field(None, alias='Director')
+    writer: Any | None = Field(None, alias='Writer')
+
+class Images2(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    centered_background_small: str | None = Field(None, alias='centered-background-small')
+    default: str | None = None
+    cover_artwork: str | None = Field(None, alias='cover-artwork')
+    default_wide: str | None = Field(None, alias='default-wide')
+
+class Flags3(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    is_watch_free: bool | None = Field(None, alias='isWatchFree')
+
+class Title6(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    short: timedelta | str | None = Field(default=None, union_mode='left_to_right')
+    full: timedelta | str | None = Field(default=None, union_mode='left_to_right')
+
+class Episode1(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    series_id: Any | None = Field(None, alias='seriesId')
+    season_number: Any | None = Field(None, alias='seasonNumber')
+    episode_number: int | None = Field(None, alias='episodeNumber')
+    quality: str | None = None
+    images: Images2 | None = None
+    flags: Flags3 | None = None
+    episode_url: str | None = Field(None, alias='episodeUrl')
+    offering_dates: OfferingDates | None = Field(None, alias='offeringDates')
+    title: Title6 | None = None
+    summary: Summary | None = None
+
+class Season1(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    season_id: UUID | None = Field(None, alias='seasonId')
+    orgtitle: Any | None = None
+    season_number: int | None = Field(None, alias='seasonNumber')
+    season_number_slug: str | None = Field(None, alias='seasonNumberSlug')
+    number_of_episodes: int | None = Field(None, alias='numberOfEpisodes')
+    title: Title1 | None = None
+    summary: Summary | None = None
+    episodes: list[Episode1] | None = None
+
+class Images3(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    default_wide: str | None = Field(None, alias='default-wide')
+    centered_background_small: str | None = Field(None, alias='centered-background-small')
+    default: str | None = None
+    centered_background: str | None = Field(None, alias='centered-background')
+    cover_artwork: str | None = Field(None, alias='cover-artwork')
+    logo_left: str | None = Field(None, alias='logo-left')
+    content_logo_monochromatic: str | None = Field(None, alias='content-logo-monochromatic')
+    logo_centered: str | None = Field(None, alias='logo-centered')
+    poster_with_logo: str | None = Field(None, alias='poster-with-logo')
+    content_logo_polychromatic: str | None = Field(None, alias='content-logo-polychromatic')
+    cover_artwork_horizontal: str | None = Field(None, alias='cover-artwork-horizontal')
+    cover_artwork_square: str | None = Field(None, alias='cover-artwork-square')
+
+class Rating1(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    viisi: str | None = None
+    blm: timedelta | None = None
+
+class Idref14(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    image_url_link: str | None = Field(None, alias='imageUrlLink')
+    category: Any | None = None
+    hbomax_id: UUID | None = Field(None, alias='hbomaxId')
+    series_id: UUID | None = Field(None, alias='seriesId')
+    series_title_id: Any | None = Field(None, alias='seriesTitleId')
+    flags: Flags2 | None = None
+    trailer: Trailer1 | None = None
+    genres: list[str] | None = None
+    brand: list[str] | None = None
+    episode_count: Any | None = Field(None, alias='episodeCount')
+    rating_code: list[str | timedelta] | None = Field(None, alias='ratingCode')
+    offering_dates: OfferingDates | None = Field(None, alias='offeringDates')
+    title: Title1 | None = None
+    credits: Credits | None = None
+    cast_and_crew: CastAndCrew2 | None = Field(None, alias='castAndCrew')
+    seasons: list[Season1] | None = None
+    summary: Summary | None = None
+    images: Images3 | None = None
+    status: str | None = None
+    rating: Rating1 | None = None
+    localized_rating: LocalizedRating | None = Field(None, alias='localizedRating')
+    number_of_seasons: int | None = Field(None, alias='numberOfSeasons')
+    number_of_episodes: int | None = Field(None, alias='numberOfEpisodes')
+    quality: str | None = None
+    primary_genre: str | None = Field(None, alias='primaryGenre')
+    secondary_genre: str | None = Field(None, alias='secondaryGenre')
+    genres_formatted: str | None = Field(None, alias='genresFormatted')
+    release_year: str | None = Field(None, alias='releaseYear')
+
+class Default6(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    en_us: str | None = Field(None, alias='en_US')
+    url: str | None = None
+
+class Mobile6(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    en_us: str | None = Field(None, alias='en_US')
+    url: str | None = None
+
+class BrowseAudioDescription1(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    default: Default6 | None = None
+    mobile: Mobile6 | None = None
+
+class Default7(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    en_us: str | None = Field(None, alias='en_US')
+
+class Mobile7(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    en_us: str | None = Field(None, alias='en_US')
+
 class UnauthLabel2(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
-    default: Default1 | None = None
-    mobile: Mobile1 | None = None
+    default: Default7 | None = None
+    mobile: Mobile7 | None = None
 
 class AuthLabel2(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
-    default: Default1 | None = None
-    mobile: Mobile1 | None = None
+    default: Default7 | None = None
+    mobile: Mobile7 | None = None
 
 class SecondaryCta1(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
@@ -2710,16 +2841,78 @@ class Logo1(BaseModel):
     alt_text: AltText2 | None = Field(None, alias='altText')
     url: str | None = None
 
+class Link1(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    label: Label | None = None
+    url: str | None = Field(None, alias='URL')
+
+class SecondaryLink1(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    link: Link1 | None = None
+
+class UnauthLabel3(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    default: Default7 | None = None
+    mobile: Mobile7 | None = None
+
+class AuthLabel3(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    default: Default7 | None = None
+    mobile: Mobile7 | None = None
+
+class PrimaryCta1(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    unauth_label: UnauthLabel3 | None = Field(None, alias='unauthLabel')
+    unauth_url: str | None = Field(None, alias='unauthUrl')
+    auth_url: str | None = Field(None, alias='authUrl')
+    auth_label: AuthLabel3 | None = Field(None, alias='authLabel')
+
 class SkipToContent1(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
-    default: Default1 | None = None
-    mobile: Mobile1 | None = None
+    default: Default7 | None = None
+    mobile: Mobile7 | None = None
+
+class Idref15(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    browse_audio_description: BrowseAudioDescription1 | None = Field(None, alias='browseAudioDescription')
+    secondary_cta: SecondaryCta1 | None = Field(None, alias='secondaryCta')
+    logo: Logo1 | None = None
+    secondary_links: list[SecondaryLink1] | None = Field(None, alias='secondaryLinks')
+    primary_cta: PrimaryCta1 | None = Field(None, alias='primaryCta')
+    skip_to_content: SkipToContent1 | None = Field(None, alias='skipToContent')
+
+class UnauthLabel4(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    default: Default7 | None = None
+    mobile: Mobile7 | None = None
+
+class AuthLabel4(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    default: Default7 | None = None
+    mobile: Mobile7 | None = None
+
+class SecondaryCta2(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    unauth_label: UnauthLabel4 | None = Field(None, alias='unauthLabel')
+    unauth_url: str | None = Field(None, alias='unauthUrl')
+    auth_url: str | None = Field(None, alias='authUrl')
+    auth_label: AuthLabel4 | None = Field(None, alias='authLabel')
+
+class Logo2(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    alt_text: AltText2 | None = Field(None, alias='altText')
+    url: str | None = None
+
+class SkipToContent2(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    default: Default7 | None = None
+    mobile: Mobile7 | None = None
 
 class Idref17(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
-    secondary_cta: SecondaryCta1 | None = Field(None, alias='secondaryCta')
-    logo: Logo1 | None = None
-    skip_to_content: SkipToContent1 | None = Field(None, alias='skipToContent')
+    secondary_cta: SecondaryCta2 | None = Field(None, alias='secondaryCta')
+    logo: Logo2 | None = None
+    skip_to_content: SkipToContent2 | None = Field(None, alias='skipToContent')
 
 class Value(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
@@ -2747,6 +2940,41 @@ class Idref19(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     value: Value1 | None = None
 
+class Title7(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    short: str | None = None
+    full: str | None = None
+
+class Images4(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    default: str | None = None
+    centered_background_small: str | None = Field(None, alias='centered-background-small')
+    cover_artwork: str | None = Field(None, alias='cover-artwork')
+
+class Episode2(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    series_id: Any | None = Field(None, alias='seriesId')
+    season_number: Any | None = Field(None, alias='seasonNumber')
+    episode_number: int | None = Field(None, alias='episodeNumber')
+    quality: str | None = None
+    images: Images4 | None = None
+    flags: Flags3 | None = None
+    episode_url: str | None = Field(None, alias='episodeUrl')
+    offering_dates: OfferingDates | None = Field(None, alias='offeringDates')
+    title: Title7 | None = None
+    summary: Summary | None = None
+
+class Idref19Item(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    season_id: UUID | None = Field(None, alias='seasonId')
+    orgtitle: Any | None = None
+    season_number: int | None = Field(None, alias='seasonNumber')
+    season_number_slug: str | None = Field(None, alias='seasonNumberSlug')
+    number_of_episodes: int | None = Field(None, alias='numberOfEpisodes')
+    title: Title7 | None = None
+    summary: Summary | None = None
+    episodes: list[Episode2] | None = None
+
 class MaxWidthidref19(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     large: int | None = None
@@ -2758,6 +2986,89 @@ class MaxHeightidref19(BaseModel):
     large: int | None = None
     medium: int | None = None
     small: int | None = None
+
+class FirstItem(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    title: Title7 | None = None
+
+class Description(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    short: Any | None = None
+    full: Any | None = None
+
+class Image(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    default_wide: str | None = Field(None, alias='default-wide')
+    default: str | None = None
+    centered_background_small: str | None = Field(None, alias='centered-background-small')
+    centered_background: str | None = Field(None, alias='centered-background')
+    cover_artwork: str | None = Field(None, alias='cover-artwork')
+    logo_left: str | None = Field(None, alias='logo-left')
+    content_logo_monochromatic: str | None = Field(None, alias='content-logo-monochromatic')
+    logo_centered: str | None = Field(None, alias='logo-centered')
+    poster_with_logo: str | None = Field(None, alias='poster-with-logo')
+    content_logo_polychromatic: str | None = Field(None, alias='content-logo-polychromatic')
+    cover_artwork_square: str | None = Field(None, alias='cover-artwork-square')
+    cover_artwork_horizontal: str | None = Field(None, alias='cover-artwork-horizontal')
+
+class RatingCodeItem(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    code: list[str] | None = None
+    organization: str | None = None
+    rating_code: str | None = None
+
+class Title11(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    full_original: Any | None = None
+    short_original: Any | None = None
+    short: str | None = None
+    full: str | None = None
+
+class Images5(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    default_wide: str | None = Field(None, alias='default-wide')
+    default: str | None = None
+    centered_background_small: str | None = Field(None, alias='centered-background-small')
+    centered_background: str | None = Field(None, alias='centered-background')
+    cover_artwork: str | None = Field(None, alias='cover-artwork')
+    logo_left: str | None = Field(None, alias='logo-left')
+    content_logo_monochromatic: str | None = Field(None, alias='content-logo-monochromatic')
+    logo_centered: str | None = Field(None, alias='logo-centered')
+    poster_with_logo: str | None = Field(None, alias='poster-with-logo')
+    content_logo_polychromatic: str | None = Field(None, alias='content-logo-polychromatic')
+    cover_artwork_square: str | None = Field(None, alias='cover-artwork-square')
+    cover_artwork_horizontal: str | None = Field(None, alias='cover-artwork-horizontal')
+
+class Item(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    field__typename: str | None = Field(None, alias='__typename')
+    series_id: UUID | None = Field(None, alias='seriesId')
+    hbomax_url: Any | None = Field(None, alias='hbomaxURL')
+    hbomax_id: UUID | None = Field(None, alias='hbomaxId')
+    category: str | None = None
+    series_title_id: Any | None = Field(None, alias='seriesTitleId')
+    image_url_link: str | None = Field(None, alias='imageUrlLink')
+    genres: list[str] | None = None
+    brand: list[str] | None = None
+    rating_code: list[RatingCodeItem] | None = Field(None, alias='ratingCode')
+    offering_dates: OfferingDates | None = Field(None, alias='offeringDates')
+    title: Title11 | None = None
+    summary: Summary | None = None
+    images: Images5 | None = None
+    status: str | None = None
+    feature_id: UUID | None = Field(None, alias='featureId')
+    url: Any | None = None
+
+class Idref26(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    collection_id: str | None = Field(None, alias='collectionId')
+    image_to_show: str | None = Field(None, alias='imageToShow')
+    first_item: FirstItem | None = Field(None, alias='firstItem')
+    title: Title7 | None = None
+    description: Description | None = None
+    image: Image | None = None
+    event_type: str | None = Field(None, alias='eventType')
+    items: list[Item] | None = None
 
 class Value2(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
@@ -2797,6 +3108,28 @@ class MaxHeightidref30(BaseModel):
     medium: int | None = None
     small: int | None = None
 
+class Legal(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    en_us: str | None = Field(None, alias='en_US')
+
+class SecondaryRowItem(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    label: Label | None = None
+    url: str | None = None
+    open_in_new_tab: bool | None = Field(None, alias='openInNewTab')
+    is_ccpa_link: bool | None = Field(None, alias='isCCPALink')
+
+class PrimaryRowItem(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    label: Label | None = None
+    url: str | None = None
+
+class Idref33(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    legal: Legal | None = None
+    secondary_row: list[SecondaryRowItem] | None = Field(None, alias='secondaryRow')
+    primary_row: list[PrimaryRowItem] | None = Field(None, alias='primaryRow')
+
 class Value4(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     large: str | None = None
@@ -2835,7 +3168,7 @@ class MaxHeightidref43(BaseModel):
     medium: int | None = None
     small: int | None = None
 
-class Item(BaseModel):
+class Item1(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     primary_text: str | None = Field(None, alias='primaryText')
     image: str | None = None
@@ -2846,37 +3179,37 @@ class Item(BaseModel):
 class Idref53(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     type: str | None = None
-    items: list[Item] | None = None
+    items: list[Item1] | None = None
     parent_url: str | None = Field(None, alias='parentUrl')
 
-class Title4(BaseModel):
+class Title12(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     short: str | None = None
     full: str | None = None
 
-class Images2(BaseModel):
+class Images6(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     centered_background_small: str | None = Field(None, alias='centered-background-small')
     default: str | None = None
     cover_artwork: str | None = Field(None, alias='cover-artwork')
     default_wide: str | None = Field(None, alias='default-wide')
 
-class Title5(BaseModel):
+class Title13(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     short: timedelta | str | None = Field(default=None, union_mode='left_to_right')
     full: timedelta | str | None = Field(default=None, union_mode='left_to_right')
 
-class Episode1(BaseModel):
+class Episode3(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     series_id: Any | None = Field(None, alias='seriesId')
     season_number: Any | None = Field(None, alias='seasonNumber')
     episode_number: int | None = Field(None, alias='episodeNumber')
     quality: str | None = None
-    images: Images2 | None = None
-    flags: Flags1 | None = None
+    images: Images6 | None = None
+    flags: Flags3 | None = None
     episode_url: str | None = Field(None, alias='episodeUrl')
     offering_dates: OfferingDates | None = Field(None, alias='offeringDates')
-    title: Title5 | None = None
+    title: Title13 | None = None
     summary: Summary | None = None
 
 class Idref57Item(BaseModel):
@@ -2886,16 +3219,16 @@ class Idref57Item(BaseModel):
     season_number: int | None = Field(None, alias='seasonNumber')
     season_number_slug: str | None = Field(None, alias='seasonNumberSlug')
     number_of_episodes: int | None = Field(None, alias='numberOfEpisodes')
-    title: Title4 | None = None
+    title: Title12 | None = None
     summary: Summary | None = None
-    episodes: list[Episode1] | None = None
+    episodes: list[Episode3] | None = None
 
-class Title6(BaseModel):
+class Title14(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     short: str | None = None
     full: str | None = None
 
-class Images3(BaseModel):
+class Images7(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     default_wide: str | None = Field(None, alias='default-wide')
     centered_background_small: str | None = Field(None, alias='centered-background-small')
@@ -2910,7 +3243,7 @@ class Images3(BaseModel):
     cover_artwork_square: str | None = Field(None, alias='cover-artwork-square')
     cover_artwork_horizontal: str | None = Field(None, alias='cover-artwork-horizontal')
 
-class LocalizedRating1(BaseModel):
+class LocalizedRating2(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     rating_authority: str | None = None
     classifier: str | None = None
@@ -2920,24 +3253,19 @@ class Idref63Item(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     hbomax_id: UUID | None = Field(None, alias='hbomaxId')
     type: str | None = None
-    title: Title6 | None = None
+    title: Title14 | None = None
     image_url_link: str | None = Field(None, alias='imageUrlLink')
-    images: Images3 | None = None
+    images: Images7 | None = None
     offering_dates: Any | OfferingDates | None = Field(None, alias='offeringDates')
-    localized_rating: Any | LocalizedRating1 | None = Field(None, alias='localizedRating')
+    localized_rating: Any | LocalizedRating2 | None = Field(None, alias='localizedRating')
     genres: list[Any] | None = None
     rank: Any | None = None
 
-class FirstItem(BaseModel):
+class FirstItem1(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
-    title: Title6 | None = None
+    title: Title14 | None = None
 
-class Description(BaseModel):
-    model_config = ConfigDict(extra='ignore', defer_build=True)
-    short: Any | None = None
-    full: Any | None = None
-
-class Image(BaseModel):
+class Image1(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     default_wide: str | None = Field(None, alias='default-wide')
     centered_background_small: str | None = Field(None, alias='centered-background-small')
@@ -2952,61 +3280,7 @@ class Image(BaseModel):
     cover_artwork_square: str | None = Field(None, alias='cover-artwork-square')
     cover_artwork_horizontal: str | None = Field(None, alias='cover-artwork-horizontal')
 
-class RatingCodeItem(BaseModel):
-    model_config = ConfigDict(extra='ignore', defer_build=True)
-    code: list[str] | None = None
-    organization: str | None = None
-    rating_code: str | None = None
-
-class Title9(BaseModel):
-    model_config = ConfigDict(extra='ignore', defer_build=True)
-    full_original: Any | None = None
-    short_original: Any | None = None
-    short: str | None = None
-    full: str | None = None
-
-class Item1(BaseModel):
-    model_config = ConfigDict(extra='ignore', defer_build=True)
-    field__typename: str | None = Field(None, alias='__typename')
-    series_id: UUID | None = Field(None, alias='seriesId')
-    hbomax_url: Any | None = Field(None, alias='hbomaxURL')
-    hbomax_id: UUID | None = Field(None, alias='hbomaxId')
-    category: str | None = None
-    series_title_id: Any | None = Field(None, alias='seriesTitleId')
-    image_url_link: str | None = Field(None, alias='imageUrlLink')
-    genres: list[str] | None = None
-    brand: list[str] | None = None
-    rating_code: list[RatingCodeItem] | None = Field(None, alias='ratingCode')
-    offering_dates: OfferingDates | None = Field(None, alias='offeringDates')
-    title: Title9 | None = None
-    summary: Summary | None = None
-    images: Images3 | None = None
-    status: str | None = None
-    badges: list[Any] | None = None
-    feature_id: UUID | None = Field(None, alias='featureId')
-    url: Any | None = None
-
-class Idref64(BaseModel):
-    model_config = ConfigDict(extra='ignore', defer_build=True)
-    collection_id: str | None = Field(None, alias='collectionId')
-    image_to_show: str | None = Field(None, alias='imageToShow')
-    first_item: FirstItem | None = Field(None, alias='firstItem')
-    title: Title6 | None = None
-    description: Description | None = None
-    image: Image | None = None
-    event_type: str | None = Field(None, alias='eventType')
-    items: list[Item1] | None = None
-
-class Title10(BaseModel):
-    model_config = ConfigDict(extra='ignore', defer_build=True)
-    short: str | None = None
-    full: str | None = None
-
-class FirstItem1(BaseModel):
-    model_config = ConfigDict(extra='ignore', defer_build=True)
-    title: Title10 | None = None
-
-class Title12(BaseModel):
+class Title17(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     full_original: Any | None = None
     short_original: Any | None = None
@@ -3026,9 +3300,57 @@ class Item2(BaseModel):
     brand: list[str] | None = None
     rating_code: list[RatingCodeItem] | None = Field(None, alias='ratingCode')
     offering_dates: OfferingDates | None = Field(None, alias='offeringDates')
-    title: Title12 | None = None
+    title: Title17 | None = None
     summary: Summary | None = None
-    images: Images3 | None = None
+    images: Images7 | None = None
+    status: str | None = None
+    badges: list[Any] | None = None
+    feature_id: UUID | None = Field(None, alias='featureId')
+    url: Any | None = None
+
+class Idref64(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    collection_id: str | None = Field(None, alias='collectionId')
+    image_to_show: str | None = Field(None, alias='imageToShow')
+    first_item: FirstItem1 | None = Field(None, alias='firstItem')
+    title: Title14 | None = None
+    description: Description | None = None
+    image: Image1 | None = None
+    event_type: str | None = Field(None, alias='eventType')
+    items: list[Item2] | None = None
+
+class Title18(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    short: str | None = None
+    full: str | None = None
+
+class FirstItem2(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    title: Title18 | None = None
+
+class Title20(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    full_original: Any | None = None
+    short_original: Any | None = None
+    short: str | None = None
+    full: str | None = None
+
+class Item3(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    field__typename: str | None = Field(None, alias='__typename')
+    series_id: UUID | None = Field(None, alias='seriesId')
+    hbomax_url: Any | None = Field(None, alias='hbomaxURL')
+    hbomax_id: UUID | None = Field(None, alias='hbomaxId')
+    category: str | None = None
+    series_title_id: Any | None = Field(None, alias='seriesTitleId')
+    image_url_link: str | None = Field(None, alias='imageUrlLink')
+    genres: list[str] | None = None
+    brand: list[str] | None = None
+    rating_code: list[RatingCodeItem] | None = Field(None, alias='ratingCode')
+    offering_dates: OfferingDates | None = Field(None, alias='offeringDates')
+    title: Title20 | None = None
+    summary: Summary | None = None
+    images: Images7 | None = None
     status: str | None = None
     feature_id: UUID | None = Field(None, alias='featureId')
     url: Any | None = None
@@ -3037,39 +3359,17 @@ class Idref79(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     collection_id: str | None = Field(None, alias='collectionId')
     image_to_show: str | None = Field(None, alias='imageToShow')
-    first_item: FirstItem1 | None = Field(None, alias='firstItem')
-    title: Title10 | None = None
+    first_item: FirstItem2 | None = Field(None, alias='firstItem')
+    title: Title18 | None = None
     description: Description | None = None
-    image: Image | None = None
+    image: Image1 | None = None
     event_type: str | None = Field(None, alias='eventType')
-    items: list[Item2] | None = None
+    items: list[Item3] | None = None
 
 class Idref80Item(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     lang: str | None = None
     url: str | None = None
-
-class Legal(BaseModel):
-    model_config = ConfigDict(extra='ignore', defer_build=True)
-    en_us: str | None = Field(None, alias='en_US')
-
-class SecondaryRowItem(BaseModel):
-    model_config = ConfigDict(extra='ignore', defer_build=True)
-    label: Label | None = None
-    url: str | None = None
-    open_in_new_tab: bool | None = Field(None, alias='openInNewTab')
-    is_ccpa_link: bool | None = Field(None, alias='isCCPALink')
-
-class PrimaryRowItem(BaseModel):
-    model_config = ConfigDict(extra='ignore', defer_build=True)
-    label: Label | None = None
-    url: str | None = None
-
-class Idref81(BaseModel):
-    model_config = ConfigDict(extra='ignore', defer_build=True)
-    legal: Legal | None = None
-    secondary_row: list[SecondaryRowItem] | None = Field(None, alias='secondaryRow')
-    primary_row: list[PrimaryRowItem] | None = Field(None, alias='primaryRow')
 
 class SecondaryRowItem1(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
@@ -3083,11 +3383,29 @@ class PrimaryRowItem1(BaseModel):
     label: Label | None = None
     url: str | None = None
 
-class Idref82(BaseModel):
+class Idref81(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     legal: Legal | None = None
     secondary_row: list[SecondaryRowItem1] | None = Field(None, alias='secondaryRow')
     primary_row: list[PrimaryRowItem1] | None = Field(None, alias='primaryRow')
+
+class SecondaryRowItem2(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    label: Label | None = None
+    url: str | None = None
+    open_in_new_tab: bool | None = Field(None, alias='openInNewTab')
+    is_ccpa_link: bool | None = Field(None, alias='isCCPALink')
+
+class PrimaryRowItem2(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    label: Label | None = None
+    url: str | None = None
+
+class Idref82(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    legal: Legal | None = None
+    secondary_row: list[SecondaryRowItem2] | None = Field(None, alias='secondaryRow')
+    primary_row: list[PrimaryRowItem2] | None = Field(None, alias='primaryRow')
 
 class MappedData(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
@@ -3102,17 +3420,17 @@ class MappedData(BaseModel):
     idref8: str | None = None
     idref9: str | None = None
     idref10: str | None = None
-    idref11: str | None = None
-    idref12: str | None = None
+    idref11: str | Idref11 | None = None
+    idref12: str | Idref12 | None = None
     idref13: str | None = None
-    idref14: Idref14 | None = None
-    idref15: Idref15 | None = None
+    idref14: str | Idref14 | None = None
+    idref15: str | Idref15 | None = None
     idref16: str | None = None
-    idref17: Idref17 | None = None
-    idref18: Idref18 | None = None
+    idref17: str | Idref17 | None = None
+    idref18: str | Idref18 | None = None
     max_widthidref18: MaxWidthidref18 | None = Field(None, alias='maxWidthidref18')
     max_heightidref18: MaxHeightidref18 | None = Field(None, alias='maxHeightidref18')
-    idref19: Idref19 | None = None
+    idref19: Idref19 | list[Idref19Item] | None = None
     max_widthidref19: MaxWidthidref19 | None = Field(None, alias='maxWidthidref19')
     max_heightidref19: MaxHeightidref19 | None = Field(None, alias='maxHeightidref19')
     idref20: str | None = None
@@ -3121,18 +3439,18 @@ class MappedData(BaseModel):
     idref23: str | None = None
     idref24: str | None = None
     idref25: str | None = None
-    idref26: str | None = None
+    idref26: str | Idref26 | None = None
     idref27: str | None = None
     idref28: str | None = None
-    idref29: Idref29 | None = None
+    idref29: str | Idref29 | None = None
     max_widthidref29: MaxWidthidref29 | None = Field(None, alias='maxWidthidref29')
     max_heightidref29: MaxHeightidref29 | None = Field(None, alias='maxHeightidref29')
-    idref30: Idref30 | None = None
+    idref30: str | Idref30 | None = None
     max_widthidref30: MaxWidthidref30 | None = Field(None, alias='maxWidthidref30')
     max_heightidref30: MaxHeightidref30 | None = Field(None, alias='maxHeightidref30')
     idref31: str | None = None
     idref32: str | None = None
-    idref33: str | None = None
+    idref33: str | Idref33 | None = None
     idref34: str | None = None
     idref35: str | None = None
     idref36: str | None = None
