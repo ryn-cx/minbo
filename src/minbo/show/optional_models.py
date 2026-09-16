@@ -856,36 +856,6 @@ class UsEs(BaseModel):
     start_date: AwareDatetime | None = Field(None, alias='startDate')
     end_date: AwareDatetime | None = Field(None, alias='endDate')
 
-class EsEn(BaseModel):
-    model_config = ConfigDict(extra='ignore', defer_build=True)
-    url: str | None = None
-    start_date: AwareDatetime | None = Field(None, alias='startDate')
-    end_date: AwareDatetime | None = Field(None, alias='endDate')
-
-class EsEs(BaseModel):
-    model_config = ConfigDict(extra='ignore', defer_build=True)
-    url: str | None = None
-    start_date: AwareDatetime | None = Field(None, alias='startDate')
-    end_date: AwareDatetime | None = Field(None, alias='endDate')
-
-class TrEn(BaseModel):
-    model_config = ConfigDict(extra='ignore', defer_build=True)
-    url: str | None = None
-    start_date: AwareDatetime | None = Field(None, alias='startDate')
-    end_date: AwareDatetime | None = Field(None, alias='endDate')
-
-class TrTr(BaseModel):
-    model_config = ConfigDict(extra='ignore', defer_build=True)
-    url: str | None = None
-    start_date: AwareDatetime | None = Field(None, alias='startDate')
-    end_date: AwareDatetime | None = Field(None, alias='endDate')
-
-class AuEn(BaseModel):
-    model_config = ConfigDict(extra='ignore', defer_build=True)
-    url: str | None = None
-    start_date: AwareDatetime | None = Field(None, alias='startDate')
-    end_date: AwareDatetime | None = Field(None, alias='endDate')
-
 class AlEn(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     url: str | None = None
@@ -1354,6 +1324,18 @@ class SiSl(BaseModel):
     start_date: AwareDatetime | None = Field(None, alias='startDate')
     end_date: AwareDatetime | None = Field(None, alias='endDate')
 
+class EsEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class EsEs(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
 class SeEn(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     url: str | None = None
@@ -1402,6 +1384,18 @@ class TjRu(BaseModel):
     start_date: AwareDatetime | None = Field(None, alias='startDate')
     end_date: AwareDatetime | None = Field(None, alias='endDate')
 
+class TrEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class TrTr(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
 class UaEn(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     url: str | None = None
@@ -1439,6 +1433,12 @@ class PhEn(BaseModel):
     end_date: AwareDatetime | None = Field(None, alias='endDate')
 
 class TwEn(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    url: str | None = None
+    start_date: AwareDatetime | None = Field(None, alias='startDate')
+    end_date: AwareDatetime | None = Field(None, alias='endDate')
+
+class AuEn(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     url: str | None = None
     start_date: AwareDatetime | None = Field(None, alias='startDate')
@@ -1945,11 +1945,6 @@ class ClEs(BaseModel):
 class CountryLangUris(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     us_es: UsEs | None = Field(None, alias='us/es')
-    es_en: EsEn | None = Field(None, alias='es/en')
-    es_es: EsEs | None = Field(None, alias='es/es')
-    tr_en: TrEn | None = Field(None, alias='tr/en')
-    tr_tr: TrTr | None = Field(None, alias='tr/tr')
-    au_en: AuEn | None = Field(None, alias='au/en')
     al_en: AlEn | None = Field(None, alias='al/en')
     ad_en: AdEn | None = Field(None, alias='ad/en')
     ad_es: AdEs | None = Field(None, alias='ad/es')
@@ -2028,6 +2023,8 @@ class CountryLangUris(BaseModel):
     sk_sk: SkSk | None = Field(None, alias='sk/sk')
     si_en: SiEn | None = Field(None, alias='si/en')
     si_sl: SiSl | None = Field(None, alias='si/sl')
+    es_en: EsEn | None = Field(None, alias='es/en')
+    es_es: EsEs | None = Field(None, alias='es/es')
     se_en: SeEn | None = Field(None, alias='se/en')
     se_sv: SeSv | None = Field(None, alias='se/sv')
     ch_en: ChEn | None = Field(None, alias='ch/en')
@@ -2036,6 +2033,8 @@ class CountryLangUris(BaseModel):
     ch_it: ChIt | None = Field(None, alias='ch/it')
     tj_en: TjEn | None = Field(None, alias='tj/en')
     tj_ru: TjRu | None = Field(None, alias='tj/ru')
+    tr_en: TrEn | None = Field(None, alias='tr/en')
+    tr_tr: TrTr | None = Field(None, alias='tr/tr')
     ua_en: UaEn | None = Field(None, alias='ua/en')
     ua_uk: UaUk | None = Field(None, alias='ua/uk')
     gb_en: GbEn | None = Field(None, alias='gb/en')
@@ -2043,6 +2042,7 @@ class CountryLangUris(BaseModel):
     hk_en: HkEn | None = Field(None, alias='hk/en')
     ph_en: PhEn | None = Field(None, alias='ph/en')
     tw_en: TwEn | None = Field(None, alias='tw/en')
+    au_en: AuEn | None = Field(None, alias='au/en')
     id_en: IdEn | None = Field(None, alias='id/en')
     sg_en: SgEn | None = Field(None, alias='sg/en')
     th_en: ThEn | None = Field(None, alias='th/en')
@@ -2707,8 +2707,8 @@ class CastAndCrew2(BaseModel):
 
 class Images2(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
-    centered_background_small: str | None = Field(None, alias='centered-background-small')
     default: str | None = None
+    centered_background_small: str | None = Field(None, alias='centered-background-small')
     cover_artwork: str | None = Field(None, alias='cover-artwork')
     default_wide: str | None = Field(None, alias='default-wide')
 
@@ -2755,15 +2755,15 @@ class Images3(BaseModel):
     logo_left: str | None = Field(None, alias='logo-left')
     content_logo_monochromatic: str | None = Field(None, alias='content-logo-monochromatic')
     logo_centered: str | None = Field(None, alias='logo-centered')
-    poster_with_logo: str | None = Field(None, alias='poster-with-logo')
     content_logo_polychromatic: str | None = Field(None, alias='content-logo-polychromatic')
+    poster_with_logo: str | None = Field(None, alias='poster-with-logo')
     cover_artwork_horizontal: str | None = Field(None, alias='cover-artwork-horizontal')
     cover_artwork_square: str | None = Field(None, alias='cover-artwork-square')
 
 class Rating1(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     viisi: str | None = None
-    blm: timedelta | None = None
+    blm: timedelta | str | None = Field(default=None, union_mode='left_to_right')
 
 class Idref14(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
@@ -3189,8 +3189,8 @@ class Title12(BaseModel):
 
 class Images6(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
-    centered_background_small: str | None = Field(None, alias='centered-background-small')
     default: str | None = None
+    centered_background_small: str | None = Field(None, alias='centered-background-small')
     cover_artwork: str | None = Field(None, alias='cover-artwork')
     default_wide: str | None = Field(None, alias='default-wide')
 
@@ -3231,8 +3231,8 @@ class Title14(BaseModel):
 class Images7(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     default_wide: str | None = Field(None, alias='default-wide')
-    centered_background_small: str | None = Field(None, alias='centered-background-small')
     default: str | None = None
+    centered_background_small: str | None = Field(None, alias='centered-background-small')
     centered_background: str | None = Field(None, alias='centered-background')
     cover_artwork: str | None = Field(None, alias='cover-artwork')
     logo_left: str | None = Field(None, alias='logo-left')
@@ -3240,8 +3240,8 @@ class Images7(BaseModel):
     logo_centered: str | None = Field(None, alias='logo-centered')
     content_logo_polychromatic: str | None = Field(None, alias='content-logo-polychromatic')
     poster_with_logo: str | None = Field(None, alias='poster-with-logo')
-    cover_artwork_square: str | None = Field(None, alias='cover-artwork-square')
     cover_artwork_horizontal: str | None = Field(None, alias='cover-artwork-horizontal')
+    cover_artwork_square: str | None = Field(None, alias='cover-artwork-square')
 
 class LocalizedRating2(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
@@ -3287,6 +3287,21 @@ class Title17(BaseModel):
     short: str | None = None
     full: str | None = None
 
+class Images8(BaseModel):
+    model_config = ConfigDict(extra='ignore', defer_build=True)
+    default_wide: str | None = Field(None, alias='default-wide')
+    centered_background_small: str | None = Field(None, alias='centered-background-small')
+    default: str | None = None
+    centered_background: str | None = Field(None, alias='centered-background')
+    cover_artwork: str | None = Field(None, alias='cover-artwork')
+    logo_left: str | None = Field(None, alias='logo-left')
+    content_logo_monochromatic: str | None = Field(None, alias='content-logo-monochromatic')
+    logo_centered: str | None = Field(None, alias='logo-centered')
+    content_logo_polychromatic: str | None = Field(None, alias='content-logo-polychromatic')
+    poster_with_logo: str | None = Field(None, alias='poster-with-logo')
+    cover_artwork_square: str | None = Field(None, alias='cover-artwork-square')
+    cover_artwork_horizontal: str | None = Field(None, alias='cover-artwork-horizontal')
+
 class Item2(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
     field__typename: str | None = Field(None, alias='__typename')
@@ -3302,7 +3317,7 @@ class Item2(BaseModel):
     offering_dates: OfferingDates | None = Field(None, alias='offeringDates')
     title: Title17 | None = None
     summary: Summary | None = None
-    images: Images7 | None = None
+    images: Images8 | None = None
     status: str | None = None
     badges: list[Any] | None = None
     feature_id: UUID | None = Field(None, alias='featureId')
@@ -3350,7 +3365,7 @@ class Item3(BaseModel):
     offering_dates: OfferingDates | None = Field(None, alias='offeringDates')
     title: Title20 | None = None
     summary: Summary | None = None
-    images: Images7 | None = None
+    images: Images8 | None = None
     status: str | None = None
     feature_id: UUID | None = Field(None, alias='featureId')
     url: Any | None = None
