@@ -71,12 +71,16 @@ class Show(BaseEndpoint):
 
     # TODO: Validate
     def _validate_download(self, response: str, show_id: str) -> str:
-        # The page names what it was built from by position, so every field on
-        # it sits under an idrefN key and the show is always idref14. A movie
-        # is served from the same address and carries a featureId there
-        # instead, so an id that is not a series reads as no show being found.
-        show = json.loads(response)["props"]["pageProps"]["mappedData"]["idref14"]
-        if show.get("seriesId") != show_id:
+        # The page names what it was built from by position, so the show sits
+        # under an idrefN key whose number changes from page to page and the
+        # other keys hold anything from HTML blurbs to lists. A movie is served
+        # from the same address and carries a featureId instead of a seriesId,
+        # so a page with no matching seriesId reads as no show being found.
+        mapped_data = json.loads(response)["props"]["pageProps"]["mappedData"]
+        if not any(
+            isinstance(field, dict) and field.get("seriesId") == show_id
+            for field in mapped_data.values()
+        ):
             raise ShowNotFoundError(show_id, HTTPStatus.OK, response)
         return response
 
