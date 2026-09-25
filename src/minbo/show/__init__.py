@@ -9,7 +9,8 @@ from logging import NullHandler, getLogger
 
 from minbo.base_api_endpoint import BaseEndpoint
 from minbo.exceptions import ResourceNotFoundError, ShowNotFoundError
-from minbo.show.models import ShowModel, model_validate_json
+from minbo.show.models import ParsedShowModel, model_validate_json
+from minbo.show.parse import SERIES_ID_KEY, parse_show, show_content
 
 logger = getLogger(__name__)
 logger.addHandler(NullHandler())
@@ -45,7 +46,11 @@ class Show(BaseEndpoint):
     """
 
     # TODO: Validate
-    def __call__(self, show_id: str, season_number: int | None = None) -> ShowModel:
+    def __call__(
+        self,
+        show_id: str,
+        season_number: int | None = None,
+    ) -> ParsedShowModel:
         """Download and parse the show file."""
         log_id = self.get_log_id(self.__call__, locals())
         return self.load(self.download(show_id, season_number), log_id)
@@ -71,20 +76,15 @@ class Show(BaseEndpoint):
 
     # TODO: Validate
     def _validate_download(self, response: str, show_id: str) -> str:
-        # The page names what it was built from by position, so the show sits
-        # under an idrefN key whose number changes from page to page and the
-        # other keys hold anything from HTML blurbs to lists. A movie is served
-        # from the same address and carries a featureId instead of a seriesId,
-        # so a page with no matching seriesId reads as no show being found.
-        mapped_data = json.loads(response)["props"]["pageProps"]["mappedData"]
-        if not any(
-            isinstance(field, dict) and field.get("seriesId") == show_id
-            for field in mapped_data.values()
-        ):
+        show = show_content(json.loads(response))
+        if show.get(SERIES_ID_KEY) != show_id:
             raise ShowNotFoundError(show_id, HTTPStatus.OK, response)
         return response
 
     # TODO: Validate
-    def load(self, data: str, log_id: str = "") -> ShowModel:
+    def load(self, data: str, log_id: str = "") -> ParsedShowModel:
         """Load a show file into its model."""
-        return model_validate_json(data, log_id or self.default_log_id)
+        return model_validate_json(
+            parse_show(json.loads(data)),
+            log_id or self.default_log_id,
+        )

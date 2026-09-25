@@ -9,7 +9,8 @@ from logging import NullHandler, getLogger
 
 from minbo.base_api_endpoint import BaseEndpoint
 from minbo.exceptions import MovieNotFoundError, ResourceNotFoundError
-from minbo.movie.models import MovieModel, model_validate_json
+from minbo.movie.models import ParsedMovieModel, model_validate_json
+from minbo.movie.parse import FEATURE_ID_KEY, movie_content, parse_movie
 
 logger = getLogger(__name__)
 logger.addHandler(NullHandler())
@@ -40,7 +41,7 @@ class Movie(BaseEndpoint):
     """
 
     # TODO: Validate
-    def __call__(self, movie_id: str) -> MovieModel:
+    def __call__(self, movie_id: str) -> ParsedMovieModel:
         """Download and parse the movie file."""
         log_id = self.get_log_id(self.__call__, locals())
         return self.load(self.download(movie_id), log_id)
@@ -65,20 +66,15 @@ class Movie(BaseEndpoint):
 
     # TODO: Validate
     def _validate_download(self, response: str, movie_id: str) -> str:
-        # The page names what it was built from by position, so the movie sits
-        # under an idrefN key whose number changes from page to page and the
-        # other keys hold anything from HTML blurbs to lists. A show is served
-        # from the same address and carries a seriesId instead of a featureId,
-        # so a page with no matching featureId reads as no movie being found.
-        mapped_data = json.loads(response)["props"]["pageProps"]["mappedData"]
-        if not any(
-            isinstance(field, dict) and field.get("featureId") == movie_id
-            for field in mapped_data.values()
-        ):
+        movie = movie_content(json.loads(response))
+        if movie.get(FEATURE_ID_KEY) != movie_id:
             raise MovieNotFoundError(movie_id, HTTPStatus.OK, response)
         return response
 
     # TODO: Validate
-    def load(self, data: str, log_id: str = "") -> MovieModel:
+    def load(self, data: str, log_id: str = "") -> ParsedMovieModel:
         """Load a movie file into its model."""
-        return model_validate_json(data, log_id or self.default_log_id)
+        return model_validate_json(
+            parse_movie(json.loads(data)),
+            log_id or self.default_log_id,
+        )

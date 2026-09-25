@@ -34,7 +34,7 @@ NOT_MOVIE_IDS = [
 @pytest.mark.parametrize("movie_id", MOVIE_IDS)
 def test_download(client: MinBO, movie_id: str) -> None:
     movie = client.movie(movie_id)
-    assert str(movie.props.page_props.mapped_data.idref14.feature_id) == movie_id
+    assert str(movie.title_key) == movie_id
 
 
 # TODO: Validate

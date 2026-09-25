@@ -41,10 +41,9 @@ NOT_SHOW_IDS = [
 @pytest.mark.parametrize(("show_id", "season_number"), SHOWS)
 def test_download(client: MinBO, show_id: str, season_number: int | None) -> None:
     show = client.show(show_id, season_number)
-    series = show.props.page_props.mapped_data.idref14
-    assert str(series.series_id) == show_id
+    assert str(show.title_key) == show_id
     if season_number is not None:
-        listed = [season for season in series.seasons if season.episodes]
+        listed = [season for season in show.seasons if season.episodes]
         assert [season.season_number for season in listed] == [season_number]
 
 
