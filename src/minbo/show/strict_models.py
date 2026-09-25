@@ -857,6 +857,228 @@ class UsEs(BaseModel):
     start_date: AwareDatetime = Field(..., alias='startDate')
     end_date: AwareDatetime = Field(..., alias='endDate')
 
+class HnEs(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class MxEs(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class NiEs(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class PaEs(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class ArEs(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class BoEs(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class CoEs(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class CrEs(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class DoEs(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class EcEs(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class SvEs(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class GtEs(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class PyEs(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class PeEs(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class UyEs(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class JmEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class MsEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class AiEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class AgEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class AwEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class BsEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class BbEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class BzEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class VgEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class KyEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class CwEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class DmEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class GdEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class GyEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class HtEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class KnEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class LcEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class VcEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class SrEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class TtEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class TcEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class BrPt(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
 class AlEn(BaseModel):
     model_config = ConfigDict(defer_build=True)
     url: str
@@ -1415,6 +1637,18 @@ class GbEn(BaseModel):
     start_date: AwareDatetime = Field(..., alias='startDate')
     end_date: AwareDatetime = Field(..., alias='endDate')
 
+class AuEn(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
+class ClEs(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    url: str
+    start_date: AwareDatetime = Field(..., alias='startDate')
+    end_date: AwareDatetime = Field(..., alias='endDate')
+
 class MyEn(BaseModel):
     model_config = ConfigDict(defer_build=True)
     url: str
@@ -1434,12 +1668,6 @@ class PhEn(BaseModel):
     end_date: AwareDatetime = Field(..., alias='endDate')
 
 class TwEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class AuEn(BaseModel):
     model_config = ConfigDict(defer_build=True)
     url: str
     start_date: AwareDatetime = Field(..., alias='startDate')
@@ -1715,237 +1943,46 @@ class VnVi(BaseModel):
     start_date: AwareDatetime = Field(..., alias='startDate')
     end_date: AwareDatetime = Field(..., alias='endDate')
 
-class HnEs(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class MxEs(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class NiEs(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class PaEs(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class ArEs(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class BoEs(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class CoEs(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class CrEs(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class DoEs(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class EcEs(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class SvEs(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class GtEs(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class PyEs(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class PeEs(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class UyEs(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class JmEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class MsEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class AiEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class AgEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class AwEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class BsEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class BbEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class BzEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class VgEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class KyEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class CwEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class DmEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class GdEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class GyEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class HtEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class KnEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class LcEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class VcEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class SrEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class TtEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class TcEn(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class BrPt(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
-class ClEs(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    url: str
-    start_date: AwareDatetime = Field(..., alias='startDate')
-    end_date: AwareDatetime = Field(..., alias='endDate')
-
 class CountryLangUris(BaseModel):
     model_config = ConfigDict(defer_build=True)
     us_es: UsEs = Field(..., alias='us/es')
+    hn_es: HnEs | None = Field(None, alias='hn/es')
+    mx_es: MxEs | None = Field(None, alias='mx/es')
+    ni_es: NiEs | None = Field(None, alias='ni/es')
+    pa_es: PaEs | None = Field(None, alias='pa/es')
+    ar_es: ArEs | None = Field(None, alias='ar/es')
+    bo_es: BoEs | None = Field(None, alias='bo/es')
+    co_es: CoEs | None = Field(None, alias='co/es')
+    cr_es: CrEs | None = Field(None, alias='cr/es')
+    do_es: DoEs | None = Field(None, alias='do/es')
+    ec_es: EcEs | None = Field(None, alias='ec/es')
+    sv_es: SvEs | None = Field(None, alias='sv/es')
+    gt_es: GtEs | None = Field(None, alias='gt/es')
+    py_es: PyEs | None = Field(None, alias='py/es')
+    pe_es: PeEs | None = Field(None, alias='pe/es')
+    uy_es: UyEs | None = Field(None, alias='uy/es')
+    jm_en: JmEn | None = Field(None, alias='jm/en')
+    ms_en: MsEn | None = Field(None, alias='ms/en')
+    ai_en: AiEn | None = Field(None, alias='ai/en')
+    ag_en: AgEn | None = Field(None, alias='ag/en')
+    aw_en: AwEn | None = Field(None, alias='aw/en')
+    bs_en: BsEn | None = Field(None, alias='bs/en')
+    bb_en: BbEn | None = Field(None, alias='bb/en')
+    bz_en: BzEn | None = Field(None, alias='bz/en')
+    vg_en: VgEn | None = Field(None, alias='vg/en')
+    ky_en: KyEn | None = Field(None, alias='ky/en')
+    cw_en: CwEn | None = Field(None, alias='cw/en')
+    dm_en: DmEn | None = Field(None, alias='dm/en')
+    gd_en: GdEn | None = Field(None, alias='gd/en')
+    gy_en: GyEn | None = Field(None, alias='gy/en')
+    ht_en: HtEn | None = Field(None, alias='ht/en')
+    kn_en: KnEn | None = Field(None, alias='kn/en')
+    lc_en: LcEn | None = Field(None, alias='lc/en')
+    vc_en: VcEn | None = Field(None, alias='vc/en')
+    sr_en: SrEn | None = Field(None, alias='sr/en')
+    tt_en: TtEn | None = Field(None, alias='tt/en')
+    tc_en: TcEn | None = Field(None, alias='tc/en')
+    br_pt: BrPt | None = Field(None, alias='br/pt')
     al_en: AlEn | None = Field(None, alias='al/en')
     ad_en: AdEn | None = Field(None, alias='ad/en')
     ad_es: AdEs | None = Field(None, alias='ad/es')
@@ -2039,11 +2076,12 @@ class CountryLangUris(BaseModel):
     ua_en: UaEn | None = Field(None, alias='ua/en')
     ua_uk: UaUk | None = Field(None, alias='ua/uk')
     gb_en: GbEn | None = Field(None, alias='gb/en')
+    au_en: AuEn | None = Field(None, alias='au/en')
+    cl_es: ClEs | None = Field(None, alias='cl/es')
     my_en: MyEn | None = Field(None, alias='my/en')
     hk_en: HkEn | None = Field(None, alias='hk/en')
     ph_en: PhEn | None = Field(None, alias='ph/en')
     tw_en: TwEn | None = Field(None, alias='tw/en')
-    au_en: AuEn | None = Field(None, alias='au/en')
     id_en: IdEn | None = Field(None, alias='id/en')
     sg_en: SgEn | None = Field(None, alias='sg/en')
     th_en: ThEn | None = Field(None, alias='th/en')
@@ -2089,44 +2127,6 @@ class CountryLangUris(BaseModel):
     tk_en: TkEn | None = Field(None, alias='tk/en')
     vn_en: VnEn | None = Field(None, alias='vn/en')
     vn_vi: VnVi | None = Field(None, alias='vn/vi')
-    hn_es: HnEs | None = Field(None, alias='hn/es')
-    mx_es: MxEs | None = Field(None, alias='mx/es')
-    ni_es: NiEs | None = Field(None, alias='ni/es')
-    pa_es: PaEs | None = Field(None, alias='pa/es')
-    ar_es: ArEs | None = Field(None, alias='ar/es')
-    bo_es: BoEs | None = Field(None, alias='bo/es')
-    co_es: CoEs | None = Field(None, alias='co/es')
-    cr_es: CrEs | None = Field(None, alias='cr/es')
-    do_es: DoEs | None = Field(None, alias='do/es')
-    ec_es: EcEs | None = Field(None, alias='ec/es')
-    sv_es: SvEs | None = Field(None, alias='sv/es')
-    gt_es: GtEs | None = Field(None, alias='gt/es')
-    py_es: PyEs | None = Field(None, alias='py/es')
-    pe_es: PeEs | None = Field(None, alias='pe/es')
-    uy_es: UyEs | None = Field(None, alias='uy/es')
-    jm_en: JmEn | None = Field(None, alias='jm/en')
-    ms_en: MsEn | None = Field(None, alias='ms/en')
-    ai_en: AiEn | None = Field(None, alias='ai/en')
-    ag_en: AgEn | None = Field(None, alias='ag/en')
-    aw_en: AwEn | None = Field(None, alias='aw/en')
-    bs_en: BsEn | None = Field(None, alias='bs/en')
-    bb_en: BbEn | None = Field(None, alias='bb/en')
-    bz_en: BzEn | None = Field(None, alias='bz/en')
-    vg_en: VgEn | None = Field(None, alias='vg/en')
-    ky_en: KyEn | None = Field(None, alias='ky/en')
-    cw_en: CwEn | None = Field(None, alias='cw/en')
-    dm_en: DmEn | None = Field(None, alias='dm/en')
-    gd_en: GdEn | None = Field(None, alias='gd/en')
-    gy_en: GyEn | None = Field(None, alias='gy/en')
-    ht_en: HtEn | None = Field(None, alias='ht/en')
-    kn_en: KnEn | None = Field(None, alias='kn/en')
-    lc_en: LcEn | None = Field(None, alias='lc/en')
-    vc_en: VcEn | None = Field(None, alias='vc/en')
-    sr_en: SrEn | None = Field(None, alias='sr/en')
-    tt_en: TtEn | None = Field(None, alias='tt/en')
-    tc_en: TcEn | None = Field(None, alias='tc/en')
-    br_pt: BrPt | None = Field(None, alias='br/pt')
-    cl_es: ClEs | None = Field(None, alias='cl/es')
 
 class CountryMapping(BaseModel):
     model_config = ConfigDict(defer_build=True)
@@ -2455,11 +2455,11 @@ class Flags(BaseModel):
 
 class Trailer(BaseModel):
     model_config = ConfigDict(defer_build=True)
-    program_id: UUID = Field(..., alias='programId')
-    edit_id: UUID = Field(..., alias='editId')
-    title: str
-    description: str
-    url: str
+    program_id: UUID | None = Field(..., alias='programId')
+    edit_id: UUID | None = Field(..., alias='editId')
+    title: str | None
+    description: str | None
+    url: str | None
 
 class OfferingDates(BaseModel):
     model_config = ConfigDict(defer_build=True)
@@ -2543,14 +2543,14 @@ class Images1(BaseModel):
     logo_left: str = Field(..., alias='logo-left')
     content_logo_monochromatic: str = Field(..., alias='content-logo-monochromatic')
     logo_centered: str = Field(..., alias='logo-centered')
-    poster_with_logo: str = Field(..., alias='poster-with-logo')
     content_logo_polychromatic: str = Field(..., alias='content-logo-polychromatic')
+    poster_with_logo: str = Field(..., alias='poster-with-logo')
     cover_artwork_horizontal: str = Field(..., alias='cover-artwork-horizontal')
     cover_artwork_square: str = Field(..., alias='cover-artwork-square')
 
 class Rating(BaseModel):
     model_config = ConfigDict(defer_build=True)
-    us_fcc_tv: str = Field(..., alias='us-fcc-tv')
+    us_fcc_tv: str | None = Field(None, alias='us-fcc-tv')
 
 class LocalizedRating(BaseModel):
     model_config = ConfigDict(defer_build=True)
@@ -2690,14 +2690,6 @@ class Flags2(BaseModel):
     has_dolby_vision: bool = Field(..., alias='hasDolbyVision')
     has_pse_advisory: bool = Field(..., alias='hasPSEAdvisory')
 
-class Trailer1(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    program_id: UUID | None = Field(..., alias='programId')
-    edit_id: UUID | None = Field(..., alias='editId')
-    title: str | None
-    description: str | None
-    url: str | None
-
 class CastAndCrew2(BaseModel):
     model_config = ConfigDict(defer_build=True)
     actor: list[ActorItem] = Field(..., alias='Actor')
@@ -2708,8 +2700,8 @@ class CastAndCrew2(BaseModel):
 
 class Images2(BaseModel):
     model_config = ConfigDict(defer_build=True)
-    default: str
     centered_background_small: str = Field(..., alias='centered-background-small')
+    default: str
     cover_artwork: str = Field(..., alias='cover-artwork')
     default_wide: str | None = Field(None, alias='default-wide')
 
@@ -2763,6 +2755,7 @@ class Images3(BaseModel):
 
 class Rating1(BaseModel):
     model_config = ConfigDict(defer_build=True)
+    us_fcc_tv: str | None = Field(None, alias='us-fcc-tv')
     viisi: str | None = None
     blm: timedelta | str | None = Field(default=None, union_mode='left_to_right')
 
@@ -2774,7 +2767,7 @@ class Idref14(BaseModel):
     series_id: UUID = Field(..., alias='seriesId')
     series_title_id: None = Field(..., alias='seriesTitleId')
     flags: Flags2
-    trailer: Trailer1
+    trailer: Trailer
     genres: list[str]
     brand: list[str]
     episode_count: None = Field(..., alias='episodeCount')
@@ -2882,6 +2875,11 @@ class Idref15(BaseModel):
     primary_cta: PrimaryCta1 = Field(..., alias='primaryCta')
     skip_to_content: SkipToContent1 = Field(..., alias='skipToContent')
 
+class Idref16Item(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    lang: str
+    url: str
+
 class UnauthLabel4(BaseModel):
     model_config = ConfigDict(defer_build=True)
     default: Default7
@@ -2937,9 +2935,39 @@ class Value1(BaseModel):
     medium: str
     small: str
 
+class UnauthLabel5(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    default: Default7
+    mobile: Mobile7
+
+class AuthLabel5(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    default: Default7
+    mobile: Mobile7
+
+class SecondaryCta3(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    unauth_label: UnauthLabel5 = Field(..., alias='unauthLabel')
+    unauth_url: str = Field(..., alias='unauthUrl')
+    auth_url: str = Field(..., alias='authUrl')
+    auth_label: AuthLabel5 = Field(..., alias='authLabel')
+
+class Logo3(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    alt_text: AltText2 = Field(..., alias='altText')
+    url: str
+
+class SkipToContent3(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    default: Default7
+    mobile: Mobile7
+
 class Idref19(BaseModel):
     model_config = ConfigDict(defer_build=True)
-    value: Value1
+    value: Value1 | None = None
+    secondary_cta: SecondaryCta3 | None = Field(None, alias='secondaryCta')
+    logo: Logo3 | None = None
+    skip_to_content: SkipToContent3 | None = Field(None, alias='skipToContent')
 
 class Title7(BaseModel):
     model_config = ConfigDict(defer_build=True)
@@ -2988,6 +3016,14 @@ class MaxHeightidref19(BaseModel):
     medium: int | None = None
     small: int | None = None
 
+class Value2(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: str
+
+class Idref20(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    value: Value2
+
 class FirstItem(BaseModel):
     model_config = ConfigDict(defer_build=True)
     title: Title7
@@ -3009,8 +3045,8 @@ class Image(BaseModel):
     logo_centered: str = Field(..., alias='logo-centered')
     poster_with_logo: str = Field(..., alias='poster-with-logo')
     content_logo_polychromatic: str = Field(..., alias='content-logo-polychromatic')
-    cover_artwork_square: str = Field(..., alias='cover-artwork-square')
     cover_artwork_horizontal: str = Field(..., alias='cover-artwork-horizontal')
+    cover_artwork_square: str = Field(..., alias='cover-artwork-square')
 
 class RatingCodeItem(BaseModel):
     model_config = ConfigDict(defer_build=True)
@@ -3037,8 +3073,8 @@ class Images5(BaseModel):
     logo_centered: str = Field(..., alias='logo-centered')
     poster_with_logo: str = Field(..., alias='poster-with-logo')
     content_logo_polychromatic: str = Field(..., alias='content-logo-polychromatic')
-    cover_artwork_square: str = Field(..., alias='cover-artwork-square')
     cover_artwork_horizontal: str = Field(..., alias='cover-artwork-horizontal')
+    cover_artwork_square: str = Field(..., alias='cover-artwork-square')
 
 class Item(BaseModel):
     model_config = ConfigDict(defer_build=True)
@@ -3060,7 +3096,7 @@ class Item(BaseModel):
     feature_id: UUID | None = Field(None, alias='featureId')
     url: None = Field(None)
 
-class Idref26(BaseModel):
+class Idref25(BaseModel):
     model_config = ConfigDict(defer_build=True)
     collection_id: str = Field(..., alias='collectionId')
     image_to_show: str = Field(..., alias='imageToShow')
@@ -3068,46 +3104,99 @@ class Idref26(BaseModel):
     title: Title7
     description: Description
     image: Image
-    event_type: str = Field(..., alias='eventType')
+    event_type: None = Field(..., alias='eventType')
     items: list[Item]
 
-class Value2(BaseModel):
+class Title12(BaseModel):
     model_config = ConfigDict(defer_build=True)
-    large: str
+    short: str
+    full: str
+
+class FirstItem1(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    title: Title12
+
+class Image1(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    default_wide: str = Field(..., alias='default-wide')
+    default: str
+    centered_background_small: str = Field(..., alias='centered-background-small')
+    centered_background: str = Field(..., alias='centered-background')
+    cover_artwork: str = Field(..., alias='cover-artwork')
+    logo_left: str = Field(..., alias='logo-left')
+    content_logo_monochromatic: str = Field(..., alias='content-logo-monochromatic')
+    logo_centered: str = Field(..., alias='logo-centered')
+    poster_with_logo: str = Field(..., alias='poster-with-logo')
+    content_logo_polychromatic: str = Field(..., alias='content-logo-polychromatic')
+    cover_artwork_square: str = Field(..., alias='cover-artwork-square')
+    cover_artwork_horizontal: str = Field(..., alias='cover-artwork-horizontal')
+
+class Title14(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    full_original: None
+    short_original: None
+    short: str
+    full: str
+
+class Images6(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    default_wide: str = Field(..., alias='default-wide')
+    default: str
+    centered_background_small: str = Field(..., alias='centered-background-small')
+    centered_background: str = Field(..., alias='centered-background')
+    cover_artwork: str = Field(..., alias='cover-artwork')
+    logo_left: str = Field(..., alias='logo-left')
+    content_logo_monochromatic: str = Field(..., alias='content-logo-monochromatic')
+    logo_centered: str = Field(..., alias='logo-centered')
+    poster_with_logo: str = Field(..., alias='poster-with-logo')
+    content_logo_polychromatic: str = Field(..., alias='content-logo-polychromatic')
+    cover_artwork_square: str = Field(..., alias='cover-artwork-square')
+    cover_artwork_horizontal: str = Field(..., alias='cover-artwork-horizontal')
+
+class Item1(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    field__typename: str = Field(..., alias='__typename')
+    series_id: UUID | None = Field(None, alias='seriesId')
+    hbomax_url: None = Field(..., alias='hbomaxURL')
+    hbomax_id: UUID = Field(..., alias='hbomaxId')
+    category: str
+    series_title_id: None = Field(None, alias='seriesTitleId')
+    image_url_link: str = Field(..., alias='imageUrlLink')
+    genres: list[str]
+    brand: list[str]
+    rating_code: list[RatingCodeItem] = Field(..., alias='ratingCode')
+    offering_dates: OfferingDates = Field(..., alias='offeringDates')
+    title: Title14
+    summary: Summary
+    images: Images6
+    status: str
+    feature_id: UUID | None = Field(None, alias='featureId')
+    url: None = Field(None)
+
+class Idref26(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    collection_id: str = Field(..., alias='collectionId')
+    image_to_show: str = Field(..., alias='imageToShow')
+    first_item: FirstItem1 = Field(..., alias='firstItem')
+    title: Title12
+    description: Description
+    image: Image1
+    event_type: str = Field(..., alias='eventType')
+    items: list[Item1]
 
 class Idref29(BaseModel):
     model_config = ConfigDict(defer_build=True)
     value: Value2
 
-class MaxWidthidref29(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    large: int
-
-class MaxHeightidref29(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    large: int
-
-class Value3(BaseModel):
+class Value4(BaseModel):
     model_config = ConfigDict(defer_build=True)
     large: str
-    medium: str
-    small: str
+    medium: str | None = None
+    small: str | None = None
 
 class Idref30(BaseModel):
     model_config = ConfigDict(defer_build=True)
-    value: Value3
-
-class MaxWidthidref30(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    large: int | None = None
-    medium: int | None = None
-    small: int | None = None
-
-class MaxHeightidref30(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    large: int | None = None
-    medium: int | None = None
-    small: int | None = None
+    value: Value4
 
 class Legal(BaseModel):
     model_config = ConfigDict(defer_build=True)
@@ -3125,29 +3214,122 @@ class PrimaryRowItem(BaseModel):
     label: Label
     url: str
 
+class Value5(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: str
+    medium: str
+    small: str
+
+class Idref31(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    legal: Legal | None = None
+    secondary_row: list[SecondaryRowItem] | None = Field(None, alias='secondaryRow')
+    primary_row: list[PrimaryRowItem] | None = Field(None, alias='primaryRow')
+    value: Value5 | None = None
+
+class Value6(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: str
+
+class SecondaryRowItem1(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    label: Label
+    url: str | None = None
+    open_in_new_tab: bool | None = Field(None, alias='openInNewTab')
+    is_ccpa_link: bool | None = Field(None, alias='isCCPALink')
+
+class PrimaryRowItem1(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    label: Label
+    url: str
+
 class Idref33(BaseModel):
     model_config = ConfigDict(defer_build=True)
-    legal: Legal
-    secondary_row: list[SecondaryRowItem] = Field(..., alias='secondaryRow')
-    primary_row: list[PrimaryRowItem] = Field(..., alias='primaryRow')
+    value: Value6 | None = None
+    legal: Legal | None = None
+    secondary_row: list[SecondaryRowItem1] | None = Field(None, alias='secondaryRow')
+    primary_row: list[PrimaryRowItem1] | None = Field(None, alias='primaryRow')
 
-class Value4(BaseModel):
+class MaxWidthidref33(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: int
+
+class MaxHeightidref33(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: int
+
+class Value7(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: str
+    medium: str
+    small: str
+
+class Idref34(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    value: Value7
+
+class MaxWidthidref34(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: int
+    medium: int
+    small: int
+
+class MaxHeightidref34(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: int
+    medium: int
+    small: int
+
+class Idref37(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    type: str
+    items: list[None]
+    parent_url: str = Field(..., alias='parentUrl')
+
+class Title15(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    short: str
+    full: str
+
+class Images7(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    default: str
+    centered_background_small: str = Field(..., alias='centered-background-small')
+    cover_artwork: str = Field(..., alias='cover-artwork')
+
+class Episode3(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    series_id: None = Field(..., alias='seriesId')
+    season_number: None = Field(..., alias='seasonNumber')
+    episode_number: int = Field(..., alias='episodeNumber')
+    quality: str
+    images: Images7
+    flags: Flags3
+    episode_url: str = Field(..., alias='episodeUrl')
+    offering_dates: OfferingDates = Field(..., alias='offeringDates')
+    title: Title15
+    summary: Summary
+
+class Idref41Item(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    season_id: UUID = Field(..., alias='seasonId')
+    orgtitle: None
+    season_number: int = Field(..., alias='seasonNumber')
+    season_number_slug: str = Field(..., alias='seasonNumberSlug')
+    number_of_episodes: int = Field(..., alias='numberOfEpisodes')
+    title: Title15
+    summary: Summary
+    episodes: list[Episode3]
+
+class Value8(BaseModel):
     model_config = ConfigDict(defer_build=True)
     large: str
 
 class Idref42(BaseModel):
     model_config = ConfigDict(defer_build=True)
-    value: Value4
+    value: Value8
 
-class MaxWidthidref42(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    large: int
-
-class MaxHeightidref42(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    large: int
-
-class Value5(BaseModel):
+class Value9(BaseModel):
     model_config = ConfigDict(defer_build=True)
     large: str
     medium: str
@@ -3155,21 +3337,72 @@ class Value5(BaseModel):
 
 class Idref43(BaseModel):
     model_config = ConfigDict(defer_build=True)
-    value: Value5
+    value: Value9
 
-class MaxWidthidref43(BaseModel):
+class Idref44(BaseModel):
     model_config = ConfigDict(defer_build=True)
-    large: int | None = None
-    medium: int | None = None
-    small: int | None = None
+    type: str
+    items: list[None]
+    parent_url: str = Field(..., alias='parentUrl')
 
-class MaxHeightidref43(BaseModel):
+class Images8(BaseModel):
     model_config = ConfigDict(defer_build=True)
-    large: int | None = None
-    medium: int | None = None
-    small: int | None = None
+    default_wide: str | None = Field(None, alias='default-wide')
+    default: str
+    centered_background_small: str = Field(..., alias='centered-background-small')
+    centered_background: str = Field(..., alias='centered-background')
+    cover_artwork: str = Field(..., alias='cover-artwork')
+    logo_left: str = Field(..., alias='logo-left')
+    content_logo_monochromatic: str = Field(..., alias='content-logo-monochromatic')
+    logo_centered: str = Field(..., alias='logo-centered')
+    content_logo_polychromatic: str = Field(..., alias='content-logo-polychromatic')
+    poster_with_logo: str = Field(..., alias='poster-with-logo')
+    cover_artwork_square: str = Field(..., alias='cover-artwork-square')
+    cover_artwork_horizontal: str = Field(..., alias='cover-artwork-horizontal')
 
-class Item1(BaseModel):
+class Idref47Item(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    hbomax_id: UUID = Field(..., alias='hbomaxId')
+    type: str
+    title: Title15
+    images: Images8
+    image_url_link: str = Field(..., alias='imageUrlLink')
+    genres: list[None]
+    rank: int
+    offering_dates: OfferingDates = Field(..., alias='offeringDates')
+    localized_rating: LocalizedRating = Field(..., alias='localizedRating')
+
+class Images9(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    centered_background_small: str = Field(..., alias='centered-background-small')
+    default: str
+    cover_artwork: str = Field(..., alias='cover-artwork')
+
+class Episode4(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    series_id: None = Field(..., alias='seriesId')
+    season_number: None = Field(..., alias='seasonNumber')
+    episode_number: int = Field(..., alias='episodeNumber')
+    quality: str
+    images: Images9
+    flags: Flags3
+    episode_url: str = Field(..., alias='episodeUrl')
+    offering_dates: OfferingDates = Field(..., alias='offeringDates')
+    title: Title15
+    summary: Summary
+
+class Idref48Item(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    season_id: UUID = Field(..., alias='seasonId')
+    orgtitle: None
+    season_number: int = Field(..., alias='seasonNumber')
+    season_number_slug: str = Field(..., alias='seasonNumberSlug')
+    number_of_episodes: int = Field(..., alias='numberOfEpisodes')
+    title: Title15
+    summary: Summary
+    episodes: list[Episode4]
+
+class Item2(BaseModel):
     model_config = ConfigDict(defer_build=True)
     primary_text: str = Field(..., alias='primaryText')
     image: str
@@ -3180,176 +3413,82 @@ class Item1(BaseModel):
 class Idref53(BaseModel):
     model_config = ConfigDict(defer_build=True)
     type: str
-    items: list[Item1]
+    items: list[Item2]
     parent_url: str = Field(..., alias='parentUrl')
 
-class Title12(BaseModel):
+class Images10(BaseModel):
     model_config = ConfigDict(defer_build=True)
-    short: str
-    full: str
-
-class Images6(BaseModel):
-    model_config = ConfigDict(defer_build=True)
+    default_wide: str = Field(..., alias='default-wide')
     default: str
-    centered_background_small: str = Field(..., alias='centered-background-small')
-    cover_artwork: str = Field(..., alias='cover-artwork')
-    default_wide: str | None = Field(None, alias='default-wide')
-
-class Title13(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    short: timedelta | str = Field(union_mode='left_to_right')
-    full: timedelta | str = Field(union_mode='left_to_right')
-
-class Episode3(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    series_id: None = Field(..., alias='seriesId')
-    season_number: None = Field(..., alias='seasonNumber')
-    episode_number: int = Field(..., alias='episodeNumber')
-    quality: str
-    images: Images6
-    flags: Flags3
-    episode_url: str = Field(..., alias='episodeUrl')
-    offering_dates: OfferingDates = Field(..., alias='offeringDates')
-    title: Title13
-    summary: Summary
-
-class Idref57Item(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    season_id: UUID = Field(..., alias='seasonId')
-    orgtitle: None
-    season_number: int = Field(..., alias='seasonNumber')
-    season_number_slug: str = Field(..., alias='seasonNumberSlug')
-    number_of_episodes: int = Field(..., alias='numberOfEpisodes')
-    title: Title12
-    summary: Summary
-    episodes: list[Episode3]
-
-class Title14(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    short: str
-    full: str
-
-class Images7(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    default_wide: str | None = Field(None, alias='default-wide')
-    default: str | None = None
     centered_background_small: str | None = Field(None, alias='centered-background-small')
     centered_background: str = Field(..., alias='centered-background')
-    cover_artwork: str | None = Field(None, alias='cover-artwork')
+    cover_artwork: str = Field(..., alias='cover-artwork')
     logo_left: str | None = Field(None, alias='logo-left')
-    content_logo_monochromatic: str | None = Field(None, alias='content-logo-monochromatic')
+    content_logo_monochromatic: str = Field(..., alias='content-logo-monochromatic')
     logo_centered: str | None = Field(None, alias='logo-centered')
     content_logo_polychromatic: str = Field(..., alias='content-logo-polychromatic')
     poster_with_logo: str | None = Field(None, alias='poster-with-logo')
-    cover_artwork_horizontal: str | None = Field(None, alias='cover-artwork-horizontal')
     cover_artwork_square: str | None = Field(None, alias='cover-artwork-square')
+    cover_artwork_horizontal: str | None = Field(None, alias='cover-artwork-horizontal')
 
-class LocalizedRating2(BaseModel):
+class LocalizedRating3(BaseModel):
     model_config = ConfigDict(defer_build=True)
     rating_authority: str
     classifier: str
     descriptors: list[None]
 
-class Idref63Item(BaseModel):
+class Idref54Item(BaseModel):
     model_config = ConfigDict(defer_build=True)
     hbomax_id: UUID = Field(..., alias='hbomaxId')
     type: str
-    title: Title14
+    title: Title15
     image_url_link: str = Field(..., alias='imageUrlLink')
-    images: Images7
-    offering_dates: OfferingDates | None = Field(..., alias='offeringDates')
-    localized_rating: LocalizedRating2 | None = Field(..., alias='localizedRating')
+    images: Images10
+    offering_dates: OfferingDates = Field(..., alias='offeringDates')
+    localized_rating: LocalizedRating3 | None = Field(..., alias='localizedRating')
     genres: list[None]
     rank: None
 
-class FirstItem1(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    title: Title14
-
-class Image1(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    default_wide: str = Field(..., alias='default-wide')
-    centered_background_small: str = Field(..., alias='centered-background-small')
-    default: str
-    centered_background: str = Field(..., alias='centered-background')
-    cover_artwork: str = Field(..., alias='cover-artwork')
-    logo_left: str = Field(..., alias='logo-left')
-    content_logo_monochromatic: str = Field(..., alias='content-logo-monochromatic')
-    logo_centered: str = Field(..., alias='logo-centered')
-    content_logo_polychromatic: str = Field(..., alias='content-logo-polychromatic')
-    poster_with_logo: str = Field(..., alias='poster-with-logo')
-    cover_artwork_square: str = Field(..., alias='cover-artwork-square')
-    cover_artwork_horizontal: str = Field(..., alias='cover-artwork-horizontal')
-
-class Title17(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    full_original: None
-    short_original: None
-    short: str
-    full: str
-
-class Images8(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    default_wide: str = Field(..., alias='default-wide')
-    centered_background_small: str = Field(..., alias='centered-background-small')
-    default: str
-    centered_background: str = Field(..., alias='centered-background')
-    cover_artwork: str = Field(..., alias='cover-artwork')
-    logo_left: str = Field(..., alias='logo-left')
-    content_logo_monochromatic: str = Field(..., alias='content-logo-monochromatic')
-    logo_centered: str = Field(..., alias='logo-centered')
-    content_logo_polychromatic: str = Field(..., alias='content-logo-polychromatic')
-    poster_with_logo: str = Field(..., alias='poster-with-logo')
-    cover_artwork_square: str = Field(..., alias='cover-artwork-square')
-    cover_artwork_horizontal: str = Field(..., alias='cover-artwork-horizontal')
-
-class Item2(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    field__typename: str = Field(..., alias='__typename')
-    series_id: UUID | None = Field(None, alias='seriesId')
-    hbomax_url: None = Field(..., alias='hbomaxURL')
-    hbomax_id: UUID = Field(..., alias='hbomaxId')
-    category: str
-    series_title_id: None = Field(None, alias='seriesTitleId')
-    image_url_link: str = Field(..., alias='imageUrlLink')
-    genres: list[str]
-    brand: list[str]
-    rating_code: list[RatingCodeItem] = Field(..., alias='ratingCode')
-    offering_dates: OfferingDates = Field(..., alias='offeringDates')
-    title: Title17
-    summary: Summary
-    images: Images8
-    status: str
-    badges: list[None]
-    feature_id: UUID | None = Field(None, alias='featureId')
-    url: None = Field(None)
-
-class Idref64(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    collection_id: str = Field(..., alias='collectionId')
-    image_to_show: str = Field(..., alias='imageToShow')
-    first_item: FirstItem1 = Field(..., alias='firstItem')
-    title: Title14
-    description: Description
-    image: Image1
-    event_type: str = Field(..., alias='eventType')
-    items: list[Item2]
-
-class Title18(BaseModel):
-    model_config = ConfigDict(defer_build=True)
-    short: str
-    full: str
-
 class FirstItem2(BaseModel):
     model_config = ConfigDict(defer_build=True)
-    title: Title18
+    title: Title15
 
-class Title20(BaseModel):
+class Image2(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    default_wide: str = Field(..., alias='default-wide')
+    centered_background_small: str = Field(..., alias='centered-background-small')
+    default: str
+    centered_background: str = Field(..., alias='centered-background')
+    cover_artwork: str = Field(..., alias='cover-artwork')
+    logo_left: str = Field(..., alias='logo-left')
+    content_logo_monochromatic: str = Field(..., alias='content-logo-monochromatic')
+    logo_centered: str = Field(..., alias='logo-centered')
+    content_logo_polychromatic: str = Field(..., alias='content-logo-polychromatic')
+    poster_with_logo: str = Field(..., alias='poster-with-logo')
+    cover_artwork_square: str = Field(..., alias='cover-artwork-square')
+    cover_artwork_horizontal: str = Field(..., alias='cover-artwork-horizontal')
+
+class Title23(BaseModel):
     model_config = ConfigDict(defer_build=True)
     full_original: None
     short_original: None
     short: str
     full: str
+
+class Images11(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    default_wide: str = Field(..., alias='default-wide')
+    centered_background_small: str = Field(..., alias='centered-background-small')
+    default: str
+    centered_background: str = Field(..., alias='centered-background')
+    cover_artwork: str = Field(..., alias='cover-artwork')
+    logo_left: str = Field(..., alias='logo-left')
+    content_logo_monochromatic: str = Field(..., alias='content-logo-monochromatic')
+    logo_centered: str = Field(..., alias='logo-centered')
+    content_logo_polychromatic: str = Field(..., alias='content-logo-polychromatic')
+    poster_with_logo: str = Field(..., alias='poster-with-logo')
+    cover_artwork_square: str = Field(..., alias='cover-artwork-square')
+    cover_artwork_horizontal: str = Field(..., alias='cover-artwork-horizontal')
 
 class Item3(BaseModel):
     model_config = ConfigDict(defer_build=True)
@@ -3364,46 +3503,65 @@ class Item3(BaseModel):
     brand: list[str]
     rating_code: list[RatingCodeItem] = Field(..., alias='ratingCode')
     offering_dates: OfferingDates = Field(..., alias='offeringDates')
-    title: Title20
+    title: Title23
     summary: Summary
-    images: Images8
+    images: Images11
     status: str
+    badges: list[None]
     feature_id: UUID | None = Field(None, alias='featureId')
     url: None = Field(None)
 
-class Idref79(BaseModel):
+class Idref55(BaseModel):
     model_config = ConfigDict(defer_build=True)
     collection_id: str = Field(..., alias='collectionId')
     image_to_show: str = Field(..., alias='imageToShow')
     first_item: FirstItem2 = Field(..., alias='firstItem')
-    title: Title18
+    title: Title15
     description: Description
-    image: Image1
+    image: Image2
     event_type: str = Field(..., alias='eventType')
     items: list[Item3]
 
-class Idref80Item(BaseModel):
+class Title24(BaseModel):
     model_config = ConfigDict(defer_build=True)
-    lang: str
-    url: str
+    short: str
+    full: str
 
-class SecondaryRowItem1(BaseModel):
+class Images12(BaseModel):
     model_config = ConfigDict(defer_build=True)
-    label: Label
-    url: str | None = None
-    open_in_new_tab: bool | None = Field(None, alias='openInNewTab')
-    is_ccpa_link: bool | None = Field(None, alias='isCCPALink')
+    default: str
+    centered_background_small: str = Field(..., alias='centered-background-small')
+    cover_artwork: str = Field(..., alias='cover-artwork')
+    default_wide: str | None = Field(None, alias='default-wide')
 
-class PrimaryRowItem1(BaseModel):
+class Title25(BaseModel):
     model_config = ConfigDict(defer_build=True)
-    label: Label
-    url: str
+    short: timedelta | str = Field(union_mode='left_to_right')
+    full: timedelta | str = Field(union_mode='left_to_right')
 
-class Idref81(BaseModel):
+class Episode5(BaseModel):
     model_config = ConfigDict(defer_build=True)
-    legal: Legal
-    secondary_row: list[SecondaryRowItem1] = Field(..., alias='secondaryRow')
-    primary_row: list[PrimaryRowItem1] = Field(..., alias='primaryRow')
+    series_id: None = Field(..., alias='seriesId')
+    season_number: None = Field(..., alias='seasonNumber')
+    episode_number: int = Field(..., alias='episodeNumber')
+    quality: str
+    images: Images12
+    flags: Flags3
+    episode_url: str = Field(..., alias='episodeUrl')
+    offering_dates: OfferingDates = Field(..., alias='offeringDates')
+    title: Title25
+    summary: Summary
+
+class Idref57Item(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    season_id: UUID = Field(..., alias='seasonId')
+    orgtitle: None
+    season_number: int = Field(..., alias='seasonNumber')
+    season_number_slug: str = Field(..., alias='seasonNumberSlug')
+    number_of_episodes: int = Field(..., alias='numberOfEpisodes')
+    title: Title24
+    summary: Summary
+    episodes: list[Episode5]
 
 class SecondaryRowItem2(BaseModel):
     model_config = ConfigDict(defer_build=True)
@@ -3417,11 +3575,355 @@ class PrimaryRowItem2(BaseModel):
     label: Label
     url: str
 
-class Idref82(BaseModel):
+class Idref61(BaseModel):
     model_config = ConfigDict(defer_build=True)
     legal: Legal
     secondary_row: list[SecondaryRowItem2] = Field(..., alias='secondaryRow')
     primary_row: list[PrimaryRowItem2] = Field(..., alias='primaryRow')
+
+class SecondaryRowItem3(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    label: Label
+    url: str | None = None
+    open_in_new_tab: bool | None = Field(None, alias='openInNewTab')
+    is_ccpa_link: bool | None = Field(None, alias='isCCPALink')
+
+class PrimaryRowItem3(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    label: Label
+    url: str
+
+class Idref62(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    legal: Legal
+    secondary_row: list[SecondaryRowItem3] = Field(..., alias='secondaryRow')
+    primary_row: list[PrimaryRowItem3] = Field(..., alias='primaryRow')
+
+class Title26(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    short: str
+    full: str
+
+class Images13(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    default_wide: str | None = Field(None, alias='default-wide')
+    default: str | None = None
+    centered_background_small: str | None = Field(None, alias='centered-background-small')
+    centered_background: str = Field(..., alias='centered-background')
+    cover_artwork: str | None = Field(None, alias='cover-artwork')
+    logo_left: str | None = Field(None, alias='logo-left')
+    content_logo_monochromatic: str | None = Field(None, alias='content-logo-monochromatic')
+    logo_centered: str | None = Field(None, alias='logo-centered')
+    content_logo_polychromatic: str = Field(..., alias='content-logo-polychromatic')
+    poster_with_logo: str | None = Field(None, alias='poster-with-logo')
+    cover_artwork_horizontal: str | None = Field(None, alias='cover-artwork-horizontal')
+    cover_artwork_square: str | None = Field(None, alias='cover-artwork-square')
+
+class Idref63Item(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    hbomax_id: UUID = Field(..., alias='hbomaxId')
+    type: str
+    title: Title26
+    image_url_link: str = Field(..., alias='imageUrlLink')
+    images: Images13
+    offering_dates: OfferingDates | None = Field(..., alias='offeringDates')
+    localized_rating: LocalizedRating3 | None = Field(..., alias='localizedRating')
+    genres: list[None]
+    rank: None
+
+class FirstItem3(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    title: Title26
+
+class Title29(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    full_original: None
+    short_original: None
+    short: str
+    full: str
+
+class Images14(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    default_wide: str = Field(..., alias='default-wide')
+    centered_background_small: str = Field(..., alias='centered-background-small')
+    default: str
+    centered_background: str = Field(..., alias='centered-background')
+    cover_artwork: str = Field(..., alias='cover-artwork')
+    logo_left: str = Field(..., alias='logo-left')
+    content_logo_monochromatic: str = Field(..., alias='content-logo-monochromatic')
+    logo_centered: str = Field(..., alias='logo-centered')
+    content_logo_polychromatic: str = Field(..., alias='content-logo-polychromatic')
+    poster_with_logo: str = Field(..., alias='poster-with-logo')
+    cover_artwork_square: str = Field(..., alias='cover-artwork-square')
+    cover_artwork_horizontal: str = Field(..., alias='cover-artwork-horizontal')
+
+class Item4(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    field__typename: str = Field(..., alias='__typename')
+    series_id: UUID | None = Field(None, alias='seriesId')
+    hbomax_url: None = Field(..., alias='hbomaxURL')
+    hbomax_id: UUID = Field(..., alias='hbomaxId')
+    category: str
+    series_title_id: None = Field(None, alias='seriesTitleId')
+    image_url_link: str = Field(..., alias='imageUrlLink')
+    genres: list[str]
+    brand: list[str]
+    rating_code: list[RatingCodeItem] = Field(..., alias='ratingCode')
+    offering_dates: OfferingDates = Field(..., alias='offeringDates')
+    title: Title29
+    summary: Summary
+    images: Images14
+    status: str
+    badges: list[None]
+    feature_id: UUID | None = Field(None, alias='featureId')
+    url: None = Field(None)
+
+class Idref64(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    collection_id: str = Field(..., alias='collectionId')
+    image_to_show: str = Field(..., alias='imageToShow')
+    first_item: FirstItem3 = Field(..., alias='firstItem')
+    title: Title26
+    description: Description
+    image: Image2
+    event_type: str = Field(..., alias='eventType')
+    items: list[Item4]
+
+class Title30(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    short: str
+    full: str
+
+class FirstItem4(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    title: Title30
+
+class Title32(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    full_original: None
+    short_original: None
+    short: str
+    full: str
+
+class Item5(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    field__typename: str = Field(..., alias='__typename')
+    series_id: UUID | None = Field(None, alias='seriesId')
+    hbomax_url: None = Field(..., alias='hbomaxURL')
+    hbomax_id: UUID = Field(..., alias='hbomaxId')
+    category: str
+    series_title_id: None = Field(None, alias='seriesTitleId')
+    image_url_link: str = Field(..., alias='imageUrlLink')
+    genres: list[str]
+    brand: list[str]
+    rating_code: list[RatingCodeItem] = Field(..., alias='ratingCode')
+    offering_dates: OfferingDates = Field(..., alias='offeringDates')
+    title: Title32
+    summary: Summary
+    images: Images14
+    status: str
+    feature_id: UUID | None = Field(None, alias='featureId')
+    url: None = Field(None)
+
+class Idref70(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    collection_id: str = Field(..., alias='collectionId')
+    image_to_show: str = Field(..., alias='imageToShow')
+    first_item: FirstItem4 = Field(..., alias='firstItem')
+    title: Title30
+    description: Description
+    image: Image2
+    event_type: str = Field(..., alias='eventType')
+    items: list[Item5]
+
+class Idref71Item(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    lang: str
+    url: str
+
+class SecondaryRowItem4(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    label: Label
+    url: str | None = None
+    open_in_new_tab: bool | None = Field(None, alias='openInNewTab')
+    is_ccpa_link: bool | None = Field(None, alias='isCCPALink')
+
+class PrimaryRowItem4(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    label: Label
+    url: str
+
+class Idref72(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    legal: Legal
+    secondary_row: list[SecondaryRowItem4] = Field(..., alias='secondaryRow')
+    primary_row: list[PrimaryRowItem4] = Field(..., alias='primaryRow')
+
+class SecondaryRowItem5(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    label: Label
+    url: str | None = None
+    open_in_new_tab: bool | None = Field(None, alias='openInNewTab')
+    is_ccpa_link: bool | None = Field(None, alias='isCCPALink')
+
+class PrimaryRowItem5(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    label: Label
+    url: str
+
+class Idref73(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    legal: Legal
+    secondary_row: list[SecondaryRowItem5] = Field(..., alias='secondaryRow')
+    primary_row: list[PrimaryRowItem5] = Field(..., alias='primaryRow')
+
+class MaxWidthidref29(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: int
+
+class MaxHeightidref29(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: int
+
+class MaxWidthidref30(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: int | None = None
+    medium: int | None = None
+    small: int | None = None
+
+class MaxHeightidref30(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: int | None = None
+    medium: int | None = None
+    small: int | None = None
+
+class MaxWidthidref42(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: int
+
+class MaxHeightidref42(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: int
+
+class MaxWidthidref43(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: int | None = None
+    medium: int | None = None
+    small: int | None = None
+
+class MaxHeightidref43(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: int | None = None
+    medium: int | None = None
+    small: int | None = None
+
+class Title33(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    short: str
+    full: str
+
+class FirstItem5(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    title: Title33
+
+class Title35(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    full_original: None
+    short_original: None
+    short: str
+    full: str
+
+class Item6(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    field__typename: str = Field(..., alias='__typename')
+    series_id: UUID | None = Field(None, alias='seriesId')
+    hbomax_url: None = Field(..., alias='hbomaxURL')
+    hbomax_id: UUID = Field(..., alias='hbomaxId')
+    category: str
+    series_title_id: None = Field(None, alias='seriesTitleId')
+    image_url_link: str = Field(..., alias='imageUrlLink')
+    genres: list[str]
+    brand: list[str]
+    rating_code: list[RatingCodeItem] = Field(..., alias='ratingCode')
+    offering_dates: OfferingDates = Field(..., alias='offeringDates')
+    title: Title35
+    summary: Summary
+    images: Images14
+    status: str
+    feature_id: UUID | None = Field(None, alias='featureId')
+    url: None = Field(None)
+
+class Idref79(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    collection_id: str = Field(..., alias='collectionId')
+    image_to_show: str = Field(..., alias='imageToShow')
+    first_item: FirstItem5 = Field(..., alias='firstItem')
+    title: Title33
+    description: Description
+    image: Image2
+    event_type: str = Field(..., alias='eventType')
+    items: list[Item6]
+
+class Idref80Item(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    lang: str
+    url: str
+
+class SecondaryRowItem6(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    label: Label
+    url: str | None = None
+    open_in_new_tab: bool | None = Field(None, alias='openInNewTab')
+    is_ccpa_link: bool | None = Field(None, alias='isCCPALink')
+
+class PrimaryRowItem6(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    label: Label
+    url: str
+
+class Idref81(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    legal: Legal
+    secondary_row: list[SecondaryRowItem6] = Field(..., alias='secondaryRow')
+    primary_row: list[PrimaryRowItem6] = Field(..., alias='primaryRow')
+
+class SecondaryRowItem7(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    label: Label
+    url: str | None = None
+    open_in_new_tab: bool | None = Field(None, alias='openInNewTab')
+    is_ccpa_link: bool | None = Field(None, alias='isCCPALink')
+
+class PrimaryRowItem7(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    label: Label
+    url: str
+
+class Idref82(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    legal: Legal
+    secondary_row: list[SecondaryRowItem7] = Field(..., alias='secondaryRow')
+    primary_row: list[PrimaryRowItem7] = Field(..., alias='primaryRow')
+
+class MaxWidthidref20(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: int
+
+class MaxHeightidref20(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: int
+
+class MaxWidthidref31(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: int
+    medium: int
+    small: int
+
+class MaxHeightidref31(BaseModel):
+    model_config = ConfigDict(defer_build=True)
+    large: int
+    medium: int
+    small: int
 
 class MappedData(BaseModel):
     model_config = ConfigDict(defer_build=True)
@@ -3441,7 +3943,7 @@ class MappedData(BaseModel):
     idref13: str
     idref14: str | Idref14
     idref15: str | Idref15
-    idref16: str
+    idref16: str | list[Idref16Item]
     idref17: str | Idref17
     idref18: str | Idref18
     max_widthidref18: MaxWidthidref18 | None = Field(None, alias='maxWidthidref18')
@@ -3449,68 +3951,72 @@ class MappedData(BaseModel):
     idref19: Idref19 | list[Idref19Item]
     max_widthidref19: MaxWidthidref19 | None = Field(None, alias='maxWidthidref19')
     max_heightidref19: MaxHeightidref19 | None = Field(None, alias='maxHeightidref19')
-    idref20: str
+    idref20: str | Idref20
     idref21: str
     idref22: str
     idref23: str
     idref24: str
-    idref25: str
+    idref25: str | Idref25
     idref26: str | Idref26
     idref27: str
     idref28: str
     idref29: str | Idref29
-    max_widthidref29: MaxWidthidref29 | None = Field(None, alias='maxWidthidref29')
-    max_heightidref29: MaxHeightidref29 | None = Field(None, alias='maxHeightidref29')
     idref30: str | Idref30
-    max_widthidref30: MaxWidthidref30 | None = Field(None, alias='maxWidthidref30')
-    max_heightidref30: MaxHeightidref30 | None = Field(None, alias='maxHeightidref30')
-    idref31: str
-    idref32: str
-    idref33: str | Idref33
-    idref34: str | None = None
+    idref31: str | Idref31
+    idref32: str | None = None
+    idref33: str | Idref33 | None = None
+    max_widthidref33: MaxWidthidref33 | None = Field(None, alias='maxWidthidref33')
+    max_heightidref33: MaxHeightidref33 | None = Field(None, alias='maxHeightidref33')
+    idref34: str | Idref34 | None = None
+    max_widthidref34: MaxWidthidref34 | None = Field(None, alias='maxWidthidref34')
+    max_heightidref34: MaxHeightidref34 | None = Field(None, alias='maxHeightidref34')
     idref35: str | None = None
     idref36: str | None = None
-    idref37: str | None = None
+    idref37: str | Idref37 | None = None
     idref38: str | None = None
     idref39: str | None = None
     idref40: str | None = None
-    idref41: str | None = None
-    idref42: Idref42 | None = None
-    max_widthidref42: MaxWidthidref42 | None = Field(None, alias='maxWidthidref42')
-    max_heightidref42: MaxHeightidref42 | None = Field(None, alias='maxHeightidref42')
-    idref43: Idref43 | None = None
-    max_widthidref43: MaxWidthidref43 | None = Field(None, alias='maxWidthidref43')
-    max_heightidref43: MaxHeightidref43 | None = Field(None, alias='maxHeightidref43')
-    idref44: str | None = None
+    idref41: str | list[Idref41Item] | None = None
+    idref42: str | Idref42 | None = None
+    idref43: str | Idref43 | None = None
+    idref44: str | Idref44 | None = None
     idref45: str | None = None
     idref46: str | None = None
-    idref47: str | None = None
-    idref48: str | None = None
+    idref47: str | list[Idref47Item] | None = None
+    idref48: str | list[Idref48Item] | None = None
     idref49: str | None = None
     idref50: str | None = None
     idref51: str | None = None
     idref52: str | None = None
-    idref53: Idref53 | None = None
-    idref54: str | None = None
-    idref55: str | None = None
+    idref53: str | Idref53 | None = None
+    idref54: str | list[Idref54Item] | None = None
+    idref55: str | Idref55 | None = None
     idref56: str | None = None
-    idref57: list[Idref57Item] | None = None
+    idref57: str | list[Idref57Item] | None = None
     idref58: str | None = None
     idref59: str | None = None
     idref60: str | None = None
-    idref61: str | None = None
-    idref62: str | None = None
-    idref63: list[Idref63Item] | None = None
-    idref64: Idref64 | None = None
+    idref61: str | Idref61 | None = None
+    idref62: str | Idref62 | None = None
+    idref63: str | list[Idref63Item] | None = None
+    idref64: str | Idref64 | None = None
     idref65: str | None = None
     idref66: str | None = None
     idref67: str | None = None
     idref68: str | None = None
     idref69: str | None = None
-    idref70: str | None = None
-    idref71: str | None = None
-    idref72: str | None = None
-    idref73: str | None = None
+    idref70: str | Idref70 | None = None
+    idref71: str | list[Idref71Item] | None = None
+    idref72: str | Idref72 | None = None
+    idref73: str | Idref73 | None = None
+    max_widthidref29: MaxWidthidref29 | None = Field(None, alias='maxWidthidref29')
+    max_heightidref29: MaxHeightidref29 | None = Field(None, alias='maxHeightidref29')
+    max_widthidref30: MaxWidthidref30 | None = Field(None, alias='maxWidthidref30')
+    max_heightidref30: MaxHeightidref30 | None = Field(None, alias='maxHeightidref30')
+    max_widthidref42: MaxWidthidref42 | None = Field(None, alias='maxWidthidref42')
+    max_heightidref42: MaxHeightidref42 | None = Field(None, alias='maxHeightidref42')
+    max_widthidref43: MaxWidthidref43 | None = Field(None, alias='maxWidthidref43')
+    max_heightidref43: MaxHeightidref43 | None = Field(None, alias='maxHeightidref43')
     idref74: str | None = None
     idref75: str | None = None
     idref76: str | None = None
@@ -3520,6 +4026,10 @@ class MappedData(BaseModel):
     idref80: list[Idref80Item] | None = None
     idref81: Idref81 | None = None
     idref82: Idref82 | None = None
+    max_widthidref20: MaxWidthidref20 | None = Field(None, alias='maxWidthidref20')
+    max_heightidref20: MaxHeightidref20 | None = Field(None, alias='maxHeightidref20')
+    max_widthidref31: MaxWidthidref31 | None = Field(None, alias='maxWidthidref31')
+    max_heightidref31: MaxHeightidref31 | None = Field(None, alias='maxHeightidref31')
 
 class MediaMelonConfig(BaseModel):
     model_config = ConfigDict(defer_build=True)
