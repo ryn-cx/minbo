@@ -8,26 +8,26 @@ from uuid import UUID
 
 class Images(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
-    default: str | None = None
-    default_wide: str | None = None
-    centered_background: str | None = None
-    centered_background_small: str | None = None
-    cover_artwork: str | None = None
-    cover_artwork_horizontal: str | None = None
-    cover_artwork_square: str | None = None
-    poster_with_logo: str | None = None
-    logo_left: str | None = None
-    logo_centered: str | None = None
-    content_logo_monochromatic: str | None = None
-    content_logo_polychromatic: str | None = None
+    default: str | Any = Field(default=None, union_mode='left_to_right')
+    default_wide: str | Any = Field(default=None, union_mode='left_to_right')
+    centered_background: str | Any = Field(default=None, union_mode='left_to_right')
+    centered_background_small: str | Any = Field(default=None, union_mode='left_to_right')
+    cover_artwork: str | Any = Field(default=None, union_mode='left_to_right')
+    cover_artwork_horizontal: str | Any = Field(default=None, union_mode='left_to_right')
+    cover_artwork_square: str | Any = Field(default=None, union_mode='left_to_right')
+    poster_with_logo: str | Any = Field(default=None, union_mode='left_to_right')
+    logo_left: str | Any = Field(default=None, union_mode='left_to_right')
+    logo_centered: str | Any = Field(default=None, union_mode='left_to_right')
+    content_logo_monochromatic: str | Any = Field(default=None, union_mode='left_to_right')
+    content_logo_polychromatic: str | Any = Field(default=None, union_mode='left_to_right')
 
 class Images1(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
-    default: str | None = None
-    default_wide: str | None = None
+    default: str | Any = Field(default=None, union_mode='left_to_right')
+    default_wide: str | Any = Field(default=None, union_mode='left_to_right')
     centered_background: Any | None = None
-    centered_background_small: str | None = None
-    cover_artwork: str | None = None
+    centered_background_small: str | Any = Field(default=None, union_mode='left_to_right')
+    cover_artwork: str | Any = Field(default=None, union_mode='left_to_right')
     cover_artwork_horizontal: Any | None = None
     cover_artwork_square: Any | None = None
     poster_with_logo: Any | None = None
@@ -38,91 +38,91 @@ class Images1(BaseModel):
 
 class Episode(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
-    episode_number: int | None = None
-    title: str | None = None
-    summary: str | None = None
-    url: str | None = None
-    images: Images1 | None = None
-    start_date: AwareDatetime | None = None
-    end_date: AwareDatetime | None = None
+    episode_number: int | Any = Field(default=None, union_mode='left_to_right')
+    title: str | Any = Field(default=None, union_mode='left_to_right')
+    summary: str | Any = Field(default=None, union_mode='left_to_right')
+    url: str | Any = Field(default=None, union_mode='left_to_right')
+    images: Images1 | Any = Field(default=None, union_mode='left_to_right')
+    start_date: AwareDatetime | Any = Field(default=None, union_mode='left_to_right')
+    end_date: AwareDatetime | Any = Field(default=None, union_mode='left_to_right')
 
 class Season(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
-    key: UUID | None = None
-    season_number: int | None = None
+    key: UUID | Any = Field(default=None, union_mode='left_to_right')
+    season_number: int | Any = Field(default=None, union_mode='left_to_right')
     name: Any | None = None
     summary: Any | None = None
-    episode_count: int | None = None
-    episodes: list[Episode] | None = None
+    episode_count: int | Any = Field(default=None, union_mode='left_to_right')
+    episodes: list[Episode] | Any = Field(default=None, union_mode='left_to_right')
 
 class Images2(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
-    default: str | None = None
-    default_wide: str | None = None
-    centered_background: str | None = None
-    centered_background_small: str | None = None
-    cover_artwork: str | None = None
-    cover_artwork_horizontal: str | None = None
-    cover_artwork_square: str | None = None
-    poster_with_logo: str | None = None
-    logo_left: str | None = None
-    logo_centered: str | None = None
-    content_logo_monochromatic: str | None = None
-    content_logo_polychromatic: str | None = None
+    default: str | Any = Field(default=None, union_mode='left_to_right')
+    default_wide: str | Any = Field(default=None, union_mode='left_to_right')
+    centered_background: str | Any = Field(default=None, union_mode='left_to_right')
+    centered_background_small: str | Any = Field(default=None, union_mode='left_to_right')
+    cover_artwork: str | Any = Field(default=None, union_mode='left_to_right')
+    cover_artwork_horizontal: str | Any = Field(default=None, union_mode='left_to_right')
+    cover_artwork_square: str | Any = Field(default=None, union_mode='left_to_right')
+    poster_with_logo: str | Any = Field(default=None, union_mode='left_to_right')
+    logo_left: str | Any = Field(default=None, union_mode='left_to_right')
+    logo_centered: str | Any = Field(default=None, union_mode='left_to_right')
+    content_logo_monochromatic: str | Any = Field(default=None, union_mode='left_to_right')
+    content_logo_polychromatic: str | Any = Field(default=None, union_mode='left_to_right')
 
 class RelatedItem(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
-    title_key: UUID | None = None
-    media_type: str | None = None
-    url: str | None = None
-    title: str | None = None
+    title_key: UUID | Any = Field(default=None, union_mode='left_to_right')
+    media_type: str | Any = Field(default=None, union_mode='left_to_right')
+    url: str | Any = Field(default=None, union_mode='left_to_right')
+    title: str | Any = Field(default=None, union_mode='left_to_right')
     summary: Any | None = None
-    genres: list[Any] | None = None
-    maturity_rating: str | None = None
-    images: Images2 | None = None
+    genres: list[Any] | Any = Field(default=None, union_mode='left_to_right')
+    maturity_rating: str | Any = Field(default=None, union_mode='left_to_right')
+    images: Images2 | Any = Field(default=None, union_mode='left_to_right')
 
 class Title(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
-    title_key: UUID | None = None
-    media_type: str | None = None
-    url: str | None = None
-    title: str | None = None
-    summary: str | None = None
-    genres: list[str] | None = None
+    title_key: UUID | Any = Field(default=None, union_mode='left_to_right')
+    media_type: str | Any = Field(default=None, union_mode='left_to_right')
+    url: str | Any = Field(default=None, union_mode='left_to_right')
+    title: str | Any = Field(default=None, union_mode='left_to_right')
+    summary: str | Any = Field(default=None, union_mode='left_to_right')
+    genres: list[str] | Any = Field(default=None, union_mode='left_to_right')
     maturity_rating: Any | None = None
-    images: Images2 | None = None
+    images: Images2 | Any = Field(default=None, union_mode='left_to_right')
 
 class Carousel(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
-    collection_id: str | None = None
-    title: str | None = None
-    titles: list[Title] | None = None
+    collection_id: str | Any = Field(default=None, union_mode='left_to_right')
+    title: str | Any = Field(default=None, union_mode='left_to_right')
+    titles: list[Title] | Any = Field(default=None, union_mode='left_to_right')
 
 class ParsedShowModel(BaseModel):
     model_config = ConfigDict(extra='ignore', defer_build=True)
-    title_key: UUID | None = None
-    url: str | None = None
-    title: str | None = None
-    summary: str | None = None
-    release_year: int | None = None
-    genres: list[str] | None = None
-    primary_genre: str | None = None
-    brands: list[str] | None = None
-    maturity_rating: str | None = None
-    images: Images | None = None
-    start_date: AwareDatetime | None = None
-    end_date: AwareDatetime | None = None
-    trailer_url: str | None = None
-    cast: list[str] | None = None
-    directors: list[Any] | None = None
-    writers: list[Any] | None = None
-    producers: list[Any] | None = None
-    creators: list[str] | None = None
-    season_count: int | None = None
-    episode_count: int | None = None
-    seasons: list[Season] | None = None
-    related: list[RelatedItem] | None = None
-    carousels: list[Carousel] | None = None
+    title_key: UUID | Any = Field(default=None, union_mode='left_to_right')
+    url: str | Any = Field(default=None, union_mode='left_to_right')
+    title: str | Any = Field(default=None, union_mode='left_to_right')
+    summary: str | Any = Field(default=None, union_mode='left_to_right')
+    release_year: int | Any = Field(default=None, union_mode='left_to_right')
+    genres: list[str] | Any = Field(default=None, union_mode='left_to_right')
+    primary_genre: str | Any = Field(default=None, union_mode='left_to_right')
+    brands: list[str] | Any = Field(default=None, union_mode='left_to_right')
+    maturity_rating: str | Any = Field(default=None, union_mode='left_to_right')
+    images: Images | Any = Field(default=None, union_mode='left_to_right')
+    start_date: AwareDatetime | Any = Field(default=None, union_mode='left_to_right')
+    end_date: AwareDatetime | Any = Field(default=None, union_mode='left_to_right')
+    trailer_url: str | Any = Field(default=None, union_mode='left_to_right')
+    cast: list[str] | Any = Field(default=None, union_mode='left_to_right')
+    directors: list[Any] | Any = Field(default=None, union_mode='left_to_right')
+    writers: list[Any] | Any = Field(default=None, union_mode='left_to_right')
+    producers: list[Any] | Any = Field(default=None, union_mode='left_to_right')
+    creators: list[str] | Any = Field(default=None, union_mode='left_to_right')
+    season_count: int | Any = Field(default=None, union_mode='left_to_right')
+    episode_count: int | Any = Field(default=None, union_mode='left_to_right')
+    seasons: list[Season] | Any = Field(default=None, union_mode='left_to_right')
+    related: list[RelatedItem] | Any = Field(default=None, union_mode='left_to_right')
+    carousels: list[Carousel] | Any = Field(default=None, union_mode='left_to_right')
     _raw_input: Any = PrivateAttr(default=None)
 
     @model_validator(mode='wrap')
