@@ -29,7 +29,7 @@ class RelatedItem(BaseModel):
     title: str | Any = Field(default=None, union_mode='left_to_right')
     summary: Any | None = None
     genres: list[Any] | Any = Field(default=None, union_mode='left_to_right')
-    maturity_rating: Any | None = None
+    maturity_rating: str | Any = Field(default=None, union_mode='left_to_right')
     images: Images | Any = Field(default=None, union_mode='left_to_right')
 
 class Title(BaseModel):
@@ -68,7 +68,7 @@ class ParsedMovieModel(BaseModel):
     directors: list[Any] | Any = Field(default=None, union_mode='left_to_right')
     writers: list[Any] | Any = Field(default=None, union_mode='left_to_right')
     producers: list[Any] | Any = Field(default=None, union_mode='left_to_right')
-    creators: list[Any] | Any = Field(default=None, union_mode='left_to_right')
+    creators: list[str] | Any = Field(default=None, union_mode='left_to_right')
     release_date: date | str | Any = Field(default=None, union_mode='left_to_right')
     runtime: str | Any = Field(default=None, union_mode='left_to_right')
     related: list[RelatedItem] | Any = Field(default=None, union_mode='left_to_right')

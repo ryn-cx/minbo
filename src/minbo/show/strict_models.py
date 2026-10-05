@@ -120,7 +120,7 @@ class ParsedShowModel(BaseModel):
     url: str
     title: str
     summary: str
-    release_year: int
+    release_year: int | None
     genres: list[str]
     primary_genre: str
     brands: list[str]

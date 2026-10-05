@@ -9,21 +9,6 @@ from datetime import date
 
 class Images(BaseModel):
     model_config = ConfigDict(defer_build=True)
-    default: str
-    default_wide: str
-    centered_background: str
-    centered_background_small: str
-    cover_artwork: str
-    cover_artwork_horizontal: str
-    cover_artwork_square: str
-    poster_with_logo: str
-    logo_left: str
-    logo_centered: str
-    content_logo_monochromatic: str
-    content_logo_polychromatic: str
-
-class Images1(BaseModel):
-    model_config = ConfigDict(defer_build=True)
     default: str | None
     default_wide: str | None
     centered_background: str | None
@@ -45,8 +30,8 @@ class RelatedItem(BaseModel):
     title: str
     summary: None
     genres: list[None]
-    maturity_rating: None
-    images: Images1
+    maturity_rating: str | None
+    images: Images
 
 class Images2(BaseModel):
     model_config = ConfigDict(defer_build=True)
@@ -90,7 +75,7 @@ class ParsedMovieModel(BaseModel):
     genres: list[str]
     primary_genre: str
     brands: list[str]
-    maturity_rating: str
+    maturity_rating: str | None
     images: Images
     start_date: AwareDatetime
     end_date: AwareDatetime
@@ -99,9 +84,9 @@ class ParsedMovieModel(BaseModel):
     directors: list[None]
     writers: list[None]
     producers: list[None]
-    creators: list[None]
+    creators: list[str]
     release_date: date | str = Field(union_mode='left_to_right')
-    runtime: str
+    runtime: str | None
     related: list[RelatedItem]
     carousels: list[Carousel]
     _raw_input: Any = PrivateAttr(default=None)
