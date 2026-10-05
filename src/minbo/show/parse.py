@@ -18,6 +18,7 @@ from minbo.parsing import (
     shared_fields,
     start_date,
     text_or_none,
+    watch_url,
 )
 
 SERIES_ID_KEY = "seriesId"
@@ -77,7 +78,7 @@ def _episode(listed_episode: Any) -> dict[str, Any]:  # noqa: ANN401 - Any JSON 
         "episode_number": number_or_none(episode.get("episodeNumber")),
         "title": full_text(episode.get("title")),
         "summary": full_text(episode.get("summary")),
-        "url": build_url(episode.get("episodeUrl")),
+        "url": watch_url(episode.get("episodeUrl")),
         "images": images(episode.get("images")),
         "start_date": start_date(episode.get("offeringDates")),
         "end_date": end_date(episode.get("offeringDates")),

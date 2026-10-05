@@ -78,6 +78,15 @@ def build_url(path: Any) -> str | None:  # noqa: ANN401 - Any JSON value.
 
 
 # TODO: Validate
+def watch_url(path: Any) -> str | None:  # noqa: ANN401 - Any JSON value.
+    written_path = text_or_none(path)
+    if written_path is None:
+        return None
+    video_id = written_path.rstrip("/").rsplit("/", 1)[-1]
+    return f"https://play.hbomax.com/video/watch/{video_id}"
+
+
+# TODO: Validate
 def full_text(value: Any) -> str | None:  # noqa: ANN401 - Any JSON value.
     return text_or_none(mapping(value).get("full"))
 
