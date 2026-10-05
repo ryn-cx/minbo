@@ -1,0 +1,1 @@
+{"$schema": "http://json-schema.org/schema#", "type": "object", "properties": {"titles": {"type": "array", "items": {"type": "object", "properties": {"title_key": {"type": "string", "format": "uuid"}, "title": {"type": "string"}, "url": {"type": "string"}, "media_type": {"type": "string"}}, "required": ["media_type", "title", "title_key", "url"]}}}, "required": ["titles"]}

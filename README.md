@@ -18,6 +18,10 @@ season_two = client.show("ab553cdc-e15d-4597-b65f-bec9201fd2dd", 2)
 movie = client.movie("92b085e4-764c-41ca-a46f-4d76a5b28642")
 print(movie.title, movie.runtime, movie.maturity_rating)
 
+# Every movie and every show the site lists, from its sitemap pages.
+for title in client.sitemap("movies").titles:
+    print(title.title_key, title.title, title.url)
+
 # Downloading and parsing are separate, so a response can be kept as it was served.
 page = client.movie.download("92b085e4-764c-41ca-a46f-4d76a5b28642")
 movie = client.movie.load(page)

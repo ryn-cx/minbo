@@ -13,6 +13,7 @@ from get_around import GetAround
 from minbo.exceptions import ExtractionError, HTTPError, ResourceNotFoundError
 from minbo.movie import Movie
 from minbo.show import Show
+from minbo.sitemap import Sitemap
 
 logger = getLogger(__name__)
 logger.addHandler(NullHandler())
@@ -60,6 +61,7 @@ class MinBO:
 
         self.movie = Movie(self)
         self.show = Show(self)
+        self.sitemap = Sitemap(self)
 
     # TODO: Validate
     def _headers(self) -> dict[str, str]:
