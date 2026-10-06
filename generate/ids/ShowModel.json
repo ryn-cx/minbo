@@ -1,102 +1,48 @@
-{
-  "chernobyl": [
-    "396999a6-3fff-4af3-802b-10c46d10deff",
-    null
-  ],
-  "big-bang-theory": [
-    "c8ea8e19-cae7-4683-9b62-cdbbed744784",
-    null
-  ],
-  "abbott-elementary-5": [
+[
+  "396999a6-3fff-4af3-802b-10c46d10deff",
+  "c8ea8e19-cae7-4683-9b62-cdbbed744784",
+  [
     "229855e0-bbfb-4f5b-970c-b26a911a44a7",
     5
   ],
-  "great-food-truck-race": [
-    "2a471f80-41cb-4db6-b832-21dcd54061b9",
-    null
-  ],
-  "cake-boss": [
-    "005c1174-e066-42c7-827b-8914c1d91504",
-    null
-  ],
-  "house-of-the-dragon": [
-    "c68e69d7-9317-428a-a615-cdf8fe5a2e06",
-    null
-  ],
-  "22ecd056": [
-    "22ecd056-64fb-4421-8fd5-21ac673911aa",
-    null
-  ],
-  "c3929b9b": [
-    "c3929b9b-4de5-4560-b5fa-d7ad3c36cb29",
-    null
-  ],
-  "3933c31f": [
-    "3933c31f-227b-43cb-ac7d-ad3858c50524",
-    null
-  ],
-  "6e04063b": [
-    "6e04063b-47b7-4c44-92cf-d4354406c565",
-    null
-  ],
-  "2ff9871d": [
-    "2ff9871d-edd1-4112-84d8-fdde39c164d3",
-    null
-  ],
-  "6ec0072b": [
-    "6ec0072b-aaad-4a3d-a003-7ff8bb5e417e",
-    null
-  ],
-  "c5ec2810": [
-    "c5ec2810-47ee-4999-b2a2-eff27886dd42",
-    null
-  ],
-  "2537da31": [
-    "2537da31-ff99-4195-a53e-e0e1ddb1d67e",
-    null
-  ],
-  "17f960d6": [
-    "17f960d6-89a8-43e2-9a4d-363b44346e39",
-    null
-  ],
-  "f9bb61ee": [
-    "f9bb61ee-4dc9-40be-aaa1-e80c11b39531",
-    null
-  ],
-  "5f4d98e0": [
-    "5f4d98e0-d49d-4a20-aa41-d1a63becbde8",
-    null
-  ],
-  "ab7aade9-1": [
+  "2a471f80-41cb-4db6-b832-21dcd54061b9",
+  "005c1174-e066-42c7-827b-8914c1d91504",
+  "c68e69d7-9317-428a-a615-cdf8fe5a2e06",
+  "22ecd056-64fb-4421-8fd5-21ac673911aa",
+  "c3929b9b-4de5-4560-b5fa-d7ad3c36cb29",
+  "3933c31f-227b-43cb-ac7d-ad3858c50524",
+  "6e04063b-47b7-4c44-92cf-d4354406c565",
+  "2ff9871d-edd1-4112-84d8-fdde39c164d3",
+  "6ec0072b-aaad-4a3d-a003-7ff8bb5e417e",
+  "c5ec2810-47ee-4999-b2a2-eff27886dd42",
+  "2537da31-ff99-4195-a53e-e0e1ddb1d67e",
+  "17f960d6-89a8-43e2-9a4d-363b44346e39",
+  "f9bb61ee-4dc9-40be-aaa1-e80c11b39531",
+  "5f4d98e0-d49d-4a20-aa41-d1a63becbde8",
+  [
     "ab7aade9-8133-4aaa-b49f-b78fd42379b6",
     1
   ],
-  "812e5466-1": [
+  [
     "812e5466-becc-4b1e-87f4-c9e39a301586",
     1
   ],
-  "50c8ce6d": [
-    "50c8ce6d-088c-42d9-9147-d1b19b1289d4",
-    null
-  ],
-  "eaa21376-1": [
+  "50c8ce6d-088c-42d9-9147-d1b19b1289d4",
+  [
     "eaa21376-a54d-4245-95d6-a86dce6313c8",
     1
   ],
-  "fff09eaf-1": [
+  [
     "fff09eaf-17c3-446b-be32-8a0d47e4ccf1",
     1
   ],
-  "674af3b6-3": [
+  [
     "674af3b6-eeb8-493a-b3c5-a911a9cc0f26",
     3
   ],
-  "8dd6e3f0": [
-    "8dd6e3f0-2d4a-4276-b395-6a0819566667",
-    null
-  ],
-  "8dd6e3f0-1": [
+  "8dd6e3f0-2d4a-4276-b395-6a0819566667",
+  [
     "8dd6e3f0-2d4a-4276-b395-6a0819566667",
     1
   ]
-}
+]

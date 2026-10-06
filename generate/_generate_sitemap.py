@@ -6,8 +6,8 @@ from typing import Literal
 from get_around import build_client_automatically
 from good_ass_pydantic_integrator.recordings import (
     RecordingId,
-    download_named_missing,
-    load_named_ids,
+    download_missing,
+    load_ids,
 )
 
 from generate.constants import GENERATOR_PATHS
@@ -28,12 +28,12 @@ class SitemapId(RecordingId[MinBO]):
         return client.sitemap.download(self.kind)
 
 
-SITEMAPS = load_named_ids(GENERATOR_PATHS, MODEL_NAME, SitemapId)
+SITEMAPS = load_ids(GENERATOR_PATHS, MODEL_NAME, SitemapId)
 
 
 # TODO: Validate
 def generate_sitemap(client: MinBO) -> None:
-    download_named_missing(GENERATOR_PATHS, MODEL_NAME, SITEMAPS, client)
+    download_missing(GENERATOR_PATHS, MODEL_NAME, SITEMAPS, client)
     rebuild_parsed_model(MODEL_NAME, PARSED_MODEL_NAME, parse_sitemap)
 
 
