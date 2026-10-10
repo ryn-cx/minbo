@@ -81,10 +81,12 @@ class ParsedMovieModel(BaseModel):
     end_date: AwareDatetime
     trailer_url: str | None
     cast: list[str]
-    directors: list[None]
-    writers: list[None]
-    producers: list[None]
+    directors: list[str]
+    writers: list[str]
+    producers: list[str]
     creators: list[str]
+    sources: list[str]
+    sign_interpreters: list[str]
     release_date: date | str = Field(union_mode='left_to_right')
     runtime: str | None
     related: list[RelatedItem]

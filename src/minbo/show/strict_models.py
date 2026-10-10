@@ -130,10 +130,12 @@ class ParsedShowModel(BaseModel):
     end_date: AwareDatetime
     trailer_url: str | None
     cast: list[str]
-    directors: list[None]
-    writers: list[None]
-    producers: list[None]
+    directors: list[str]
+    writers: list[str]
+    producers: list[str]
     creators: list[str]
+    sources: list[str]
+    sign_interpreters: list[str]
     season_count: int
     episode_count: int
     seasons: list[Season]

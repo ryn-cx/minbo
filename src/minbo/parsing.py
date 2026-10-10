@@ -24,10 +24,12 @@ IMAGE_NAMES = {
 MEDIA_TYPES = {"series": "series", "feature": "movie"}
 
 CREDIT_ROLES = {
-    "cast": "Actor",
-    "directors": "Director",
-    "writers": "Writer",
-    "producers": "Producer",
+    "directors": "directors",
+    "writers": "writers",
+    "producers": "producers",
+    "creators": "creators",
+    "sources": "sources",
+    "sign_interpreters": "signInterpreters",
 }
 
 
@@ -117,16 +119,17 @@ def maturity_rating(content_node: dict[str, Any]) -> str | None:
 # TODO: Validate
 def credits_fields(content_node: dict[str, Any]) -> dict[str, Any]:
     cast_and_crew = mapping(content_node.get("castAndCrew"))
-    named_roles = {
-        field: [
-            str(mapping(person)["name"])
-            for person in sequence(cast_and_crew.get(role))
-            if mapping(person).get("name")
-        ]
-        for field, role in CREDIT_ROLES.items()
-    }
+    cast = [
+        name
+        for person in sequence(cast_and_crew.get("Actor"))
+        if (name := text_or_none(mapping(person).get("name")))
+    ]
     written_credits = mapping(content_node.get("credits"))
-    return {**named_roles, "creators": _written_names(written_credits.get("creators"))}
+    written_roles = {
+        field: _written_names(written_credits.get(credits_key))
+        for field, credits_key in CREDIT_ROLES.items()
+    }
+    return {"cast": cast, **written_roles}
 
 
 # TODO: Validate
